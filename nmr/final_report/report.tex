@@ -39,6 +39,12 @@
 %prstper,
 %floatfix,
 ]{revtex4-2}
+\usepackage{xfrac}
+\usepackage{mathtools}
+
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
 \usepackage{gensymb}
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
@@ -55,6 +61,16 @@
 %%height=10in,a5paper,hmargin={3cm,0.8in},
 %]{geometry}
 
+
+
+%%% COMMANDS
+
+
+\newcommand{\half}{$\sfrac{1}{2}$ }
+\newcommand{\pauliz}{\begin{pmatrix}
+                    1 & 0 \\
+                    0 & -1 
+                    \end{pmatrix}}
 
 
 \begin{document}
@@ -83,42 +99,93 @@ bwaaa
 
 %\tableofcontents
 
-\section{\label{sec:level1}Introduction}
+\section{\label{sec:intro}Introduction}
 
+The study of nuclear magnetic resonance (NMR) utilizes weak magnetic fields to affect the nuclei of atoms in a strong magnetic field. Under certain conditions, atoms will exhibit ``resonance,'' causing the observation of a transient magnetic field as nuclei relax back to their equillibrium state. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean hendrerit finibus lacus, id facilisis felis ornare eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur hendrerit mi mauris, ac luctus enim varius vitae. Praesent sem diam, lobortis ac tincidunt id, venenatis consequat erat. Ut nisi orci, pulvinar quis facilisis in, vestibulum non arcu. Phasellus fringilla vestibulum justo eget tempor. Suspendisse felis purus, tempor sit amet nisl non, hendrerit feugiat dolor. Donec maximus lacus eros, quis volutpat metus molestie ut. Cras facilisis nibh id nisi volutpat imperdiet. Sed ante mi, viverra et turpis eget, dapibus fermentum nibh. Integer dui mi, blandit vitae rutrum a, malesuada eu metus. Proin ut pellentesque neque, nec rhoncus turpis. Integer eu libero ante. Maecenas molestie vel dui nec auctor. Donec nulla enim, interdum a velit sit amet, mattis congue lectus.
+\section{\label{sec:theroy} Theoretical Description}
 
-Integer laoreet ipsum id nisl vestibulum tristique. Praesent vel facilisis felis. Etiam quis pharetra ipsum, quis posuere ante. Maecenas velit odio, dictum nec sem vel, placerat finibus nulla. Donec quam dolor, gravida ac venenatis non, euismod non est. Nulla lacus magna, condimentum non dictum vel, aliquam ac erat. Nunc vel maximus felis, ut cursus odio. Nam ut placerat mi. Vivamus congue arcu in urna vulputate, eget sollicitudin libero gravida. Donec sed euismod arcu, ac bibendum dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis tempor diam, ut pharetra augue consectetur in. Morbi ultrices erat vitae nunc dignissim rutrum eget sagittis ex. Praesent a egestas augue. Aenean convallis, mi eu tristique pretium, quam arcu dictum urna, eget mattis augue erat vel magna. Duis tempus, erat sit amet vulputate maximus, est massa sagittis urna, ac vestibulum urna magna quis massa.
+\subsection{\label{subsec:larmor} Larmor Precession}
 
-Sed ultrices dapibus neque, vel sodales justo porttitor a. Nunc et gravida metus, eget sagittis justo. Pellentesque lobortis lobortis lacus a varius. Phasellus aliquet ex vel auctor venenatis. In dictum quis risus ut condimentum. Cras eget tellus eget nulla elementum interdum. Vestibulum cursus erat vitae sagittis consectetur. Pellentesque hendrerit dictum bibendum. Aliquam vulputate id mi eget vehicula. Proin eleifend orci mi. Sed nec malesuada elit. Cras molestie ac quam et pretium. Nulla facilisi. Etiam euismod quam at enim rutrum lacinia. Etiam semper mi eu lectus blandit, quis volutpat justo egestas.
+We will start with the phenomena of Larmor precession, occuring when atoms are placed in a strong magnetic field. Larmor precession most readily occurs when the nucleus has a net magnetic moment i.e. there is an odd number of protons, producing a spin \half  system. In this case, the magnetic dipole moment $\mu$ of the nucleus is described as 
 
-Mauris id ultricies felis, vitae egestas nisi. Aenean tempor nec eros ut tristique. In vehicula ligula pellentesque lorem malesuada gravida. Phasellus efficitur lacinia lacus a faucibus. In velit mauris, eleifend vel consectetur a, cursus eu justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis maximus ullamcorper justo eget tempus. Phasellus a mi ante. Vivamus vel dui ut odio pharetra fringilla ut ut justo. Vivamus vehicula ipsum ut odio placerat sodales. Sed interdum fermentum accumsan.
+\begin{equation}
+    \vec{\mu} = \gamma \vec{S}
+\end{equation}
 
-Nullam neque sapien, aliquam a semper vitae, fermentum vitae mauris. Curabitur eu nulla eu lorem efficitur vulputate. Aliquam bibendum, est pulvinar pharetra aliquam, diam mauris tincidunt nisi, et tempus elit dui scelerisque dui. Donec sed tristique ante, quis ultrices nibh. Aliquam erat volutpat. Nullam efficitur arcu eu risus lacinia posuere eget sit amet tellus. Cras ut tempor est. Quisque non imperdiet ligula, non varius turpis.
+where $\vec{S}$ denotes the spin vector and $\gamma$ is a constant known as the gyromagnetic ratio (which differs depending on the type of nucleus). Under a magnetic field, the energy of this system reads 
 
-Praesent imperdiet ullamcorper dolor, in tempor ante tincidunt non. Nam quis sapien a sapien finibus malesuada. Pellentesque tempor magna vitae nisl blandit ornare. Sed ac blandit mauris. Morbi accumsan velit varius tellus tempor scelerisque. Nulla lorem massa, feugiat eget ipsum id, lacinia tristique nisl. Pellentesque pharetra ex felis, et tempus dolor volutpat a. Vestibulum nec ultrices tortor. Suspendisse sed pellentesque diam. Mauris eleifend metus et nibh euismod viverra. Duis vel feugiat justo. Mauris scelerisque fringilla gravida.
+\begin{equation}
+    E = -\vec{\mu} \cdot \vec{B_0}
+\end{equation}
 
-Quisque eget augue eget ligula eleifend eleifend a posuere sapien. Donec accumsan neque eu diam convallis, eget consectetur sapien faucibus. Proin volutpat vulputate orci. Maecenas ac neque dictum, faucibus mauris nec, ornare ex. Pellentesque et ligula sed augue rutrum interdum non ac dolor. Nullam lectus risus, rhoncus a feugiat et, varius venenatis massa. Vivamus vitae diam sodales, semper neque vitae, lobortis metus. Aliquam at diam tortor.
+where we denote $B_0$ the external magnetic field. This yields the Hamiltonian 
 
-Mauris ac sapien ac nibh pellentesque vestibulum. Nam vehicula vestibulum elit non ultricies. Praesent ut eros ullamcorper, lobortis purus a, pretium nunc. Nullam tincidunt, sem vel tempor pulvinar, purus mi sollicitudin neque, id vehicula libero sapien quis diam. Praesent est sapien, tempus vel nisi eget, rhoncus maximus sem. Sed et enim nibh. Ut nec elementum nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum facilisis, ipsum in auctor fermentum, tortor libero venenatis odio, quis fringilla arcu nisl ut diam. Donec sed maximus tortor, laoreet fermentum tellus. Etiam leo ligula, pellentesque ut ante id, laoreet congue ante. Ut pharetra tellus ut magna sagittis molestie. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer ultrices pellentesque accumsan. Quisque et arcu porttitor, ullamcorper massa a, scelerisque massa. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+\begin{equation}
+    H = -\gamma \vec{B_0} \cdot S
+\end{equation}
 
-Integer luctus malesuada justo, et feugiat lacus porta at. Aliquam lacinia id nisl a porttitor. Integer vitae nunc elementum, vehicula sapien non, pulvinar mauris. Nulla porttitor rhoncus ultrices. Nullam consectetur ac turpis et sodales. Donec sem leo, sollicitudin vitae consequat ut, mattis in erat. Quisque mattis, lacus eu convallis lobortis, tortor lorem egestas quam, vel commodo enim libero non lectus.
+where $S$ is the Pauli spin operator $S = (\sigma_x, \sigma_y, \sigma_z)$. Let us orient our magnetic field against the z-axis, such that 
 
-Ut gravida feugiat quam, ut convallis ipsum lobortis sed. Nulla ac interdum justo, lacinia facilisis lacus. Aenean ac fermentum risus, in blandit diam. Donec porta, purus vel vehicula blandit, dui nisl placerat nunc, a sollicitudin quam justo ac ante. Curabitur at lorem dapibus, semper sapien accumsan, congue orci. Mauris vitae laoreet tortor. Aenean nec pharetra arcu. Donec laoreet felis non velit vehicula, vehicula scelerisque velit convallis. Ut auctor purus non nulla vehicula dapibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi laoreet iaculis condimentum. Nulla ultrices suscipit justo sit amet lobortis.
-\section{\label{sec:intro} Section II}
-Duis vestibulum ligula eu turpis varius, at vulputate nibh aliquet. Donec vitae tristique lectus, a pretium tellus. Aenean scelerisque dui sed mi commodo mollis. Nunc pulvinar velit ut sodales laoreet. Donec dapibus dolor id felis rutrum, non aliquet lectus mollis. Etiam rhoncus volutpat tortor, et eleifend odio fringilla sit amet. In hac habitasse platea dictumst. Aenean dapibus arcu et lectus rhoncus interdum. Suspendisse potenti. Praesent vitae dui sollicitudin, rutrum risus at, molestie felis. Maecenas consequat sodales nulla, quis faucibus lectus scelerisque sodales. Etiam urna diam, pulvinar non convallis at, porta vel sem. Etiam nec lacus ligula. Morbi varius suscipit pretium. Aenean nisi enim, dictum eget suscipit sit amet, bibendum a erat.
+\begin{equation}
+    \vec{B_0} = B_0 \hat{z} 
+\end{equation}
 
-Sed egestas quam dapibus mi commodo, eget dictum quam tempus. Integer malesuada turpis neque, ut vulputate dolor luctus sed. Sed sem velit, tincidunt quis diam euismod, semper lacinia purus. Pellentesque nec porta nisl. Fusce mi ex, faucibus sed urna ac, dapibus facilisis nisi. Vivamus est felis, egestas sit amet nibh sit amet, ultricies lobortis ante. Maecenas malesuada est nec dui aliquet, sed accumsan erat volutpat. Integer id ligula sagittis, eleifend turpis eget, tincidunt metus. Suspendisse lacinia luctus quam.
+and the Hamiltonian now reads
 
-Vestibulum posuere volutpat lacus sit amet congue. In fringilla nulla turpis, sit amet elementum leo semper eu. Fusce mattis elementum erat ac lacinia. Aliquam ornare, lacus et volutpat viverra, velit erat blandit ex, sed cursus leo lacus sit amet dui. Aenean dignissim est sapien, id iaculis erat commodo eget. Vestibulum sagittis, nulla eget pulvinar pulvinar, augue massa eleifend nulla, nec dignissim lacus magna vel nisi. Nam suscipit tristique nisl, nec accumsan odio mollis eu. Mauris lorem turpis, rutrum a mi eget, consequat auctor nisi. Etiam ut convallis lectus.
+\begin{equation}\label{eqn:hamiltonian}
+    H = -\frac{\hbar}{2} \gamma B_0  \pauliz
+\end{equation}
 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis in tortor blandit, eleifend tellus quis, vulputate orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla lobortis ligula vitae tellus luctus, eu suscipit tortor aliquam. Phasellus nec bibendum tellus. In lobortis tempus erat, et convallis neque finibus quis. Sed pellentesque iaculis nulla vel suscipit. Pellentesque tempus ultrices consectetur. Sed ipsum velit, ornare eu mollis convallis, tristique ac eros.
+The Hamiltonian has eigenstates
 
-Suspendisse consectetur pretium ante, at maximus enim fermentum vestibulum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed blandit luctus lectus ut imperdiet. In hendrerit id purus at cursus. Sed aliquam laoreet ante, eu aliquet diam fringilla porta. Nulla congue tortor vitae leo malesuada, ut tincidunt nisi laoreet. Etiam tortor diam, ultricies sollicitudin eleifend a, volutpat tincidunt dolor. Suspendisse potenti. Morbi dapibus neque sed efficitur placerat. Pellentesque nec congue nisi. Maecenas hendrerit, nibh ullamcorper interdum placerat, ante nisl posuere mauris, eu euismod nisl erat vitae ipsum. Curabitur tincidunt et sem id mattis. Phasellus viverra tellus massa.
+\begin{equation}
+    \ket{\pm} : E_\pm = \mp \frac{\hbar}{2} \gamma B_0 
+\end{equation}
 
-Proin ut ligula ac nulla sagittis cursus at at nisl. Mauris lobortis erat libero, non pretium risus placerat ut. Aenean nec ante nisl. Maecenas ipsum mi, porttitor et leo a, consequat finibus libero. Pellentesque vel libero efficitur, blandit tortor eget, accumsan nulla. In diam risus, malesuada ornare cursus vitae, mollis id diam. Donec odio turpis, sodales ac quam quis, pharetra placerat ipsum. Cras tortor diam, tincidunt a nibh ac, blandit malesuada dolor. Duis sed pulvinar ligula. Nulla ac nisl posuere, sagittis dolor quis, facilisis erat.
+These eigenstates correspond to nuclei aligned either parallel or antiparallel to the magnetic field $B_0$. We will use these vectors $\ket{\pm}$ as our basis. We can evolve these stationary states with the time-dependent Schr\"odinger equation and then calculate the expectation of each of our Pauli matrices to obtain 
 
-Maecenas eu eleifend diam. Sed at libero luctus, rutrum ipsum ut, mollis nulla. Vestibulum sed ex eu augue mollis dignissim. Ut facilisis mi ut risus tempus, quis convallis nunc facilisis. In sed pellentesque metus. Proin at magna tristique, porttitor nisl eu, finibus ex. Aliquam sollicitudin lectus vel efficitur auctor. In cursus ligula vitae tincidunt feugiat. Etiam convallis arcu nec feugiat convallis. Maecenas sed pellentesque enim, in rhoncus ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc non orci a odio sodales elementum. Proin ac urna sed metus porta suscipit. Mauris vel lacinia sem. Donec rutrum sem quis congue imperdiet. 
+\begin{align*}
+    \langle S_x \rangle &= \frac{\hbar}{2} \sin(\theta)\cos(\gamma B_0 t)\\
+    \langle S_y \rangle &= \frac{\hbar}{2} \sin(\theta)\sin(\gamma B_0 t)\\
+    \langle S_z \rangle &= \frac{\hbar}{2} \cos(\theta)   
+\end{align*}
+
+These equations are the classical precession equations; our spin vector will precess about the magnetic field at a constant frequency
+\begin{equation}
+    \omega_0 = \gamma B_0 
+\end{equation}
+
+This frequency is known as the \textbf{Larmor frequency}, and $\theta$ indicates the angle between $\vec{\mu}$ and $\vec{B_0}$; this angle characterizes the system,
+
+\begin{equation}
+    \ket{\psi} = \sin\left(\sfrac{\theta}{2}\right)\ket{+}+ \cos\left(\sfrac{\theta}{2}\right) \ket{-}
+\end{equation}
+
+These equations above can also be derived from a classical viewpoint; we can calculate the torque $\vec{\tau}  =\vec{ \mu }\times \vec{B_0}$ on the nucleus by the magnetic moment and use Newton's second law to derive a similar precession.
+
+\subsection{\label{subsec:pulses} Net Magnetization and Relaxation}
+
+The lower energy $E_+$ is the favored energy state; slightly more spins will align parallel to $\vec{B_0}$ as opposed to antiparallel. Using statistical mechanics, we can derive the expected number of $\ket{+}$ vs $\ket{-}$. Since this is a canonical two-state system, the ratio $\frac{N_+}{N_-}$ is equal to the ratio of the Boltzmann factors, yielding 
+
+\begin{equation}
+    \frac{N_+}{N_-} = \exp\left(\frac{\gamma \hbar B_0}{k T}\right)
+\end{equation}
+
+This small difference produces a net longitudinal magnetization (in this context, ``longitudinal'' refers ``along the $B_0$ field''), which is the sum of the individual quantized spins of the sytem. 
+
+\begin{equation}
+    M_z = \sum_i \gamma \hbar m_i = \frac{\hbar}{2} \gamma (N_+ - N_-)
+\end{equation}
+
+In equillibrium with our original magnetic field $B_0$, we expect a slight magnetization in the $+\hat{z}$ direction. However, if we were to apply another magnetic field briefly to this system, we would see a change in the net magnetization $\vec{M}(t)$. Eventually, the system will return back to its equillibrium state. In order to reach equillibrium, the system must give back energy to the surrounding lattice. 
+
+We are interested in understanding how long it takes for our system to reach equillibrium. In general, after a disturbance, the magnetization follows 
+
+\begin{equation}
+    \frac{d M_z(t)}{}
+\end{equation}
+
 % The \nocite command causes all entries in a bibliography to be printed out
 % whether or not they are actually referenced in the text. This is appropriate
 % for the sample file to show the different styles of references, but authors
