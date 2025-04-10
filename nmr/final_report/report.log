@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.2.13)  10 APR 2025 02:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.2.13)  10 APR 2025 04:11
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -170,13 +170,9 @@ Package: revsymb4-2 2022/06/05 4.2f (https://journals.aps.org/revtex/ for docume
 LaTeX Info: Redefining \frak on input line 104.
 LaTeX Info: Redefining \Bbb on input line 120.
 LaTeX Info: Redefining \REV@mathfrak on input line 128.
-)) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xfrac\xfrac.sty (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2024-01-04 L3 programming layer (loader) 
- (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count281
-\l__pdf_internal_box=\box68
-)) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+)) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/gensymb\gensymb.sty
+Package: gensymb 2022/10/17 v1.0.2 (KJH)
+) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
@@ -194,7 +190,34 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen149
 \Gin@req@width=\dimen150
-) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
+) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/tools\dcolumn.sty
+Package: dcolumn 2023/07/08 v1.06 decimal alignment package (DPC)
+ (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen151
+\ar@mcellbox=\box68
+\extrarowheight=\dimen152
+\NC@list=\toks26
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box69
+)) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
+Package: bm 2023/07/08 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+LaTeX Info: Redefining \bm on input line 219.
+) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xfrac\xfrac.sty (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2024-01-04 L3 programming layer (loader) 
+ (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count281
+\l__pdf_internal_box=\box70
+)) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
 Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
 ) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
@@ -202,19 +225,19 @@ Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 Package: xparse 2023-10-10 L3 Experimental document command parser
 ) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/xtemplate\xtemplate.sty
 Package: xtemplate 2023-10-10 L3 Experimental prototype document functions
-\l__xtemplate_tmp_dim=\dimen151
+\l__xtemplate_tmp_dim=\dimen153
 \l__xtemplate_tmp_int=\count282
 \l__xtemplate_tmp_muskip=\muskip18
-\l__xtemplate_tmp_skip=\skip56
+\l__xtemplate_tmp_skip=\skip58
 )
 Package: xfrac 2023-10-10 L3 Experimental split-level fractions
-\l__xfrac_slash_box=\box69
-\l__xfrac_tmp_box=\box70
-\l__xfrac_denominator_bot_sep_dim=\dimen152
-\l__xfrac_numerator_bot_sep_dim=\dimen153
-\l__xfrac_numerator_top_sep_dim=\dimen154
-\l__xfrac_slash_left_sep_dim=\dimen155
-\l__xfrac_slash_right_sep_dim=\dimen156
+\l__xfrac_slash_box=\box71
+\l__xfrac_tmp_box=\box72
+\l__xfrac_denominator_bot_sep_dim=\dimen154
+\l__xfrac_numerator_bot_sep_dim=\dimen155
+\l__xfrac_numerator_top_sep_dim=\dimen156
+\l__xfrac_slash_left_sep_dim=\dimen157
+\l__xfrac_slash_right_sep_dim=\dimen158
 \l__xfrac_slash_left_muskip=\muskip19
 \l__xfrac_slash_right_muskip=\muskip20
 
@@ -227,85 +250,102 @@ Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count283
 \calc@Bcount=\count284
-\calc@Adimen=\dimen157
-\calc@Bdimen=\dimen158
-\calc@Askip=\skip57
-\calc@Bskip=\skip58
+\calc@Adimen=\dimen159
+\calc@Bdimen=\dimen160
+\calc@Askip=\skip59
+\calc@Bskip=\skip60
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count285
-\calc@Cskip=\skip59
+\calc@Cskip=\skip61
 ) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
 \g_MT_multlinerow_int=\count286
-\l_MT_multwidth_dim=\dimen159
-\origjot=\skip60
-\l_MT_shortvdotswithinadjustabove_dim=\dimen160
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen161
-\l_MT_above_intertext_sep=\dimen162
-\l_MT_below_intertext_sep=\dimen163
-\l_MT_above_shortintertext_sep=\dimen164
-\l_MT_below_shortintertext_sep=\dimen165
-\xmathstrut@box=\box71
-\xmathstrut@dim=\dimen166
-) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/gensymb\gensymb.sty
-Package: gensymb 2022/10/17 v1.0.2 (KJH)
-) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/tools\dcolumn.sty
-Package: dcolumn 2023/07/08 v1.06 decimal alignment package (DPC)
- (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen167
-\ar@mcellbox=\box72
-\extrarowheight=\dimen168
-\NC@list=\toks26
-\extratabsurround=\skip61
-\backup@length=\skip62
-\ar@cellbox=\box73
-)) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
-Package: bm 2023/07/08 v1.2f Bold Symbol Support (DPC/FMi)
-\symboldoperators=\mathgroup6
-\symboldletters=\mathgroup7
-\symboldsymbols=\mathgroup8
-Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
-Package bm Info: No bold for \U/msa/m/n, using \pmb.
-Package bm Info: No bold for \U/msb/m/n, using \pmb.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
-LaTeX Info: Redefining \bm on input line 219.
+\l_MT_multwidth_dim=\dimen161
+\origjot=\skip62
+\l_MT_shortvdotswithinadjustabove_dim=\dimen162
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen163
+\l_MT_above_intertext_sep=\dimen164
+\l_MT_below_intertext_sep=\dimen165
+\l_MT_above_shortintertext_sep=\dimen166
+\l_MT_below_shortintertext_sep=\dimen167
+\xmathstrut@box=\box73
+\xmathstrut@dim=\dimen168
+) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+ (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen169
+\captionmargin=\dimen170
+\caption@leftmargin=\dimen171
+\caption@rightmargin=\dimen172
+\caption@width=\dimen173
+\caption@indent=\dimen174
+\caption@parindent=\dimen175
+\caption@hangindent=\dimen176
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->\par \vskip \abovecaptionskip \begingroup \small \rmfamily \sbox \@tempboxa {\let \\\heading@cr \@make@capt@title {#1}{#2}}\@ifdim {\wd \@tempboxa >\hsize }{\begingroup \samepage \flushing \let \footnote \@footnotemark@gobble \@make@capt@title {#1}{#2}\par \endgroup }{\global \@minipagefalse \hb@xt@ \hsize {\hfil \unhbox \@tempboxa \hfil }}\endgroup \vskip \belowcaptionskip  on input line 1175.
 )
-Class revtex4-2 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 76.
-Class revtex4-2 Info: cite was not loaded (OK!) on input line 76.
-Class revtex4-2 Info: mcite was not loaded (OK!) on input line 76.
-Class revtex4-2 Info: multicol was not loaded (OK!) on input line 76.
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count287
+\c@continuedfloat=\count288
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count289
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count290
+)
+Class revtex4-2 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 84.
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 84.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 84.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 84.
  (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+\symgns@font=\mathgroup9
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 84.
+Package gensymb Info: Math companion symbols declared on input line 84.
+LaTeX Info: Redefining \degree on input line 84.
+LaTeX Info: Redefining \celsius on input line 84.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 84.
+LaTeX Info: Redefining \ohm on input line 84.
+Package gensymb Info: Using \textohm for \ohm on input line 84.
+Package gensymb Info: Using \textmu for \micro on input line 84.
  (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count287
-\scratchdimen=\dimen169
+\scratchcounter=\count291
+\scratchdimen=\dimen177
 \scratchbox=\box74
-\nofMPsegments=\count288
-\nofMParguments=\count289
+\nofMPsegments=\count292
+\nofMParguments=\count293
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count290
-\MPscratchDim=\dimen170
-\MPnumerator=\count291
-\makeMPintoPDFobject=\count292
+\MPscratchCnt=\count294
+\MPscratchDim=\dimen178
+\MPnumerator=\count295
+\makeMPintoPDFobject=\count296
 \everyMPtoPDFconversion=\toks28
 ) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -313,28 +353,40 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\symgns@font=\mathgroup9
-LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 76.
-Package gensymb Info: Math companion symbols declared on input line 76.
-LaTeX Info: Redefining \degree on input line 76.
-LaTeX Info: Redefining \celsius on input line 76.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 76.
-LaTeX Info: Redefining \ohm on input line 76.
-Package gensymb Info: Using \textohm for \ohm on input line 76.
-Package gensymb Info: Using \textmu for \micro on input line 76.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 \openout3 = `reportNotes.bib'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 110.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 118.
  (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 110.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 118.
  (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{C:/Users/Ali/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+)
+<figs/larmor-precession.png, id=1, 560.0925pt x 462.22687pt>
+File: figs/larmor-precession.png Graphic file (type png)
+<use figs/larmor-precession.png>
+Package pdftex.def Info: figs/larmor-precession.png  used on input line 171.
+(pdftex.def)             Requested size: 196.80075pt x 162.4166pt.
+ [1{C:/Users/Ali/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./figs/larmor-precession.png>]
+<figs/pi-2-pulse.png, id=21, 479.54156pt x 456.95718pt>
+File: figs/pi-2-pulse.png Graphic file (type png)
+<use figs/pi-2-pulse.png>
+Package pdftex.def Info: figs/pi-2-pulse.png  used on input line 240.
+(pdftex.def)             Requested size: 153.00156pt x 145.79698pt.
+<figs/pi-pulse.png, id=22, 956.07187pt x 898.85812pt>
+File: figs/pi-pulse.png Graphic file (type png)
+<use figs/pi-pulse.png>
+Package pdftex.def Info: figs/pi-pulse.png  used on input line 244.
+(pdftex.def)             Requested size: 153.00156pt x 143.83395pt.
+
+
+Class revtex4-2 Warning: Float cannot be placed.
+
 No file report.bbl.
-[2] (report.aux)
+[2] [3 <./figs/pi-2-pulse.png> <./figs/pi-pulse.png>] (report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -346,17 +398,17 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 6111 strings out of 474486
- 99359 string characters out of 5744699
- 1948542 words of memory out of 5000000
- 28327 multiletter control sequences out of 15000+600000
- 568965 words of font info for 79 fonts, out of 8000000 for 9000
+ 7621 strings out of 474486
+ 128453 string characters out of 5744699
+ 1957542 words of memory out of 5000000
+ 29815 multiletter control sequences out of 15000+600000
+ 573983 words of font info for 97 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,12n,79p,521b,582s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (2 pages, 178648 bytes).
+ 71i,12n,79p,521b,583s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on report.pdf (3 pages, 1082113 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
+ 114 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

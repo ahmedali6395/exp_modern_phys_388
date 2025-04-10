@@ -39,12 +39,8 @@
 %prstper,
 %floatfix,
 ]{revtex4-2}
-\usepackage{xfrac}
-\usepackage{mathtools}
 
-\DeclarePairedDelimiter\bra{\langle}{\rvert}
-\DeclarePairedDelimiter\ket{\lvert}{\rangle}
-\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
 \usepackage{gensymb}
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
@@ -63,6 +59,17 @@
 
 
 
+%%% USER ADDED PACKAGES
+
+% user added packages 
+\usepackage{xfrac}
+\usepackage{mathtools}
+\usepackage{subcaption}
+
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
 %%% COMMANDS
 
 
@@ -71,6 +78,7 @@
                     1 & 0 \\
                     0 & -1 
                     \end{pmatrix}}
+\newcommand{\halfpi}{\frac{\pi}{2}}
 
 
 \begin{document}
@@ -121,7 +129,7 @@ where $\vec{S}$ denotes the spin vector and $\gamma$ is a constant known as the 
 
 where we denote $B_0$ the external magnetic field. This yields the Hamiltonian 
 
-\begin{equation}
+\begin{equation}\label{eqn:base-hamiltonian}
     H = -\gamma \vec{B_0} \cdot S
 \end{equation}
 
@@ -156,10 +164,19 @@ These equations are the classical precession equations; our spin vector will pre
     \omega_0 = \gamma B_0 
 \end{equation}
 
-This frequency is known as the \textbf{Larmor frequency}, and $\theta$ indicates the angle between $\vec{\mu}$ and $\vec{B_0}$; this angle characterizes the system,
+This frequency is known as the \textbf{Larmor frequency}, and $\theta$ indicates the angle between $\vec{\mu}$ and $\vec{B_0}$. 
+
+\begin{figure}[h]
+    \centering
+    \framebox{\includegraphics[width = 0.8\linewidth]{figs/larmor-precession.png}}
+
+    \caption{Larmor precession about $\vec{B_0}$}
+\end{figure}
+
+$\theta$ characterizes the system, up to a phase,
 
 \begin{equation}
-    \ket{\psi} = \sin\left(\sfrac{\theta}{2}\right)\ket{+}+ \cos\left(\sfrac{\theta}{2}\right) \ket{-}
+    \ket{\psi} = \cos\left(\sfrac{\theta}{2}\right)\ket{+}+ e^{i\phi}\sin\left(\sfrac{\theta}{2}\right) \ket{-}
 \end{equation}
 
 These equations above can also be derived from a classical viewpoint; we can calculate the torque $\vec{\tau}  =\vec{ \mu }\times \vec{B_0}$ on the nucleus by the magnetic moment and use Newton's second law to derive a similar precession.
@@ -180,11 +197,55 @@ This small difference produces a net longitudinal magnetization (in this context
 
 In equillibrium with our original magnetic field $B_0$, we expect a slight magnetization in the $+\hat{z}$ direction. However, if we were to apply another magnetic field briefly to this system, we would see a change in the net magnetization $\vec{M}(t)$. Eventually, the system will return back to its equillibrium state. In order to reach equillibrium, the system must give back energy to the surrounding lattice. 
 
-We are interested in understanding how long it takes for our system to reach equillibrium. In general, after a disturbance, the magnetization follows 
+We are interested in understanding how long it takes for our system to reach equillibrium. In general, after a disturbance, the magnetization follows the Bloch equation, reproduced in Equation \ref{eqn:bloch}
+
+\begin{equation}\label{eqn:bloch}
+    \frac{d \vec{M}(t)}{dt} = \frac{\vec{M}(t)-\vec{M_0}}{T_1}
+\end{equation}
+
+where $\vec{M_0}$ denotes the equillibrium magnetization. We refer to $T_1$ as the \textbf{spin-lattice relaxation time}.
+
+\subsection{\label{sec:tipping}Producing Transverse Magnetizations}
+
+\subsubsection{Apply a Circularly Polarized Field}
+
+So far, we have discussed the uniform $\vec{B_0}$ field. However, to produce a transverse magnetization (i.e. a magnetization in the x-y plane) we need to get creative. We will use a circularly polarized field, 
 
 \begin{equation}
-    \frac{d M_z(t)}{}
+    \vec{B_1}(t) = B_1\left[\cos(\omega_0t)\hat{x}+\sin(\omega_0t)\hat{y}\right]
 \end{equation}
+
+Note that $\vec{B_1}(t)$ oscillates at the Larmor frequency. Thus, the new Hamiltonian has an extra time-dependant term, still in the form of Equation \ref{eqn:base-hamiltonian}. Solving this Hamiltonian is beyond the scope of this lab report; however, can still apply the classical torque result 
+
+\begin{equation}
+    \vec{\tau} = \vec{\mu} \times \gamma \left[\vec{B_0}+\vec{B_1}(t)\right]
+\end{equation}
+
+by transforming into a rotating reference frame (rotating at the Larmor frequency), we find that the effective field becomes 
+
+\begin{equation}
+    \vec{\tau}^* = (B_0 - \sfrac{\mu}{\gamma}) \hat{z}+ B_1 \hat{x}
+\end{equation}
+
+In this rotating frame, applying a circularly polarized magnetic field has the effect of ``tipping'' the magnetization into a transverse plane. Transforming back into the lab frame, we will observe the magnetization in the x-y plane still precessing about the z-axis. 
+\subsubsection{$\halfpi$ and $\pi$ pulses}
+Doing this, we will create two types of pulses. We will first define a \textbf{$\halfpi$ pulse}, a pulse of $B_1(t)$ that will be applied for exactly long enough such that the magnetization is entirely in the $x-y$ plane. We will also define a \textbf{$\pi$ pulse}, a pulse that flips the magnetization from $+\hat{z}$ to $-\hat{z}$. 
+
+During a $\halfpi$ or $\pi$ pulse, we can plot the expectation $\langle \vec{S} \rangle  = (\langle S_x \rangle, \langle S_y \rangle, \langle S_z \rangle)$ over time, as shown in Figure \ref{fig:pulse-spirals}.
+
+
+\begin{figure*}[h]
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \includegraphics[width = \linewidth]{figs/pi-2-pulse.png}
+        \caption{$\halfpi$ pulse produces transverse magentization}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \includegraphics[width = \linewidth]{figs/pi-pulse.png}
+        \caption{$\pi$ pulse flips magentization from $+\hat{z}$ to $-\hat{z}$}
+    \end{subfigure}
+    \caption{$\langle \vec{S} \rangle$ over time during a $\halfpi$ and $\pi$ pulse}\label{fig:pulse-spirals}
+\end{figure*}
 
 % The \nocite command causes all entries in a bibliography to be printed out
 % whether or not they are actually referenced in the text. This is appropriate
