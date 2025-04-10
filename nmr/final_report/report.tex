@@ -168,7 +168,7 @@ This frequency is known as the \textbf{Larmor frequency}, and $\theta$ indicates
 
 \begin{figure}[h]
     \centering
-    \framebox{\includegraphics[width = 0.8\linewidth]{figs/larmor-precession.png}}
+    {\includegraphics[width = 0.6\linewidth]{figs/larmor-precession.png}}
 
     \caption{Larmor precession about $\vec{B_0}$}
 \end{figure}
@@ -224,17 +224,18 @@ Note that $\vec{B_1}(t)$ oscillates at the Larmor frequency. Thus, the new Hamil
 by transforming into a rotating reference frame (rotating at the Larmor frequency), we find that the effective field becomes 
 
 \begin{equation}
-    \vec{\tau}^* = (B_0 - \sfrac{\mu}{\gamma}) \hat{z}+ B_1 \hat{x}
+    \vec{\tau}^* = (B_0 - \sfrac{\mu}{\gamma}) \hat{z}^*+ B_1 \hat{x}^*
 \end{equation}
 
 In this rotating frame, applying a circularly polarized magnetic field has the effect of ``tipping'' the magnetization into a transverse plane. Transforming back into the lab frame, we will observe the magnetization in the x-y plane still precessing about the z-axis. 
 \subsubsection{$\halfpi$ and $\pi$ pulses}
-Doing this, we will create two types of pulses. We will first define a \textbf{$\halfpi$ pulse}, a pulse of $B_1(t)$ that will be applied for exactly long enough such that the magnetization is entirely in the $x-y$ plane. We will also define a \textbf{$\pi$ pulse}, a pulse that flips the magnetization from $+\hat{z}$ to $-\hat{z}$. 
 
-During a $\halfpi$ or $\pi$ pulse, we can plot the expectation $\langle \vec{S} \rangle  = (\langle S_x \rangle, \langle S_y \rangle, \langle S_z \rangle)$ over time, as shown in Figure \ref{fig:pulse-spirals}.
+By applying $\vec{B_1}(t)$, we will create two types of pulses. We will first define a \textbf{$\halfpi$ pulse}, a pulse of $B_1(t)$ that will be applied for exactly long enough such that the magnetization is entirely in the $x-y$ plane. We will also define a \textbf{$\pi$ pulse}, a pulse that flips the magnetization from $+\hat{z}$ to $-\hat{z}$. 
+
+During a $\halfpi$ or $\pi$ pulse, we can plot the expectation $\langle \vec{M} \rangle  = (\langle M_x \rangle, \langle M_y \rangle, \langle M_z \rangle)$ over time, as shown in Figure \ref{fig:pulse-spirals}.
 
 
-\begin{figure*}[h]
+\begin{figure*}[htbp]
     \centering
     \begin{subfigure}{0.3\linewidth}
         \includegraphics[width = \linewidth]{figs/pi-2-pulse.png}
@@ -244,7 +245,7 @@ During a $\halfpi$ or $\pi$ pulse, we can plot the expectation $\langle \vec{S} 
         \includegraphics[width = \linewidth]{figs/pi-pulse.png}
         \caption{$\pi$ pulse flips magentization from $+\hat{z}$ to $-\hat{z}$}
     \end{subfigure}
-    \caption{$\langle \vec{S} \rangle$ over time during a $\halfpi$ and $\pi$ pulse}\label{fig:pulse-spirals}
+    \caption{$\langle \vec{M} \rangle$ over time during a $\halfpi$ and $\pi$ pulse}\label{fig:pulse-spirals}
 \end{figure*}
 
 % The \nocite command causes all entries in a bibliography to be printed out
