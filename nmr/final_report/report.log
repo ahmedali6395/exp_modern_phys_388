@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.2.13)  10 APR 2025 04:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.2.13)  11 APR 2025 02:14
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -302,50 +302,98 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count289
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count290
+) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+Package: siunitx 2023-11-14 v3.3.9 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count291
+\l__siunitx_number_exponent_fixed_int=\count292
+\l__siunitx_number_min_decimal_int=\count293
+\l__siunitx_number_min_integer_int=\count294
+\l__siunitx_number_round_precision_int=\count295
+\l__siunitx_number_lower_threshold_int=\count296
+\l__siunitx_number_upper_threshold_int=\count297
+\l__siunitx_number_group_first_int=\count298
+\l__siunitx_number_group_size_int=\count299
+\l__siunitx_number_group_minimum_int=\count300
+\l__siunitx_angle_tmp_dim=\dimen177
+\l__siunitx_angle_marker_box=\box74
+\l__siunitx_angle_unit_box=\box75
+\l__siunitx_compound_count_int=\count301
+ (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/translations\translations.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
+ (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count302
+) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
-Class revtex4-2 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 84.
-Class revtex4-2 Info: cite was not loaded (OK!) on input line 84.
-Class revtex4-2 Info: mcite was not loaded (OK!) on input line 84.
-Class revtex4-2 Info: multicol was not loaded (OK!) on input line 84.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+\l__siunitx_table_tmp_box=\box76
+\l__siunitx_table_tmp_dim=\dimen178
+\l__siunitx_table_column_width_dim=\dimen179
+\l__siunitx_table_integer_box=\box77
+\l__siunitx_table_decimal_box=\box78
+\l__siunitx_table_uncert_box=\box79
+\l__siunitx_table_before_box=\box80
+\l__siunitx_table_after_box=\box81
+\l__siunitx_table_before_dim=\dimen180
+\l__siunitx_table_carry_dim=\dimen181
+\l__siunitx_unit_tmp_int=\count303
+\l__siunitx_unit_position_int=\count304
+\l__siunitx_unit_total_int=\count305
+)
+Class revtex4-2 Info: Unrecognized array package. Please update this document class! (Proceeding with fingers crossed.) on input line 85.
+Class revtex4-2 Info: cite was not loaded (OK!) on input line 85.
+Class revtex4-2 Info: mcite was not loaded (OK!) on input line 85.
+Class revtex4-2 Info: multicol was not loaded (OK!) on input line 85.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 85.
  (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
 \symgns@font=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 84.
-Package gensymb Info: Math companion symbols declared on input line 84.
-LaTeX Info: Redefining \degree on input line 84.
-LaTeX Info: Redefining \celsius on input line 84.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 84.
-LaTeX Info: Redefining \ohm on input line 84.
-Package gensymb Info: Using \textohm for \ohm on input line 84.
-Package gensymb Info: Using \textmu for \micro on input line 84.
+(Font)                  TS1/cmr/m/n --> TS1/cmr/b/n on input line 85.
+Package gensymb Info: Math companion symbols declared on input line 85.
+LaTeX Info: Redefining \degree on input line 85.
+LaTeX Info: Redefining \celsius on input line 85.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 85.
+LaTeX Info: Redefining \ohm on input line 85.
+Package gensymb Info: Using \textohm for \ohm on input line 85.
+Package gensymb Info: Using \textmu for \micro on input line 85.
  (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count291
-\scratchdimen=\dimen177
-\scratchbox=\box74
-\nofMPsegments=\count292
-\nofMParguments=\count293
+\scratchcounter=\count306
+\scratchdimen=\dimen182
+\scratchbox=\box82
+\nofMPsegments=\count307
+\nofMParguments=\count308
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count294
-\MPscratchDim=\dimen178
-\MPnumerator=\count295
-\makeMPintoPDFobject=\count296
+\MPscratchCnt=\count309
+\MPscratchDim=\dimen183
+\MPnumerator=\count310
+\makeMPintoPDFobject=\count311
 \everyMPtoPDFconversion=\toks28
 ) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -355,35 +403,64 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+ (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+ (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+ (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)) (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 85.
 \openout3 = `reportNotes.bib'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 118.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 119.
  (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 118.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 119.
  (C:\Users\Ali\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <figs/larmor-precession.png, id=1, 560.0925pt x 462.22687pt>
 File: figs/larmor-precession.png Graphic file (type png)
 <use figs/larmor-precession.png>
-Package pdftex.def Info: figs/larmor-precession.png  used on input line 171.
+Package pdftex.def Info: figs/larmor-precession.png  used on input line 172.
 (pdftex.def)             Requested size: 147.6015pt x 121.81244pt.
  [1{C:/Users/Ali/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./figs/larmor-precession.png>]
 <figs/pi-2-pulse.png, id=21, 479.54156pt x 456.95718pt>
 File: figs/pi-2-pulse.png Graphic file (type png)
 <use figs/pi-2-pulse.png>
-Package pdftex.def Info: figs/pi-2-pulse.png  used on input line 241.
+Package pdftex.def Info: figs/pi-2-pulse.png  used on input line 251.
 (pdftex.def)             Requested size: 153.00156pt x 145.79698pt.
 <figs/pi-pulse.png, id=22, 956.07187pt x 898.85812pt>
 File: figs/pi-pulse.png Graphic file (type png)
 <use figs/pi-pulse.png>
-Package pdftex.def Info: figs/pi-pulse.png  used on input line 245.
+Package pdftex.def Info: figs/pi-pulse.png  used on input line 255.
 (pdftex.def)             Requested size: 153.00156pt x 143.83395pt.
+ [2] [3 <./figs/pi-2-pulse.png> <./figs/pi-pulse.png>]
 
+Package siunitx Info: Option "separate-uncertainty" has been deprecated in
+(siunitx)             this release.
+(siunitx)             
+(siunitx)             Use "uncertainty-mode = separate" as a replacement.
+
+
+
+Package caption Warning: \label without proper reference on input line 337.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:simulation' on page 4 undefined on input line 332.
+
+<figs/purcell/simulation.png, id=38, 494.3268pt x 396.0396pt>
+File: figs/purcell/simulation.png Graphic file (type png)
+<use figs/purcell/simulation.png>
+Package pdftex.def Info: figs/purcell/simulation.png  used on input line 336.
+(pdftex.def)             Requested size: 196.80075pt x 157.66972pt.
 No file report.bbl.
-[2] [3 <./figs/pi-2-pulse.png> <./figs/pi-pulse.png>] (report.aux)
+[4 <./figs/purcell/simulation.png>] [5] (report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -393,19 +470,22 @@ L3 programming layer <2024-01-04>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 3.25pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 7624 strings out of 474486
- 128488 string characters out of 5744699
- 1956542 words of memory out of 5000000
- 29818 multiletter control sequences out of 15000+600000
- 573983 words of font info for 97 fonts, out of 8000000 for 9000
+ 12041 strings out of 474486
+ 256931 string characters out of 5744699
+ 1954542 words of memory out of 5000000
+ 34194 multiletter control sequences out of 15000+600000
+ 574151 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,12n,79p,521b,583s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on report.pdf (3 pages, 1082121 bytes).
+ 73i,13n,80p,1997b,593s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti9.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on report.pdf (5 pages, 1211195 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
