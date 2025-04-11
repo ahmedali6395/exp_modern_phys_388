@@ -66,11 +66,13 @@
 \usepackage{mathtools}
 \usepackage{subcaption}
 \usepackage{siunitx}
+\usepackage[LGR,T1]{fontenc}
+\usepackage{amsmath}
 
 \DeclarePairedDelimiter\bra{\langle}{\rvert}
 \DeclarePairedDelimiter\ket{\lvert}{\rangle}
 \DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
-
+\DeclareMathAlphabet{\mathgtt}{LGR}{cmtt}{m}{n}
 %%% COMMANDS
 
 
@@ -80,6 +82,7 @@
                     0 & -1 
                     \end{pmatrix}}
 \newcommand{\halfpi}{\frac{\pi}{2}}
+\newcommand{\taucode}{\mathgtt{t}}
 
 
 \begin{document}
@@ -101,7 +104,7 @@
              %  but any date may be explicitly specified
 
 \begin{abstract}
-bwaaa
+This intermediate report summarizes our investigation of pulsed nuclear magnetic resonance (NMR) using the TeachSpin spectrometer. Building on the principles of Larmor precession and the quantum-mechanical behavior of spin-\half nuclei, we examined the response of magnetic moments when subjected to time-dependent radio frequency (RF) pulses. We began with a theoretical framework covering key concepts such as the net magnetization arising from the Boltzmann population difference and the associated longitudinal ($T_1$) and transverse ($T_2$) relaxation processes. In our experiments, specially-tuned $\halfpi$ and $\pi$ pulses were applied to tip and invert the magnetization, thereby generating free induction decay (FID) signals and spin echoes. A simulation model incorporating the exponential decay of echo amplitudes, modulated by cosine factors to account for beating effects in a Carr-Purcell pulse sequence, provided a basis for comparing the expected with the observed signal features. Data analysis of envelope decay for mineral oil samples yielded an experimental $T_2$ value of \SI[uncertainty-mode=separate]{44\pm3}{\milli\second}, which aligns well with previously reported values. Our study demonstrates the successful application of pulsed NMR techniques in measuring relaxation times, validating both the theoretical description and the simulation model.
 \end{abstract}
 
 \maketitle
@@ -331,20 +334,78 @@ From a heuristic standpoint, this makes sense; we have a decaying envelope chara
 
 Plotting these results, we obtain Figure \ref{fig:simulation}. 
 
-\begin{figure}
+\begin{figure}[h]
     \centering
     \includegraphics[width = 0.8\linewidth]{figs/purcell/simulation.png}
-    \label{fig:simulation}\caption{Simulation of the beating behavior in a Carr-Purcell sequence with 60 $\pi$ pulses. Each echo is modeled as a Gaussian pulse. The echo amplitude decays exponentially (simulating $T_2$ decay) and is modulated by a cosine factor (to incorporate beating effects). Additionally, we overlay a smooth envelope curve that passes through the echo peak amplitudes. }
+   \caption{Simulation of the beating behavior in a Carr-Purcell sequence with 60 $\pi$ pulses. Each echo is modeled as a Gaussian pulse. The echo amplitude decays exponentially (simulating $T_2$ decay) and is modulated by a cosine factor (to incorporate beating effects). Additionally, we overlay a smooth envelope curve that passes through the echo peak amplitudes.}\label{fig:simulation}
 \end{figure}
 
 Physically, in an idealized model we would ``see'' every individual rephasing event of the spins as a distinct, narrow pulse. However, in a real NMR detection system the output isn't the raw high-frequency signal — instead, the receiver circuitry (which includes mixers, rectifiers, and low-pass filters) performs envelope detection. This means that it extracts and outputs the overall amplitude envelope of the rapidly oscillating RF signal rather than the instantaneous voltage values.
 
-The envelope represents the net decay or modulation of the transverse magnetization (affected by factors like $T_2$ and any beat modulation) rather than the fine time structure of each echo. As a result, the oscilloscope displays a smooth decaying curve rather than the “spiky” substructure seen in the simulation.
+The envelope represents the net decay or modulation of the transverse magnetization (affected by factors like $T_2$ and any beat modulation) rather than the fine time structure of each echo. As a result, the oscilloscope displays a smooth decaying curve rather than the ``spiky'' substructure seen in the simulation.
 
 \subsubsection{Obtaining experimental values of $T_2$}
 
+We will now create the Carr-Purcell with mineral oil. Apply a $\halfpi$ pulse and subsequent $\pi$ pulses to produce spin-echoes. Let \texttt{N} denote the number of $\pi$ pulses after a $\halfpi$ pulse. We perform this experiment with \texttt{N}=\{10, 20, 21, 50\}. We use varying separation times $\taucode$ between the pulses to get a feel for the procedure; the exact time isn't relavant for this part of the experiment, although minimizing times will produce more accurate results. These plots and exponential fits to the peaks are presented in Figure \ref{fig:experimental-purcell}. 
 
-Let \texttt{N} denote the number of $\pi$ pulses after a $\halfpi$ pulse. 
+The envelope obeys Equation \ref{eqn:bloch-t2}; therefore, we fit an exponential to each of the experimental sets. We then obtain fitted time constants. These results are summarized in Table \ref{tab:t2-times}.
+
+% Table generated by Excel2LaTeX from sheet 'Sheet1'
+\begin{table}[htbp]
+    \centering
+    \caption{$T_2$ measured times for mineral oil}
+      \begin{tabular}{|c|c|c|}
+      \hline
+      \texttt{N} & \SI[parse-numbers=false]{\text{Total Time}}{(\milli\second)} & $\SI[parse-numbers=false]{T_2}{(\milli\second)}$\\
+      
+      \hline
+      10    & 80    & 48.79 \\
+      \hline
+      20    & 36    & 41.09 \\
+      \hline
+      21    & 162   & 44.7 \\
+      \hline
+      50    & 70    & 41.33 \\
+      \hline
+      \end{tabular}%
+    \label{tab:t2-times}%
+  \end{table}%
+  
+From these four calculations of $T_2$, we obtain a final\cite{lab-manual}
+
+\begin{equation}
+    T_2 = \SI[uncertainty-mode=separate]{44(3)}{\milli\second}
+\end{equation}
+
+
+\begin{figure*}[hbpt]
+    \centering
+    \begin{subfigure}{0.3\linewidth}
+        \includegraphics[width = 0.8\linewidth]{figs/purcell/data2.png}
+        \caption{\texttt{N} = 10}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \includegraphics[width = 0.8\linewidth]{figs/purcell/data3.png}
+        \caption{\texttt{N} = 20, $\taucode = \SI{1}{\milli\second}$}
+    \end{subfigure}\\
+    \begin{subfigure}{0.3\linewidth}
+        \includegraphics[width = 0.8\linewidth]{figs/purcell/data1.png}
+        \caption{\texttt{N} = 21, $\taucode = \SI{2}{\milli\second}$}
+    \end{subfigure}
+    \begin{subfigure}{0.3\linewidth}
+        \includegraphics[width = 0.8\linewidth]{figs/purcell/data4.png}
+        \caption{\texttt{N} = 50, $\taucode = \SI{0.9}{\milli\second}$}
+    \end{subfigure}
+    \caption{Different Carr-Purcell sequences for different \texttt{N}, $\taucode$}\label{fig:experimental-purcell}
+\end{figure*}
+
+
+
+
+
+\newpage
+
+
 
 
 
@@ -354,7 +415,8 @@ Let \texttt{N} denote the number of $\pi$ pulses after a $\halfpi$ pulse.
 % most likely will not want to use it.
 \nocite{*}
 
-\bibliography{apssamp}% Produces the bibliography via BibTeX.
+
+\bibliography{appsamp.bib}% Produces the bibliography via BibTeX.
 
 \end{document}
 %
