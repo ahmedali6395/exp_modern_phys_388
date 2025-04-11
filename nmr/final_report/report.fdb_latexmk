@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex report"] 1744356281.85934 "report.aux" "report.bbl" "report" 1744356285.52093 0
-  "./appsamp.bib" 1744356264 268 d3733d5d14b3782e99fec06da952bcb0 ""
-  "./reportNotes.bib" 1744356284 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
+["bibtex report"] 1744359622.22266 "report.aux" "report.bbl" "report" 1744359626.33395 0
+  "./appsamp.bib" 1744359203 563 7f9a220590f67bd25dffb77bed006fb8 ""
+  "./reportNotes.bib" 1744359624 104 4d8bb863c86f3d7b03a471e9d4707f34 ""
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/bibtex/bst/revtex/apsrev4-2.bst" 1685674058 69609 e9dea59f0e753ccda3ddc8f5806d846d ""
-  "report.aux" 1744356284 3853 94e36c29f71e61f659468fcc2b0ceb5b "pdflatex"
+  "report.aux" 1744359624 4141 74868dc1faf44f49f76e75e0e01049a3 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1744356282.14219 "c:/Users/Ali/Desktop/Spring 2025/exp_modern_physics/git/nmr/final_report/report.tex" "report.pdf" "report" 1744356285.52176 0
+["pdflatex"] 1744359622.55678 "c:/Users/Ali/Desktop/Spring 2025/exp_modern_physics/git/nmr/final_report/report.tex" "report.pdf" "report" 1744359626.33479 0
   "C:/Users/Ali/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1744355872 311995 b3aa835c4c02f6fdac146381ede36be7 ""
   "C:/Users/Ali/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1707863654 24224102 b3fa1fd62264269a1affcd366cd1efd1 ""
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1001775420 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -76,6 +76,7 @@
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb" 1247596666 33993 9b89b85fd2d9df0482bd47194d1d3bf3 ""
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1247596666 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
+  "C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1247596667 32587 65067f817f408bc71a7312f3d9828a9b ""
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb" 1247596666 32442 c975af247b6702f7ca0c299af3616b80 ""
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
@@ -154,7 +155,7 @@
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/tex/latex/translations/dicts/translations-basic-dictionary-english.trsl" 1644048522 5588 0c1628daf15f4411ff1f463114c634a3 ""
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/tex/latex/translations/translations.sty" 1644048522 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "c:/Users/Ali/Desktop/Spring 2025/exp_modern_physics/git/nmr/final_report/report.tex" 1744356275 24401 0cc45f4d6ae3e39b1ba4943b444edb79 ""
+  "c:/Users/Ali/Desktop/Spring 2025/exp_modern_physics/git/nmr/final_report/report.tex" 1744359617 26392 64408fdecfe9b3c2a04abb1e2b920156 ""
   "figs/larmor-precession.png" 1744270463 125003 6c0c5936ae5075bc4170cdab3220b374 ""
   "figs/pi-2-pulse.png" 1744271116 370694 6d4de73abadd78d0f0c0be54f397ac5b ""
   "figs/pi-pulse.png" 1744271741 504801 f375b8d8b6f4cae6ec18f850f28f693b ""
@@ -163,9 +164,9 @@
   "figs/purcell/data3.png" 1744345801 90182 d3f0ca4b66163e08304a76802499aff7 ""
   "figs/purcell/data4.png" 1744345801 95962 5f2dfbf4a657f6bdc209f63d7d4ee893 ""
   "figs/purcell/simulation.png" 1744345801 106726 e9ecee1191ad0d605d075427b84f2c17 ""
-  "report.aux" 1744356284 3853 94e36c29f71e61f659468fcc2b0ceb5b "pdflatex"
-  "report.bbl" 1744356282 2610 a832ea598ed5635069525f34fbff2f56 "bibtex report"
-  "report.tex" 1744356275 24401 0cc45f4d6ae3e39b1ba4943b444edb79 ""
+  "report.aux" 1744359624 4141 74868dc1faf44f49f76e75e0e01049a3 "pdflatex"
+  "report.bbl" 1744359622 3185 69696943538ff73352d6c3dc59d2334b "bibtex report"
+  "report.tex" 1744359617 26392 64408fdecfe9b3c2a04abb1e2b920156 ""
   (generated)
   "report.aux"
   "report.log"

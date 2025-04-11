@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{2}%
+\begin{thebibliography}{3}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -50,11 +50,20 @@
 \providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
 \let\auto@bib@innerbib\@empty
 %</preamble>
+\bibitem [{\citenamefont {Griffiths}\ and\ \citenamefont
+  {Schroeter}(2018)}]{griffiths}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.~J.}\ \bibnamefont
+  {Griffiths}}\ and\ \bibinfo {author} {\bibfnamefont {D.~F.}\ \bibnamefont
+  {Schroeter}},\ }\href@noop {} {\emph {\bibinfo {title} {Introduction to
+  Quantum Mechanics}}},\ \bibinfo {edition} {third edition}\ ed.\ (\bibinfo
+  {publisher} {Cambridge University Press},\ \bibinfo {address} {Cambridge ;
+  New York, NY},\ \bibinfo {year} {2018})\BibitemShut {NoStop}%
 \bibitem [{Lab Manual()}]{lab-manual}%
   \BibitemOpen
   Lab Manual,\ \href@noop {} {\emph {\bibinfo {title} {Pulsed Nuclear Magnetic
   Resonance}}}\BibitemShut {NoStop}%
-\bibitem [{\citenamefont {Slichter}(1990)}]{abook}%
+\bibitem [{\citenamefont {Slichter}(1990)}]{principles-resonance}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~P.}\ \bibnamefont
   {Slichter}},\ }\href@noop {} {\emph {\bibinfo {title} {Principles of Magnetic
