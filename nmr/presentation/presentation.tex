@@ -15,6 +15,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage[LGR,T1]{fontenc}
+\usepackage{animate}
 
 
 \newcommand{\half}{$\sfrac{1}{2}$ }
@@ -73,7 +74,7 @@
     \begin{minipage}{0.4\linewidth}
         \begin{figure}
             \centering
-            \includegraphics[width = \linewidth]{setup.png}\\
+            \includegraphics[width = \linewidth]{setup.png}
             \caption{Typical $\Bnot$ and vector aligned with field}
         \end{figure}
     \end{minipage}
@@ -124,12 +125,12 @@
 
 \begin{frame}{Larmor Precession}
 
-    \begin{minipage}{0.6\linewidth}
+    \begin{minipage}{0.5\linewidth}
         Evolving an arbitrary spin vector
         \begin{gather*}
             \ket{\psi} = \cos\left(\sfrac{\theta}{2}\right)\ket{+}+ e^{i\phi}\sin\left(\sfrac{\theta}{2}\right) \ket{-}
         \end{gather*}
-        yields, 
+        yields, \cite{griffiths}
         \begin{align*}
             \langle S_x \rangle &= \frac{\hbar}{2} \sin(\theta)\cos(\gamma B_0 t)\\
             \langle S_y \rangle &= \frac{\hbar}{2} \sin(\theta)\sin(\gamma B_0 t)\\
@@ -140,7 +141,8 @@
             \omega_0 = \gamma B_0 
         \end{equation}
     \end{minipage}
-    \begin{minipage}{0.3\linewidth}
+    \hfill
+    \begin{minipage}{0.4\linewidth}
         % IF YOU WANT THE HAMILTONIAN AND EIGENSTATES COME BACK HERE % 
         % \begin{block}{Hamiltonian of System}
         %     \begin{equation}\label{eqn:hamiltonian}
@@ -151,108 +153,214 @@
         %         \ket{\pm} : E_\pm = \mp \frac{\hbar}{2} \gamma B_0 
         %     \end{equation}        
         % \end{block}
-
+        \begin{figure}
+            \centering
+            \includegraphics[width=\linewidth]{figs/larmor-precession.png}
+            \caption{Larmor precession about $\Bnot$}
+        \end{figure}
         
     \end{minipage}
     
 \end{frame}
 
+%------------------------------------------------
+ 
 
+\begin{frame}{Net Magnetization and Relaxation}
+
+    With many spins, any material can acquire a net magentization.
+
+    Along $\hat{z}$, statistical mechanics tells us that 
+
+    \begin{equation}
+        \frac{N_+}{N_-} = \exp\left(\frac{\gamma \hbar B_0}{k T}\right)
+    \end{equation}
+    with total \textbf{net magnetization}
+    \begin{equation}
+        M_z = \sum_i \gamma \hbar m_i = \frac{\hbar}{2} \gamma (N_+ - N_-)
+    \end{equation}
+    Expect spins to eventually re-align with $\hat{z}$ direction. 
+\end{frame}
 %------------------------------------------------
 
-\begin{frame}{Blocks of Highlighted Text}
-    In this slide, some important text will be \alert{highlighted} because it's important. Please, don't abuse it.
 
-    \begin{block}{Block}
-        Sample text
+\begin{frame}{Producing Transverse Magnetization}
+    \begin{block}{Circularly Polarized Field}
+        \begin{equation}
+            \vec{B_1}(t) = B_1\left[\cos(\omega_0t)\hat{x}+\sin(\omega_0t)\hat{y}\right]
+        \end{equation}        
     \end{block}
+    To ``tip'' magnetization into $xy$ plane, apply a circularly polarized $\Bone (t)$. Classical torque result in a rotating frame yields, 
 
-    \begin{alertblock}{Alertblock}
-        Sample text in red box
-    \end{alertblock}
-
-    \begin{examples}
-        Sample text in green box. The title of the block is ``Examples".
-    \end{examples}
+    
+    \begin{equation}
+        \vec{B}^* = \left(\left[\Bnot- \frac{\omega_0}{\gamma}\right] \hat{z}^* + B_1 \hat{x}^*\right)
+    \end{equation}
 \end{frame}
 
 %------------------------------------------------
-
-\begin{frame}{Multiple Columns}
-    \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-
-        \column{.45\textwidth} % Left column and width
-        \textbf{Heading}
-        \begin{enumerate}
-            \item Statement
-            \item Explanation
-            \item Example
-        \end{enumerate}
-
-        \column{.45\textwidth} % Right column and width
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
-
-    \end{columns}
+\begin{frame}{$\halfpi$ and $\pi$ pusles}
+    \begin{figure}
+        \centering
+        \begin{subfigure}{0.4\linewidth}
+            \includegraphics[width = \linewidth]{figs/pi-2-pulse.png}
+            \caption{$\halfpi$ pulse produces transverse magentization}
+        \end{subfigure}
+        \begin{subfigure}{0.4\linewidth}
+            \includegraphics[width = \linewidth]{figs/pi-pulse.png}
+            \caption{$\pi$ pulse flips magentization from $+\hat{z}$ to $-\hat{z}$}
+        \end{subfigure}
+        \caption{$\langle \vec{S} \rangle$ over time during a $\halfpi$ and $\pi$ pulse}\label{fig:pulse-spirals}
+    \end{figure}
 \end{frame}
 
-%------------------------------------------------
-\section{Second Section}
-%------------------------------------------------
+\begin{frame}{Spin-Lattice Relaxation $(T_1)$}
+    Time constant associated with decay of net magnetization back towards $+\hat{z}$. 
 
-\begin{frame}{Table}
-    \begin{table}
-        \begin{tabular}{l l l}
-            \toprule
-            \textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2} \\
-            \midrule
-            Treatment 1         & 0.0003262           & 0.562               \\
-            Treatment 2         & 0.0015681           & 0.910               \\
-            Treatment 3         & 0.0009271           & 0.296               \\
-            \bottomrule
-        \end{tabular}
-        \caption{Table caption}
-    \end{table}
+    \begin{equation}\label{eqn:bloch-t1}
+        \frac{d \vec{M}(t)}{dt} = \frac{\vec{M}(t)-\vec{M_0}}{T_1}
+    \end{equation}
+    Referred to as the \textbf{Bloch equations}. 
 \end{frame}
 
-%------------------------------------------------
+\begin{frame}{Spin-Spin Relaxation $(T_2)$}
+    Time constant associated with the decay of the relative ``coherence'' of spins in $xy$ plane, with associated Bloch equation,    
 
-\begin{frame}{Theorem}
-    \begin{theorem}[Mass--energy equivalence]
-        $E = mc^2$
-    \end{theorem}
+    \begin{equation}\label{eqn:bloch-t2}
+        \frac{d\vec{M}_{x,y}}{dt} = \frac{\vec{M}_{x,y}}{T_2}
+    \end{equation}
 \end{frame}
 
-%------------------------------------------------
-
-\begin{frame}{Figure}
-    Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
-    %\begin{figure}
-    %\includegraphics[width=0.8\linewidth]{test}
-    %\end{figure}
+\begin{frame}{Free Induction Decay and $T_2^*$}
+    \begin{itemize}
+        \item Observations performed with a pickup coil detecting flux in transverse direction
+        \item Magnetization becomes increasingly decoherent; produces \textbf{free induction decay (FID)} signal
+        \item Combined effects of spin-lattice, spin-spin, and field inhomogeneities \cite{principles-resonance}
+    \end{itemize}
+    \begin{equation}
+        \frac{1}{T_2^*} = \frac{1}{T_1}+\frac{1}{T_2}+ \gamma \Delta B_0
+    \end{equation}
+    
 \end{frame}
+% FAILED ATTEMPT AT ANIMATION - WILL REMOVE LATER 
+% %------------------------------------------------
+% \begin{frame}{$\halfpi$ and $\pi$ pusles animated?}
+%     \begin{figure}
+%         \centering
+%         \begin{subfigure}{0.4\linewidth}
+%             \animategraphics[loop, width = \linewidth]{10}{figs/gif_attempt/pi_2_pulse/pi_2_pulse_2-}{0}{99}
+%             \caption{$\halfpi$ pulse produces transverse magentization}
+%         \end{subfigure}
+%         \begin{subfigure}{0.4\linewidth}
+%             \includegraphics[width = \linewidth]{figs/pi-pulse.png}
+%             \caption{$\pi$ pulse flips magentization from $+\hat{z}$ to $-\hat{z}$}
+%         \end{subfigure}
+%         \caption{$\langle \vec{S} \rangle$ over time during a $\halfpi$ and $\pi$ pulse}\label{fig:pulse-spirals}
+%     \end{figure}
+    
+% \end{frame}
+
+
 
 %------------------------------------------------
 
-\begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
-    \frametitle{Citation}
-    An example of the \verb|\cite| command to cite within the presentation:\\~
 
-    This statement requires citation \cite{p1}.
-\end{frame}
 
-%------------------------------------------------
+
+% \begin{frame}{Blocks of Highlighted Text}
+%     In this slide, some important text will be \alert{highlighted} because it's important. Please, don't abuse it.
+
+%     \begin{block}{Block}
+%         Sample text
+%     \end{block}
+
+%     \begin{alertblock}{Alertblock}
+%         Sample text in red box
+%     \end{alertblock}
+
+%     \begin{examples}
+%         Sample text in green box. The title of the block is ``Examples".
+%     \end{examples}
+% \end{frame}
+
+% %------------------------------------------------
+
+% \begin{frame}{Multiple Columns}
+%     \begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+
+%         \column{.45\textwidth} % Left column and width
+%         \textbf{Heading}
+%         \begin{enumerate}
+%             \item Statement
+%             \item Explanation
+%             \item Example
+%         \end{enumerate}
+
+%         \column{.45\textwidth} % Right column and width
+%         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+
+%     \end{columns}
+% \end{frame}
+
+% %------------------------------------------------
+% \section{Second Section}
+% %------------------------------------------------
+
+% \begin{frame}{Table}
+%     \begin{table}
+%         \begin{tabular}{l l l}
+%             \toprule
+%             \textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2} \\
+%             \midrule
+%             Treatment 1         & 0.0003262           & 0.562               \\
+%             Treatment 2         & 0.0015681           & 0.910               \\
+%             Treatment 3         & 0.0009271           & 0.296               \\
+%             \bottomrule
+%         \end{tabular}
+%         \caption{Table caption}
+%     \end{table}
+% \end{frame}
+
+% %------------------------------------------------
+
+% \begin{frame}{Theorem}
+%     \begin{theorem}[Mass--energy equivalence]
+%         $E = mc^2$
+%     \end{theorem}
+% \end{frame}
+
+% %------------------------------------------------
+
+% \begin{frame}{Figure}
+%     Uncomment the code on this slide to include your own image from the same directory as the template .TeX file.
+%     %\begin{figure}
+%     %\includegraphics[width=0.8\linewidth]{test}
+%     %\end{figure}
+% \end{frame}
+
+% %------------------------------------------------
+
+% \begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+%     \frametitle{Citation}
+%     An example of the \verb|\cite| command to cite within the presentation:\\~
+
+%     This statement requires citation \cite{p1}.
+% \end{frame}
+
+% %------------------------------------------------
 
 \begin{frame}{References}
     \footnotesize
+    \bibliographystyle{ieeetr}
     \bibliography{reference.bib}
-    \bibliographystyle{apalike}
+
 \end{frame}
 
-%------------------------------------------------
+% %------------------------------------------------
 
-\begin{frame}
-    \Huge{\centerline{\textbf{The End}}}
-\end{frame}
+% \begin{frame}
+%     \Huge{\centerline{\textbf{The End}}}
+% \end{frame}
 
 %----------------------------------------------------------------------------------------
 
