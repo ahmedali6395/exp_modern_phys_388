@@ -74,7 +74,7 @@
     \begin{minipage}{0.4\linewidth}
         \begin{figure}
             \centering
-            \includegraphics[width = \linewidth]{setup.png}
+            \includegraphics[width = \linewidth]{figs/setup.png}
             \caption{Typical $\Bnot$ and vector aligned with field}
         \end{figure}
     \end{minipage}
@@ -253,11 +253,194 @@
     \end{minipage}
     
 %------------------------------------------------
-\section{Apparatus and Experimental Procedures}
 \end{frame}
 
-\begin{frame}{I am ALI AHMED}
+
+\section{Apparatus and Experimental Procedures}
+
+\begin{frame}{Apparatus: TeachSpin NMR Set} 
+    \begin{figure}
+        \includegraphics[width = 0.8\linewidth]{figs/teachspin.png}
+        \caption{Pulsed/CW NMR Spectrometer, PS2-B}
+    \end{figure}
 \end{frame}
+
+\begin{frame}{Permanent Magnet}
+    \begin{itemize}
+        \item .5 T magnetic field
+        \item RF sample measurement coil
+        \item Tuning capacitors (find resonance with RF coil)
+        \item Thermal servo units/Field gradient coils 
+    \end{itemize}
+
+    \begin{figure}
+        \centering
+        \begin{subfigure}{0.35\linewidth}
+            \includegraphics[width = \linewidth]{figs/above.png}
+            \caption{Capacitors}
+        \end{subfigure}
+        \begin{subfigure}{0.3\linewidth}
+            \includegraphics[width = \linewidth]{figs/coils.png}
+            \caption{RF Coil}
+        \end{subfigure}
+        \caption{Diagrams of RF coil and capacitors}\label{fig:coils}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{PS2 Controller}
+    \begin{itemize}
+        \item Field gradient coil control $\rightarrow$ Maximize homogeneity
+        \item Magnet temperature control $\rightarrow$ Indicate reference temperature 
+    \end{itemize}
+    \begin{figure}
+        \includegraphics[width = 0.6\linewidth]{figs/temp-controller.png}
+        \caption{Temperature controller}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Mainframe}
+    \begin{itemize}
+        \item Receiver
+        \begin{itemize}
+            \item Process RF sample signal 
+            \item Tunable gain and filter
+        \end{itemize}
+        \item Synthesizer
+        \begin{itemize}
+            \item Generates RF excitation signal 
+        \end{itemize}
+        \item Pulse Programmer $\rightarrow$ Some Controls: 
+        \begin{itemize}
+            \item A and B length
+            \item A and B delay time
+        \end{itemize} 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Some Notes on Pulse Sequencing}
+    Recall,
+    \begin{alertblock}{$\halfpi$ pulse}
+        \begin{itemize}
+            \item Flips net magnetization into $xy$ plane
+            \item Generates FID signal
+        \end{itemize}
+    \end{alertblock}
+
+    \begin{alertblock}{$\pi$ pulse}
+        \begin{itemize}
+            \item Flips net magnetization along $-\hat{z}$ axis
+            \item No FID signal
+        \end{itemize}
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}{What happens after a $\halfpi$ pulse?}
+    \begin{itemize}
+        \item FID signal decays primarily due to spin dephasing from field inhomogeneities* 
+        \item Spins decay back to the $+\hat{z}$-axis (even after FID signal disappears)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Dephasing due to field inhomogeneities}
+    \begin{itemize}
+        \item Static magnetic field pointing in z produces a torque that causes the spin to rotate in the $xy$ plane 
+        \item Different field magnitudes cause different rotation speeds 
+        \item If all the spins are aligned in the $xy$ plane, FID signal is strong
+        \item If they are misaligned (out of phase), FID signal is weak
+        \item This makes it hard to measure $T_2$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{What happens after a $\pi$ pulse?}
+    \begin{itemize}
+        \item FID does not form since spins are not in $xy$ plane
+        \item Spins decay back to the +z-axis (no FID signal forms) 
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{$T_1$ Measurement Sequence: $\halfpi - \pi$}
+    \begin{itemize}
+        \item Apply a $\halfpi$ pulse.
+        \begin{itemize}
+            \item Magnetization enters $xy$ plane and dephases
+            Spins slowly decay to $+\hat{z}$
+        \end{itemize}
+        \item Apply another $\halfpi$ pulse a little later
+        \begin{itemize}
+            \item $xy$ spins kicked to the $-\hat{z}$-axis (no FID signal)
+            \item $+\hat{z}$ spins kicked to the $xy$ (FID signal)
+        \end{itemize}
+        \item Gives an idea of how fast longitudinal spins decay
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{$T_1$ Measurement Sequence: $\pi-\halfpi$}
+    \begin{itemize}
+        \item Apply a $\pi$ pulse.
+        \begin{itemize}
+            \item Net magnetization jumps to $-\hat{z}$ (no signal)
+            \item Spins slowly decay to $+\hat{z}$
+        \end{itemize}
+        \item Apply a $\halfpi$ pulse a little later
+        \begin{itemize}
+            \item Spins along $-\hat{z}$ are kicked to $-\hat{x}$
+            \item Spins along +z are kicked to $+\hat{x}$
+            \item If no FID signal is produced (half life)
+        \end{itemize}
+        \item Much more elegant
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{$T_2$ Measurement Sequence: $\halfpi-\pi$}
+    \begin{itemize}
+        \item Apply a $\halfpi$ pulse $\rightarrow$ Net magnetization enters the $xy$ plane and dephases 
+        \item Apply a $\pi$ pulse a little later
+            \begin{itemize}
+                \item Spins remain in $xy$ plane, but `reverse' rotation direction
+                \item Spins rephase a little later 
+            \end{itemize}
+        \item The decay in rephasing signal follows $T_2$
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Using More Pulses}
+    \begin{itemize}
+        \item To better characterize the decay multiple $\pi$ pulses are applied
+        \item Must be close together to mitigate molecular diffusion
+        \begin{itemize}
+            \item Spin dephases at one speed and returns at another 
+            \item Will not rephase with the rest
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Experimental Procedure: Resonance}
+    \begin{itemize}
+        \item Tune RF frequency to proton resonance (~21 MHz) $\rightarrow$ Minimize beats
+        \item Use tuning capacitor to maximize FID signal
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{$\halfpi$ and $\pi$ pulses}
+    \begin{itemize}
+        \item Apply a single RF pulse and vary its length
+        \item Find the length with maximum FID signal
+        \item This is a $\halfpi$ pulse
+        \item Double the length to find $\pi$ pulse length
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sequencing}
+    \begin{itemize}
+        \item Use adequate pulse sequences to measure decay times
+        \item Record data for processing to calculate characteristic times $T_1$ and $T_2$
+    \end{itemize}
+\end{frame}
+
 % FAILED ATTEMPT AT ANIMATION - WILL REMOVE LATER 
 % %------------------------------------------------
 % \begin{frame}{$\halfpi$ and $\pi$ pusles animated?}
