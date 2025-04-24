@@ -751,6 +751,11 @@ INPUT C:\Users\Ali\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmsso8.t
 INPUT C:\Users\Ali\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmsso8.tfm
 INPUT .\figs\pi-2-pulse.png
 INPUT .\figs\pi-pulse.png
+INPUT .\figs\basic_fid.png
+INPUT .\figs\basic_fid.png
+INPUT .\figs\basic_fid.png
+INPUT .\figs\basic_fid.png
+INPUT .\figs\basic_fid.png
 INPUT .\presentation.bbl
 INPUT .\presentation.bbl
 OUTPUT presentation.nav

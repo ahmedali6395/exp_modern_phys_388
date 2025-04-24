@@ -224,7 +224,7 @@
 \end{frame}
 
 \begin{frame}{Spin-Spin Relaxation $(T_2)$}
-    Time constant associated with the decay of the relative ``coherence'' of spins in $xy$ plane, with associated Bloch equation,    
+    Time constant associated with the decay of the relative ``coherence'' of spins in $xy$ plane, with associated Bloch equation \cite{principles-resonance},    
 
     \begin{equation}\label{eqn:bloch-t2}
         \frac{d\vec{M}_{x,y}}{dt} = \frac{\vec{M}_{x,y}}{T_2}
@@ -232,15 +232,28 @@
 \end{frame}
 
 \begin{frame}{Free Induction Decay and $T_2^*$}
-    \begin{itemize}
-        \item Observations performed with a pickup coil detecting flux in transverse direction
-        \item Magnetization becomes increasingly decoherent; produces \textbf{free induction decay (FID)} signal
-        \item Combined effects of spin-lattice, spin-spin, and field inhomogeneities \cite{principles-resonance}
-    \end{itemize}
-    \begin{equation}
-        \frac{1}{T_2^*} = \frac{1}{T_1}+\frac{1}{T_2}+ \gamma \Delta B_0
-    \end{equation}
+
+    \begin{minipage}{0.6\textwidth}
+        \begin{itemize}
+            \item Observations performed with a pickup coil detecting flux in transverse direction
+            \item Magnetization becomes increasingly decoherent; produces \textbf{free induction decay (FID)} signal
+            \item Combined effects of spin-lattice, spin-spin, and field inhomogeneities \cite{principles-resonance}
+        \end{itemize}
+        \begin{equation}
+            \frac{1}{T_2^*} = \frac{1}{T_1}+\frac{1}{T_2}+ \gamma \Delta B_0
+        \end{equation}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.3\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figs/basic_fid.png}
+            \caption{Basic FID signal of mineral oil \cite{lab-manual}}
+        \end{figure}
+    \end{minipage}
     
+%------------------------------------------------
+\section{Apparatus and Experimental Procedures}
 \end{frame}
 % FAILED ATTEMPT AT ANIMATION - WILL REMOVE LATER 
 % %------------------------------------------------

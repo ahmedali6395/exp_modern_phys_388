@@ -1,1 +1,2 @@
 \beamer@sectionintoc {1}{Principles of NMR}{3}{0}{1}
+\beamer@sectionintoc {2}{Apparatus and Experimental Procedures}{10}{0}{2}
