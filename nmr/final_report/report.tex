@@ -153,7 +153,10 @@ The study of nuclear magnetic resonance (NMR) utilizes weak magnetic fields to a
 
 \subsection{\label{subsec:larmor} Larmor Precession}
 
-We will start with the phenomena of Larmor precession, occuring when atoms are placed in a strong magnetic field. Larmor precession most readily occurs when the nucleus has a net magnetic moment i.e. there is an odd number of protons, producing a spin $\half$ system. In this case, the magnetic dipole moment $\mu$ of the nucleus is described as
+We will start with the phenomena of Larmor precession, occuring when atoms are placed in a strong magnetic field.
+% Larmor precession most readily occurs when the nucleus has a net magnetic moment i.e. there is an odd number of protons, producing a spin $\half$ system.  %% SEONGSHIK ROASTED US FOR THIS
+A nucleus has nonzero spin if it contains an odd total number of nucleons (protons plus neutrons). Spin-$\half$ systems (e.g. $^1H$, $^13C$, $^19F$, etc.) arise when there is an odd total nucleon number.  %% fixed based on his feedback
+In this case, the magnetic dipole moment $\mu$ of the nucleus is described as
 
 \begin{equation}
     \vec{\mu} = \gamma \vec{S}
@@ -284,16 +287,16 @@ So far, we have discussed the uniform $\vec{B_0}$ field. However, to produce a t
     \vec{B_1}(t) = B_1\left[\cos(\omega_0t)\hat{x}+\sin(\omega_0t)\hat{y}\right]
 \end{equation}
 
-Note that $\vec{B_1}(t)$ oscillates at the Larmor frequency. Thus, the new Hamiltonian has an extra time-dependant term, still in the form of Equation \ref{eqn:base-hamiltonian}. Solving this Hamiltonian is beyond the scope of this lab report; however, can still apply the classical torque result \cite{principles-resonance}
+Note that $\vec{B_1}(t)$ oscillates at the Larmor frequency. Thus, the new Hamiltonian has an extra time-dependant term, still in the form of Equation \ref{eqn:base-hamiltonian}. Solving this Hamiltonian is beyond the scope of this lab report; however, we can still apply the classical torque result to obtain \cite{principles-resonance}
 
 \begin{equation}
-    \vec{\tau} = \vec{\mu} \times \gamma \left[\vec{B_0}+\vec{B_1}(t)\right]
+    \vec{\tau} = \vec{\mu} \times  \left[\vec{B_0}+\vec{B_1}(t)\right]
 \end{equation}
 
 by transforming into a rotating reference frame (rotating at the Larmor frequency), we find that the effective field becomes
 
 \begin{equation}
-    \vec{\tau}^* = (B_0 - \sfrac{\mu}{\gamma}) \hat{z}^*+ B_1 \hat{x}^*
+    \vec{B}^* = (B_0 - \sfrac{\mu}{\gamma}) \hat{z}^*+ B_1 \hat{x}^*
 \end{equation}
 
 In this rotating frame, applying a circularly polarized magnetic field has the effect of ``tipping'' the magnetization into a transverse plane. Transforming back into the lab frame, we will observe the magnetization in the x-y plane still precessing about the z-axis.
@@ -332,7 +335,7 @@ As a practical matter, the Larmor frequency generally lies in the radio frequenc
 
 \subsection{\label{sec:t2} Spin-Spin Relaxation}
 
-Along with the decay of the transverse magnetization, we observe a different kind of decay; the decay of the relative phasing of all of the magnetic moments. After a $\halfpi$ pulse, the magnetic moments are in phase with each other---however, due to mutual interactions, these moments slowly turn out of phase. This dephasing is known as \textbf{spin-spin relaxation}, and obeys a similar relationship to Equation \ref{eqn:bloch-t1}. In particular, $\vec{M_{x,y}}= 0$ and we have
+Along with the decay of the transverse magnetization, we observe a different kind of decay; the decay of the relative phasing of all of the magnetic moments. After a $\halfpi$ pulse, the magnetic moments are in phase with each other---however, due to mutual interactions, these moments slowly turn out of phase. This dephasing is known as \textbf{spin-spin relaxation}, and obeys a similar relationship to Equation \ref{eqn:bloch-t1}. In particular, the external magnetic field denoted by $\vec{M}_0$ in Equation \ref{eqn:bloch-t1} is $\vec{0}$. Adapting this, we obtain Equation \ref{eqn:bloch-t2}.
 
 \begin{equation}\label{eqn:bloch-t2}
     \frac{d\vec{M_{x,y}}}{dt} = \frac{\vec{M_{x,y}}}{T_2}
@@ -395,7 +398,7 @@ It is critical that the frequency of the RF signal be tuned to match the Larmor 
 
 There are two traditional pulse sequences that allow for a T1 measurement: $\halfpi$ and $\pi-\halfpi$. By applying a single $\halfpi$ pulse, the net magnetization vector is tipped into the x-y plane, producing an FID signal. This signal quickly decays primarily due to the dephasing of individual spins, but also realignment of spins with the z-axis. Even after this signal disappears, the net magnetization vector is still decaying towards the z-axis. At any moment in time, another $\halfpi$ pulse can be applied. When this happens, any spins aligned with the z-axis are thrown back in the x-y plane and can be measured, while those in the x-y plane are rotated out of the measurement region. This means that by applying two $\halfpi$ pulses, one can effectively check the decay of net magnetization and characterize it with a time constant.
 
-Alternatively, one can apply a $\pi$ pulse, which inverts the net magnetization to the negative z-axis. This produces a negligible FID signal, since the spins dephase before entering the measurement region (x-y plane). In spite of this, the net magnetization vector is still decaying towards the z-axis. At any moment in time, a $\halfpi$ pulse can be applied to, much like before, check the decay of the net magnetization. When the FID signal following a $\halfpi$ pulse is zero, half of the spins have decayed back to the z-axis. This is known as the zero crossing time and can be used to calculate the time constant of the decay. This method is preferred, since a null signal can easily be identified.
+Alternatively, one can apply a $\pi$ pulse, which inverts the net magnetization to $-\hat{z}$. This produces a negligible FID signal, since the spins dephase before entering the measurement region (x-y plane). In spite of this, the net magnetization vector is still decaying towards $+\hat{z}$. At any moment in time, a $\halfpi$ pulse can be applied to, much like before, check the decay of the net magnetization. When the FID signal following a $\halfpi$ pulse is zero, half of the spins have decayed back to $+\hat{z}$. This is known as the \textbf{zero crossing time} and can be used to calculate the time constant of the decay. This method is preferred, since a null signal can easily be identified.
 
 
 
