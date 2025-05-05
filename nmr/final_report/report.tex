@@ -1,24 +1,8 @@
-% ****** Start of file apssamp.tex ******
-%
-%   This file is part of the APS files in the REVTeX 4.2 distribution.
-%   Version 4.2a of REVTeX, December 2014
-%
-%   Copyright (c) 2014 The American Physical Society.
-%
-%   See the REVTeX 4 README file for restrictions and more information.
-%
-% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
-% as well as the rest of the prerequisites for REVTeX 4.2
-%
-% See the REVTeX 4 README file
-% It also requires running BibTeX. The commands are as follows:
-%
-%  1)  latex apssamp.tex
-%  2)  bibtex apssamp
-%  3)  latex apssamp.tex
-%  4)  latex apssamp.tex
-%
-\documentclass[%
+% template: apssamp.tex
+
+
+\documentclass[
+    floatfix,  % fix: "LaTeX: A float is stuck (cannot be placed); try class option [floatfix]."
     reprint,
     %superscriptaddress,
     %groupedaddress,
@@ -37,11 +21,10 @@
     %rmp,
     %prstab,
     %prstper,
-    %floatfix,
 ]{revtex4-2}
 
 
-\usepackage{gensymb}
+% \usepackage{gensymb}
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
@@ -67,6 +50,8 @@
 \usepackage{subcaption}
 \usepackage{siunitx}
 \usepackage[LGR,T1]{fontenc}
+\usepackage{textcomp}  % for \texteuro, \textperthousand, etc.
+\usepackage{lmodern}
 \usepackage{amsmath}
 
 \DeclarePairedDelimiter\bra{\langle}{\rvert}
@@ -105,7 +90,7 @@
 %  but any date may be explicitly specified
 
 \begin{abstract}
-    This intermediate report summarizes our investigation of pulsed nuclear magnetic resonance (NMR) using the TeachSpin spectrometer. Building on the principles of Larmor precession and the quantum-mechanical behavior of spin-\half nuclei, we examined the response of magnetic moments when subjected to time-dependent radio frequency (RF) pulses. We began with a theoretical framework covering key concepts such as the net magnetization arising from the Boltzmann population difference and the associated longitudinal ($T_1$) and transverse ($T_2$) relaxation processes. In our experiments, specially-tuned $\halfpi$ and $\pi$ pulses were applied to tip and invert the magnetization, thereby generating free induction decay (FID) signals and spin echoes. A simulation model incorporating the exponential decay of echo amplitudes provided a basis for comparing the expected with the observed signal features. Data analysis of envelope decay for mineral oil samples yielded an experimental $T_1 = \SI[uncertainty-mode=separate]{34\pm0.5}{\milli\second}$, $T_2 = \SI[uncertainty-mode=separate]{44\pm3}{\milli\second}$. Our study demonstrates the successful application of pulsed NMR techniques in measuring relaxation times, validating both the theoretical description and the simulation model.
+    This intermediate report summarizes our investigation of pulsed nuclear magnetic resonance (NMR) using the TeachSpin spectrometer. Building on the principles of Larmor precession and the quantum-mechanical behavior of spin-$\half$ nuclei, we examined the response of magnetic moments when subjected to time-dependent radio frequency (RF) pulses. We began with a theoretical framework covering key concepts such as the net magnetization arising from the Boltzmann population difference and the associated longitudinal ($T_1$) and transverse ($T_2$) relaxation processes. In our experiments, specially-tuned $\halfpi$ and $\pi$ pulses were applied to tip and invert the magnetization, thereby generating free induction decay (FID) signals and spin echoes. A simulation model incorporating the exponential decay of echo amplitudes provided a basis for comparing the expected with the observed signal features. Data analysis of envelope decay for mineral oil samples yielded an experimental $T_1 = \SI[uncertainty-mode=separate]{34\pm0.5}{\milli\second}$, $T_2 = \SI[uncertainty-mode=separate]{44\pm3}{\milli\second}$. Our study demonstrates the successful application of pulsed NMR techniques in measuring relaxation times, validating both the theoretical description and the simulation model.
 \end{abstract}
 
 \maketitle
@@ -169,10 +154,9 @@ These equations are the classical precession equations; our spin vector will pre
 
 This frequency is known as the \textbf{Larmor frequency}, and $\theta$ indicates the angle between $\vec{\mu}$ and $\vec{B_0}$. \cite{griffiths}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     {\includegraphics[width = 0.6\linewidth]{figs/larmor-precession.png}}
-
     \caption{Larmor precession about $\vec{B_0}$}
 \end{figure}
 
@@ -183,6 +167,9 @@ $\theta$ characterizes the system, up to a phase,
 \end{gather*}
 
 These equations above can also be derived from a classical viewpoint; we can calculate the torque $\vec{\tau}  =\vec{ \mu }\times \vec{B_0}$ on the nucleus by the magnetic moment and use Newton's second law to derive a similar precession.
+
+
+
 
 \subsection{\label{subsec:pulses} Net Magnetization and Relaxation}
 
@@ -353,7 +340,7 @@ From a heuristic standpoint, this makes sense; we have a decaying envelope chara
 
 Plotting these results, we obtain Figure \ref{fig:simulation}.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width = 0.8\linewidth]{figs/purcell/simulation.png}
     \caption{Simulation of the beating behavior in a Carr-Purcell sequence with 60 $\pi$ pulses. Each echo is modeled as a Gaussian pulse. The echo amplitude decays exponentially (simulating $T_2$ decay) and is modulated by a cosine factor (to incorporate beating effects). Additionally, we overlay a smooth envelope curve that passes through the echo peak amplitudes.}\label{fig:simulation}
@@ -434,8 +421,6 @@ In this intermediate report, we discussed our efforts to measure spin-lattice ($
 \nocite{*}
 
 
-\bibliography{appsamp.bib}% Produces the bibliography via BibTeX.
+\bibliography{appsamp.bib} % Produces the bibliography via BibTeX.
 
 \end{document}
-%
-% ****** End of file apssamp.tex ******
