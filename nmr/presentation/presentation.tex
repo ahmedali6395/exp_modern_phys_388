@@ -4,6 +4,7 @@
 
 \documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}
 \usetheme{SimpleDarkBlue}
+% \usecolortheme{owl}
 
 \usepackage{hyperref}
 \usepackage{graphicx} % Allows including images
@@ -187,7 +188,7 @@
 \begin{frame}{Producing Transverse Magnetization}
     \begin{block}{Circularly Polarized Field}
         \begin{equation}
-            \vec{B_1}(t) = B_1\left[\cos(\omega_0t)\hat{x}+\sin(\omega_0t)\hat{y}\right]
+            \vec{B_1}(t) = B_1\cos(\omega_0t)\hat{x}
         \end{equation}        
     \end{block}
     To ``tip'' magnetization into $xy$ plane, apply a circularly polarized $\Bone (t)$. Classical torque result in a rotating frame yields, 
@@ -300,22 +301,32 @@
 \end{frame}
 
 \begin{frame}{Mainframe}
-    \begin{itemize}
-        \item Receiver
+    \begin{minipage}{0.4\linewidth}
         \begin{itemize}
-            \item Process RF sample signal 
-            \item Tunable gain and filter
+            \item Receiver
+            \begin{itemize}
+                \item Process RF sample signal 
+                \item Tunable gain and filter
+            \end{itemize}
+            \item Synthesizer
+            \begin{itemize}
+                \item Generates RF excitation signal 
+            \end{itemize}
+            \item Pulse Programmer $\rightarrow$ Some Controls: 
+            \begin{itemize}
+                \item A and B length
+                \item A and B delay time
+            \end{itemize} 
         \end{itemize}
-        \item Synthesizer
-        \begin{itemize}
-            \item Generates RF excitation signal 
-        \end{itemize}
-        \item Pulse Programmer $\rightarrow$ Some Controls: 
-        \begin{itemize}
-            \item A and B length
-            \item A and B delay time
-        \end{itemize} 
-    \end{itemize}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.5\linewidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width = 0.9\linewidth]{figs/mainframe.png}
+            \caption{Mainframe (deprecated)}
+        \end{figure}
+    \end{minipage}
 \end{frame}
 
 \begin{frame}{Some Notes on Pulse Sequencing}

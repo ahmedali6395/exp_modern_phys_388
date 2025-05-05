@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex presentation"] 1745513939.92458 "presentation.aux" "presentation.bbl" "presentation" 1745514034.9078 0
+["bibtex presentation"] 1745515350.18949 "presentation.aux" "presentation.bbl" "presentation" 1745515990.11019 0
   "./reference.bib" 1745470144 656 edb271d51b058cb7afe50368218c300a ""
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/ieeetr.bst" 1291864344 18361 1a00e58565e7f19bf2b3e1bfb82254ae ""
-  "presentation.aux" 1745514033 5592 79905b47fab4b57cb8898451095a478f "lualatex"
+  "presentation.aux" 1745515988 5592 79905b47fab4b57cb8898451095a478f "lualatex"
   (generated)
   "presentation.bbl"
   "presentation.blg"
   (rewritten before read)
-["lualatex"] 1745514030.07727 "c:/Users/Ali/Desktop/Spring 2025/exp_modern_physics/git/nmr/presentation/presentation.tex" "presentation.pdf" "presentation" 1745514034.90841 0
-  "C:/Users/Ali/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1745465771 311995 b3aa835c4c02f6fdac146381ede36be7 ""
+["lualatex"] 1745515981.85304 "c:/Users/Ali/Desktop/Spring 2025/exp_modern_physics/git/nmr/presentation/presentation.tex" "presentation.pdf" "presentation" 1745515990.11169 0
+  "C:/Users/Ali/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1745514931 311995 b3aa835c4c02f6fdac146381ede36be7 ""
   "C:/Users/Ali/AppData/Local/MiKTeX/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1706745619 127339 88fa16992cfc0d6810c8903ce0f9efae ""
   "C:/Users/Ali/AppData/Local/MiKTeX/luatex-cache/generic/fonts/otl/lmsans10-regular.luc" 1707727146 127658 207e907ac5bc111db52326765dc82e81 ""
   "C:/Users/Ali/AppData/Local/MiKTeX/luatex-cache/generic/names/luaotfload-names.luc.gz" 1694640647 75287 c4c87d89cab6dcd0eb71f0d1979817b7 ""
@@ -320,22 +320,23 @@
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/tex/luatex/luaotfload/luaotfload-tounicode.lua" 1693506766 7528 c5b104d6d5d1d86f13d45294df8ac77f ""
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/tex/luatex/luaotfload/luaotfload-unicode.lua" 1693506766 7917 2ac5fb697191fbe7f30f4ab4e5f7037b ""
   "C:/Users/Ali/AppData/Local/Programs/MiKTeX/tex/luatex/luaotfload/luaotfload.lua" 1693506766 13565 c514d92e6ff6be7b2f35d8e0eb56185c ""
-  "c:/Users/Ali/Desktop/Spring 2025/exp_modern_physics/git/nmr/presentation/presentation.tex" 1745514029 19960 fcd4926142950336824d5a279eee88f0 ""
+  "c:/Users/Ali/Desktop/Spring 2025/exp_modern_physics/git/nmr/presentation/presentation.tex" 1745515980 20326 8fa7c2717c2356c8d0c9a35e9e6f5045 ""
   "figs/above.png" 1745513721 721253 c0fac60758986da24479c47f3139f188 ""
   "figs/basic_fid.png" 1745472115 10143 511728438533bdc38d6a591d7a9f2d48 ""
   "figs/coils.png" 1745513731 875115 7556751bd79639471b65b9dab3154008 ""
   "figs/larmor-precession.png" 1744270463 125003 6c0c5936ae5075bc4170cdab3220b374 ""
+  "figs/mainframe.png" 1745514460 330549 9c3822a311dd5b4d6bb0c1c89aac4642 ""
   "figs/pi-2-pulse.png" 1744271116 370694 6d4de73abadd78d0f0c0be54f397ac5b ""
   "figs/pi-pulse.png" 1744271741 504801 f375b8d8b6f4cae6ec18f850f28f693b ""
   "figs/setup.png" 1745460971 95213 dd01f442ff3e72120cef842af2880108 ""
   "figs/teachspin.png" 1745513224 293786 231436cde9a084fba2454ce5ec1bea42 ""
   "figs/temp-controller.png" 1745513743 552606 7261aa11f2e035dd99f1f1f68f17ddd5 ""
-  "presentation.aux" 1745514033 5592 79905b47fab4b57cb8898451095a478f "lualatex"
-  "presentation.bbl" 1745513940 437 884b0cb503cdff506dcfd3b815e8a7e1 "bibtex presentation"
-  "presentation.nav" 1745514033 2964 a541021f028548ea9f0caf63ea88b364 "lualatex"
-  "presentation.out" 1745514033 371 060d744a46e1aabee287367dad4352e2 "lualatex"
-  "presentation.tex" 1745514029 19960 fcd4926142950336824d5a279eee88f0 ""
-  "presentation.toc" 1745514033 127 b4c791327392eb36b0349a229fa86682 "lualatex"
+  "presentation.aux" 1745515988 5592 79905b47fab4b57cb8898451095a478f "lualatex"
+  "presentation.bbl" 1745515350 437 884b0cb503cdff506dcfd3b815e8a7e1 "bibtex presentation"
+  "presentation.nav" 1745515988 2964 a541021f028548ea9f0caf63ea88b364 "lualatex"
+  "presentation.out" 1745515988 371 060d744a46e1aabee287367dad4352e2 "lualatex"
+  "presentation.tex" 1745515980 20326 8fa7c2717c2356c8d0c9a35e9e6f5045 ""
+  "presentation.toc" 1745515988 127 b4c791327392eb36b0349a229fa86682 "lualatex"
   (generated)
   "presentation.aux"
   "presentation.log"
