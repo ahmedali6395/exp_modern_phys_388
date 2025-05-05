@@ -13,7 +13,7 @@
       devShell = pkgs.mkShell {
         buildInputs = with pkgs; [
           # uv
-          texlive.combined.scheme-basic
+          texlive.combined.scheme-full
         ];
       };
     in
