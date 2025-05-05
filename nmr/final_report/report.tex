@@ -19,25 +19,25 @@
 %  4)  latex apssamp.tex
 %
 \documentclass[%
- reprint,
-%superscriptaddress,
-%groupedaddress,
-%unsortedaddress,
-%runinaddress,
-%frontmatterverbose,
-%preprint,
-%preprintnumbers,
-%nofootinbib,
-%nobibnotes,
-%bibnotes,
- amsmath,amssymb,
- aps,
-%pra,
-%prb,
-%rmp,
-%prstab,
-%prstper,
-%floatfix,
+    reprint,
+    %superscriptaddress,
+    %groupedaddress,
+    %unsortedaddress,
+    %runinaddress,
+    %frontmatterverbose,
+    %preprint,
+    %preprintnumbers,
+    %nofootinbib,
+    %nobibnotes,
+    %bibnotes,
+    amsmath,amssymb,
+    aps,
+    %pra,
+    %prb,
+    %rmp,
+    %prstab,
+    %prstper,
+    %floatfix,
 ]{revtex4-2}
 
 
@@ -77,10 +77,11 @@
 
 
 \newcommand{\half}{$\sfrac{1}{2}$ }
-\newcommand{\pauliz}{\begin{pmatrix}
-                    1 & 0 \\
-                    0 & -1
-                    \end{pmatrix}}
+\newcommand{\pauliz}{
+    \begin{pmatrix}
+        1 & 0 \\
+        0 & -1
+\end{pmatrix}}
 \newcommand{\halfpi}{\frac{\pi}{2}}
 \newcommand{\taucode}{\mathgtt{t}}
 
@@ -101,10 +102,10 @@
 
 
 \date{\today}% It is always \today, today,
-             %  but any date may be explicitly specified
+%  but any date may be explicitly specified
 
 \begin{abstract}
-This intermediate report summarizes our investigation of pulsed nuclear magnetic resonance (NMR) using the TeachSpin spectrometer. Building on the principles of Larmor precession and the quantum-mechanical behavior of spin-\half nuclei, we examined the response of magnetic moments when subjected to time-dependent radio frequency (RF) pulses. We began with a theoretical framework covering key concepts such as the net magnetization arising from the Boltzmann population difference and the associated longitudinal ($T_1$) and transverse ($T_2$) relaxation processes. In our experiments, specially-tuned $\halfpi$ and $\pi$ pulses were applied to tip and invert the magnetization, thereby generating free induction decay (FID) signals and spin echoes. A simulation model incorporating the exponential decay of echo amplitudes provided a basis for comparing the expected with the observed signal features. Data analysis of envelope decay for mineral oil samples yielded an experimental $T_1 = \SI[uncertainty-mode=separate]{34\pm0.5}{\milli\second}$, $T_2 = \SI[uncertainty-mode=separate]{44\pm3}{\milli\second}$. Our study demonstrates the successful application of pulsed NMR techniques in measuring relaxation times, validating both the theoretical description and the simulation model.
+    This intermediate report summarizes our investigation of pulsed nuclear magnetic resonance (NMR) using the TeachSpin spectrometer. Building on the principles of Larmor precession and the quantum-mechanical behavior of spin-\half nuclei, we examined the response of magnetic moments when subjected to time-dependent radio frequency (RF) pulses. We began with a theoretical framework covering key concepts such as the net magnetization arising from the Boltzmann population difference and the associated longitudinal ($T_1$) and transverse ($T_2$) relaxation processes. In our experiments, specially-tuned $\halfpi$ and $\pi$ pulses were applied to tip and invert the magnetization, thereby generating free induction decay (FID) signals and spin echoes. A simulation model incorporating the exponential decay of echo amplitudes provided a basis for comparing the expected with the observed signal features. Data analysis of envelope decay for mineral oil samples yielded an experimental $T_1 = \SI[uncertainty-mode=separate]{34\pm0.5}{\milli\second}$, $T_2 = \SI[uncertainty-mode=separate]{44\pm3}{\milli\second}$. Our study demonstrates the successful application of pulsed NMR techniques in measuring relaxation times, validating both the theoretical description and the simulation model.
 \end{abstract}
 
 \maketitle
@@ -355,7 +356,7 @@ Plotting these results, we obtain Figure \ref{fig:simulation}.
 \begin{figure}[h]
     \centering
     \includegraphics[width = 0.8\linewidth]{figs/purcell/simulation.png}
-   \caption{Simulation of the beating behavior in a Carr-Purcell sequence with 60 $\pi$ pulses. Each echo is modeled as a Gaussian pulse. The echo amplitude decays exponentially (simulating $T_2$ decay) and is modulated by a cosine factor (to incorporate beating effects). Additionally, we overlay a smooth envelope curve that passes through the echo peak amplitudes.}\label{fig:simulation}
+    \caption{Simulation of the beating behavior in a Carr-Purcell sequence with 60 $\pi$ pulses. Each echo is modeled as a Gaussian pulse. The echo amplitude decays exponentially (simulating $T_2$ decay) and is modulated by a cosine factor (to incorporate beating effects). Additionally, we overlay a smooth envelope curve that passes through the echo peak amplitudes.}\label{fig:simulation}
 \end{figure}
 
 Physically, in an idealized model we would ``see'' every individual rephasing event of the spins as a distinct, narrow pulse. However, in a real NMR detection system the output isn't the raw high-frequency signal — instead, the receiver circuitry (which includes mixers, rectifiers, and low-pass filters) performs envelope detection. This means that it extracts and outputs the overall amplitude envelope of the rapidly oscillating RF signal rather than the instantaneous voltage values.
@@ -394,22 +395,21 @@ The envelope obeys Equation \ref{eqn:bloch-t2}; therefore, we fit an exponential
 \begin{table}[htbp]
     \centering
     \caption{$T_2$ measured times for mineral oil}
-      \begin{tabular}{|c|c|c|}
-      \hline
-      \texttt{N} & \SI[parse-numbers=false]{\text{Total Time Recorded}}{(\milli\second)} & $\SI[parse-numbers=false]{T_2}{(\milli\second)}$\\
-
-      \hline
-      10    & 80    & 48.79 \\
-      \hline
-      20    & 36    & 41.09 \\
-      \hline
-      21    & 162   & 44.7 \\
-      \hline
-      50    & 70    & 41.33 \\
-      \hline
-      \end{tabular}%
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \texttt{N} & \SI[parse-numbers=false]{\text{Total Time Recorded}}{(\milli\second)} & $\SI[parse-numbers=false]{T_2}{(\milli\second)}$\\
+        \hline
+        10    & 80    & 48.79 \\
+        \hline
+        20    & 36    & 41.09 \\
+        \hline
+        21    & 162   & 44.7 \\
+        \hline
+        50    & 70    & 41.33 \\
+        \hline
+    \end{tabular}%
     \label{tab:t2-times}%
-  \end{table}%
+\end{table}%
 
 From these four calculations of $T_2$, we obtain a final averaged result of
 

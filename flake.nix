@@ -13,7 +13,8 @@
       devShell = pkgs.mkShell {
         buildInputs = with pkgs; [
           # uv
-          texlive.combined.scheme-full
+          texlive.combined.scheme-full  ## consider switching to medium...? this shit is 2-4gb lol
+          tex-fmt
         ];
       };
     in
