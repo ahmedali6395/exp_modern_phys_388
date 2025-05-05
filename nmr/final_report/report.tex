@@ -24,7 +24,7 @@
 %groupedaddress,
 %unsortedaddress,
 %runinaddress,
-%frontmatterverbose, 
+%frontmatterverbose,
 %preprint,
 %preprintnumbers,
 %nofootinbib,
@@ -49,7 +49,7 @@
 % \usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 
-%\usepackage[showframe,%Uncomment any one of the following lines to test 
+%\usepackage[showframe,%Uncomment any one of the following lines to test
 %%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
 %%text={7in,10in},centering,
 %%margin=1.5in,
@@ -61,7 +61,7 @@
 
 %%% USER ADDED PACKAGES
 
-% user added packages 
+% user added packages
 \usepackage{xfrac}
 \usepackage{mathtools}
 \usepackage{subcaption}
@@ -79,7 +79,7 @@
 \newcommand{\half}{$\sfrac{1}{2}$ }
 \newcommand{\pauliz}{\begin{pmatrix}
                     1 & 0 \\
-                    0 & -1 
+                    0 & -1
                     \end{pmatrix}}
 \newcommand{\halfpi}{\frac{\pi}{2}}
 \newcommand{\taucode}{\mathgtt{t}}
@@ -113,32 +113,32 @@ This intermediate report summarizes our investigation of pulsed nuclear magnetic
 
 \section{\label{sec:intro}Introduction and Theoretical Description}
 
-The study of nuclear magnetic resonance (NMR) utilizes weak magnetic fields to affect the nuclei of atoms in a strong magnetic field. Under certain conditions, atoms will exhibit ``resonance,'' causing the observation of a transient magnetic field as nuclei relax back to their equillibrium state. 
+The study of nuclear magnetic resonance (NMR) utilizes weak magnetic fields to affect the nuclei of atoms in a strong magnetic field. Under certain conditions, atoms will exhibit ``resonance,'' causing the observation of a transient magnetic field as nuclei relax back to their equillibrium state.
 
 \subsection{\label{subsec:larmor} Larmor Precession}
 
-We will start with the phenomena of Larmor precession, occuring when atoms are placed in a strong magnetic field. Larmor precession most readily occurs when the nucleus has a net magnetic moment i.e. there is an odd number of protons, producing a spin \half  system. In this case, the magnetic dipole moment $\mu$ of the nucleus is described as 
+We will start with the phenomena of Larmor precession, occuring when atoms are placed in a strong magnetic field. Larmor precession most readily occurs when the nucleus has a net magnetic moment i.e. there is an odd number of protons, producing a spin \half  system. In this case, the magnetic dipole moment $\mu$ of the nucleus is described as
 
 \begin{equation}
     \vec{\mu} = \gamma \vec{S}
 \end{equation}
 
-where $\vec{S}$ denotes the spin vector and $\gamma$ is a constant known as the gyromagnetic ratio (which differs depending on the type of nucleus). Under a magnetic field, the energy of this system reads 
+where $\vec{S}$ denotes the spin vector and $\gamma$ is a constant known as the gyromagnetic ratio (which differs depending on the type of nucleus). Under a magnetic field, the energy of this system reads
 
 \begin{equation}
     E = -\vec{\mu} \cdot \vec{B_0}
 \end{equation}
 
-where we denote $B_0$ the external magnetic field. This yields the Hamiltonian 
+where we denote $B_0$ the external magnetic field. This yields the Hamiltonian
 
 \begin{equation}\label{eqn:base-hamiltonian}
     H = -\gamma \vec{B_0} \cdot S
 \end{equation}
 
-where $S$ is the Pauli spin operator $S = (\sigma_x, \sigma_y, \sigma_z)$. Let us orient our magnetic field against the z-axis, such that 
+where $S$ is the Pauli spin operator $S = (\sigma_x, \sigma_y, \sigma_z)$. Let us orient our magnetic field against the z-axis, such that
 
 \begin{equation}
-    \vec{B_0} = B_0 \hat{z} 
+    \vec{B_0} = B_0 \hat{z}
 \end{equation}
 
 and the Hamiltonian now reads
@@ -150,20 +150,20 @@ and the Hamiltonian now reads
 The Hamiltonian has eigenstates
 
 \begin{equation}
-    \ket{\pm} : E_\pm = \mp \frac{\hbar}{2} \gamma B_0 
+    \ket{\pm} : E_\pm = \mp \frac{\hbar}{2} \gamma B_0
 \end{equation}
 
-These eigenstates correspond to nuclei aligned either parallel or antiparallel to the magnetic field $B_0$. We will use these vectors $\ket{\pm}$ as our basis. We can evolve these stationary states with the time-dependent Schr\"odinger equation and then calculate the expectation of each of our Pauli matrices to obtain 
+These eigenstates correspond to nuclei aligned either parallel or antiparallel to the magnetic field $B_0$. We will use these vectors $\ket{\pm}$ as our basis. We can evolve these stationary states with the time-dependent Schr\"odinger equation and then calculate the expectation of each of our Pauli matrices to obtain
 
 \begin{align*}
     \langle S_x \rangle &= \frac{\hbar}{2} \sin(\theta)\cos(\gamma B_0 t)\\
     \langle S_y \rangle &= \frac{\hbar}{2} \sin(\theta)\sin(\gamma B_0 t)\\
-    \langle S_z \rangle &= \frac{\hbar}{2} \cos(\theta)   
+    \langle S_z \rangle &= \frac{\hbar}{2} \cos(\theta)
 \end{align*}
 
 These equations are the classical precession equations; our spin vector will precess about the magnetic field at a constant frequency
 \begin{equation}
-    \omega_0 = \gamma B_0 
+    \omega_0 = \gamma B_0
 \end{equation}
 
 This frequency is known as the \textbf{Larmor frequency}, and $\theta$ indicates the angle between $\vec{\mu}$ and $\vec{B_0}$. \cite{griffiths}
@@ -185,7 +185,7 @@ These equations above can also be derived from a classical viewpoint; we can cal
 
 \subsection{\label{subsec:pulses} Net Magnetization and Relaxation}
 
-The lower energy $E_+$ is the favored energy state; slightly more spins will align parallel to $\vec{B_0}$ as opposed to antiparallel. Using statistical mechanics, we can derive the expected number of $\ket{+}$ vs $\ket{-}$. Since this is a canonical two-state system, the ratio $\frac{N_+}{N_-}$ is equal to the ratio of the Boltzmann factors, yielding 
+The lower energy $E_+$ is the favored energy state; slightly more spins will align parallel to $\vec{B_0}$ as opposed to antiparallel. Using statistical mechanics, we can derive the expected number of $\ket{+}$ vs $\ket{-}$. Since this is a canonical two-state system, the ratio $\frac{N_+}{N_-}$ is equal to the ratio of the Boltzmann factors, yielding
 
 \begin{equation}
     \frac{N_+}{N_-} = \exp\left(\frac{\gamma \hbar B_0}{k T}\right)
@@ -197,7 +197,7 @@ This small difference produces a net longitudinal magnetization (in this context
     M_z = \sum_i \gamma \hbar m_i = \frac{\hbar}{2} \gamma (N_+ - N_-)
 \end{equation}
 
-In equillibrium with our original magnetic field $B_0$, we expect a slight magnetization in the $+\hat{z}$ direction. However, if we were to apply another magnetic field briefly to this system, we would see a change in the net magnetization $\vec{M}(t)$. Eventually, the system will return back to its equillibrium state. In order to reach equillibrium, the system must give back energy to the surrounding lattice. 
+In equillibrium with our original magnetic field $B_0$, we expect a slight magnetization in the $+\hat{z}$ direction. However, if we were to apply another magnetic field briefly to this system, we would see a change in the net magnetization $\vec{M}(t)$. Eventually, the system will return back to its equillibrium state. In order to reach equillibrium, the system must give back energy to the surrounding lattice.
 
 We are interested in understanding how long it takes for our system to reach equillibrium. In general, after a disturbance, the magnetization follows the Bloch equation, reproduced in Equation \ref{eqn:bloch-t1}.
 
@@ -213,13 +213,13 @@ One can solve Equation \ref{eqn:bloch-t1} to yield
     M_{j}(t) = M_0 - (M_0 - M_i)e^{-\sfrac{t}{T_1}}
 \end{equation}
 
-where $M_0$ is the magnetization at equillibrium and $M_i$ is the initial magnetiztion.\cite{principles-resonance} This formulation will be useful later when performing experiments. 
+where $M_0$ is the magnetization at equillibrium and $M_i$ is the initial magnetiztion.\cite{principles-resonance} This formulation will be useful later when performing experiments.
 
 \subsection{\label{sec:tipping}Producing Transverse Magnetizations}
 
 \subsubsection{Apply a Circularly Polarized Field}
 
-So far, we have discussed the uniform $\vec{B_0}$ field. However, to produce a transverse magnetization (i.e. a magnetization in the x-y plane) we need to get creative. We will use a circularly polarized field, 
+So far, we have discussed the uniform $\vec{B_0}$ field. However, to produce a transverse magnetization (i.e. a magnetization in the x-y plane) we need to get creative. We will use a circularly polarized field,
 
 \begin{equation}
     \vec{B_1}(t) = B_1\left[\cos(\omega_0t)\hat{x}+\sin(\omega_0t)\hat{y}\right]
@@ -231,16 +231,16 @@ Note that $\vec{B_1}(t)$ oscillates at the Larmor frequency. Thus, the new Hamil
     \vec{\tau} = \vec{\mu} \times \gamma \left[\vec{B_0}+\vec{B_1}(t)\right]
 \end{equation}
 
-by transforming into a rotating reference frame (rotating at the Larmor frequency), we find that the effective field becomes 
+by transforming into a rotating reference frame (rotating at the Larmor frequency), we find that the effective field becomes
 
 \begin{equation}
     \vec{\tau}^* = (B_0 - \sfrac{\mu}{\gamma}) \hat{z}^*+ B_1 \hat{x}^*
 \end{equation}
 
-In this rotating frame, applying a circularly polarized magnetic field has the effect of ``tipping'' the magnetization into a transverse plane. Transforming back into the lab frame, we will observe the magnetization in the x-y plane still precessing about the z-axis. 
+In this rotating frame, applying a circularly polarized magnetic field has the effect of ``tipping'' the magnetization into a transverse plane. Transforming back into the lab frame, we will observe the magnetization in the x-y plane still precessing about the z-axis.
 \subsubsection{$\halfpi$ and $\pi$ pulses}
 
-By applying $\vec{B_1}(t)$, we will create two types of pulses. We will first define a \textbf{$\halfpi$ pulse}, a pulse of $B_1(t)$ that will be applied for exactly long enough such that the magnetization is entirely in the $x-y$ plane. We will also define a \textbf{$\pi$ pulse}, a pulse that flips the magnetization from $+\hat{z}$ to $-\hat{z}$. 
+By applying $\vec{B_1}(t)$, we will create two types of pulses. We will first define a \textbf{$\halfpi$ pulse}, a pulse of $B_1(t)$ that will be applied for exactly long enough such that the magnetization is entirely in the $x-y$ plane. We will also define a \textbf{$\pi$ pulse}, a pulse that flips the magnetization from $+\hat{z}$ to $-\hat{z}$.
 
 
 During a $\halfpi$ or $\pi$ pulse, we can plot the expectation $\langle \vec{S} \rangle  = (\langle S_x \rangle, \langle S_y \rangle, \langle S_z \rangle)$ over time, as shown in Figure \ref{fig:pulse-spirals}.
@@ -259,25 +259,25 @@ During a $\halfpi$ or $\pi$ pulse, we can plot the expectation $\langle \vec{S} 
     \caption{$\langle \vec{S} \rangle$ over time during a $\halfpi$ and $\pi$ pulse}\label{fig:pulse-spirals}
 \end{figure*}
 
-As a practical matter, the Larmor frequency generally lies in the radio frequency range for most atoms. As a result, the $\vec{B_1}(t)$ pulses are referred to as \textbf{RF pulses}. 
+As a practical matter, the Larmor frequency generally lies in the radio frequency range for most atoms. As a result, the $\vec{B_1}(t)$ pulses are referred to as \textbf{RF pulses}.
 
 
 \subsection{\label{sec:t2} Spin-Spin Relaxation}
 
-Along with the decay of the transverse magnetization, we observe a different kind of decay; the decay of the relative phasing of all of the magnetic moments. After a $\halfpi$ pulse, the magnetic moments are in phase with each other---however, due to mutual interactions, these moments slowly turn out of phase. This dephasing is known as \textbf{spin-spin relaxation}, and obeys a similar relationship to Equation \ref{eqn:bloch-t1}. In particular, $\vec{M_{x,y}}= 0$ and we have 
+Along with the decay of the transverse magnetization, we observe a different kind of decay; the decay of the relative phasing of all of the magnetic moments. After a $\halfpi$ pulse, the magnetic moments are in phase with each other---however, due to mutual interactions, these moments slowly turn out of phase. This dephasing is known as \textbf{spin-spin relaxation}, and obeys a similar relationship to Equation \ref{eqn:bloch-t1}. In particular, $\vec{M_{x,y}}= 0$ and we have
 
 \begin{equation}\label{eqn:bloch-t2}
     \frac{d\vec{M_{x,y}}}{dt} = \frac{\vec{M_{x,y}}}{T_2}
 \end{equation}
 
-Note that both Equation \ref{eqn:bloch-t1} and \ref{eqn:bloch-t2} are in the same form, following a familiar exponential curve. 
+Note that both Equation \ref{eqn:bloch-t1} and \ref{eqn:bloch-t2} are in the same form, following a familiar exponential curve.
 
 
 \subsection{Free Induction Decay and $T_2^*$}
 
 Suppose we apply a $\halfpi$ pulse to a system of nuclei; the net magnetization will be in the x-y plane. Further suppose we place this sample within a coil aligned in either the x or y direction. Since this magnetization is precessing at the Larmor frequency about \(\vec{B_0}\), the moment induces a change in flux in the coil, producing a periodic voltage we can measure.
 
-This oscillation will decay according to Equations \ref{eqn:bloch-t1} and \ref{eqn:bloch-t2} as the magnetization becomes increasingly decoherent. The envelope of this decay is known as \textbf{free induction decay (FID)}. 
+This oscillation will decay according to Equations \ref{eqn:bloch-t1} and \ref{eqn:bloch-t2} as the magnetization becomes increasingly decoherent. The envelope of this decay is known as \textbf{free induction decay (FID)}.
 
 The characteristic decay time constant of an FID signal depends not only on $T_1$ and $T_2$, but also local inhomogeneities in $\vec{B_0}$. We label the time constant obtained from all three factors $T_2^*$, which, with some simple algebra, we obtain as \cite{lab-manual}
 
@@ -285,36 +285,36 @@ The characteristic decay time constant of an FID signal depends not only on $T_1
     \frac{1}{T_2^*} = \frac{1}{T_1}+\frac{1}{T_2}+ \gamma \Delta B_0
 \end{equation}
 
-In order to directly measure $T_1$ and $T_2$, we must therefore get creative on our measurement techniques. We will now discuss experimental procedures. 
+In order to directly measure $T_1$ and $T_2$, we must therefore get creative on our measurement techniques. We will now discuss experimental procedures.
 
 \section{Apparatus and Experimental Procedure}
 
-The apparatus for NMR experiments consists of a TeachSpin PS2-B Pulsed/CW NMR set and a Tektronix oscilloscope. The TeachSpin set comes with a \SI{0.49}{\tesla} permanent magnet, PS2 magnet temperature controller, and mainframe module with pulse programmer, synthesizer, receiver and lock-in amplifier. The synthesizer generates the signal that will be used to excite proton spins. The receiver reads the signal (specifically the envelope of the signal) from a pickup coil aligned with the x-axis of the permanent magnet; this coil outputs a voltage when proton spins produce a net change of flux. The oscilloscope then displays the output from the receiver. The pulse programmer allows for the length, period and delay time to be set for a pulse sequence. This will be critical in creating the sequences of $\halfpi$ and $\pi$ pulses needed to effectively measure NMR decay. 
+The apparatus for NMR experiments consists of a TeachSpin PS2-B Pulsed/CW NMR set and a Tektronix oscilloscope. The TeachSpin set comes with a \SI{0.49}{\tesla} permanent magnet, PS2 magnet temperature controller, and mainframe module with pulse programmer, synthesizer, receiver and lock-in amplifier. The synthesizer generates the signal that will be used to excite proton spins. The receiver reads the signal (specifically the envelope of the signal) from a pickup coil aligned with the x-axis of the permanent magnet; this coil outputs a voltage when proton spins produce a net change of flux. The oscilloscope then displays the output from the receiver. The pulse programmer allows for the length, period and delay time to be set for a pulse sequence. This will be critical in creating the sequences of $\halfpi$ and $\pi$ pulses needed to effectively measure NMR decay.
 
-It is critical that the frequency of the RF signal be tuned to match the Larmor frequency of protons in the static magnetic field. For hydrogen, the Larmor frequecy is ~\SI{21}{\mega\hertz}. 
+It is critical that the frequency of the RF signal be tuned to match the Larmor frequency of protons in the static magnetic field. For hydrogen, the Larmor frequecy is ~\SI{21}{\mega\hertz}.
 
 \subsection{Measuring $T_1$ \label{sec:measure-t1}}
 
-There are two traditional pulse sequences that allow for a T1 measurement: $\halfpi$ and $\pi-\halfpi$. By applying a single $\halfpi$ pulse, the net magnetization vector is tipped into the x-y plane, producing an FID signal. This signal quickly decays primarily due to the dephasing of individual spins, but also realignment of spins with the z-axis. Even after this signal disappears, the net magnetization vector is still decaying towards the z-axis. At any moment in time, another $\halfpi$ pulse can be applied. When this happens, any spins aligned with the z-axis are thrown back in the x-y plane and can be measured, while those in the x-y plane are rotated out of the measurement region. This means that by applying two $\halfpi$ pulses, one can effectively check the decay of net magnetization and characterize it with a time constant. 
+There are two traditional pulse sequences that allow for a T1 measurement: $\halfpi$ and $\pi-\halfpi$. By applying a single $\halfpi$ pulse, the net magnetization vector is tipped into the x-y plane, producing an FID signal. This signal quickly decays primarily due to the dephasing of individual spins, but also realignment of spins with the z-axis. Even after this signal disappears, the net magnetization vector is still decaying towards the z-axis. At any moment in time, another $\halfpi$ pulse can be applied. When this happens, any spins aligned with the z-axis are thrown back in the x-y plane and can be measured, while those in the x-y plane are rotated out of the measurement region. This means that by applying two $\halfpi$ pulses, one can effectively check the decay of net magnetization and characterize it with a time constant.
 
-Alternatively, one can apply a $\pi$ pulse, which inverts the net magnetization to the negative z-axis. This produces a negligible FID signal, since the spins dephase before entering the measurement region (x-y plane). In spite of this, the net magnetization vector is still decaying towards the z-axis. At any moment in time, a $\halfpi$ pulse can be applied to, much like before, check the decay of the net magnetization. When the FID signal following a $\halfpi$ pulse is zero, half of the spins have decayed back to the z-axis. This is known as the zero crossing time and can be used to calculate the time constant of the decay. This method is preferred, since a null signal can easily be identified. 
+Alternatively, one can apply a $\pi$ pulse, which inverts the net magnetization to the negative z-axis. This produces a negligible FID signal, since the spins dephase before entering the measurement region (x-y plane). In spite of this, the net magnetization vector is still decaying towards the z-axis. At any moment in time, a $\halfpi$ pulse can be applied to, much like before, check the decay of the net magnetization. When the FID signal following a $\halfpi$ pulse is zero, half of the spins have decayed back to the z-axis. This is known as the zero crossing time and can be used to calculate the time constant of the decay. This method is preferred, since a null signal can easily be identified.
 
 
 \subsection{Measuring $T_2$\label{sec:measure-t2}}
 
-T2 measurements require a $\halfpi-\pi$ pulse sequence. The $\halfpi$ pulse tips the magnetization into the x-y plane, where the spins dephase due to inhomogeneities in the static magnetic field and spin-spin interactions. The goal in a T2 measurement is to isolate the spin-spin dephasing.  To do this, one must note that magnitude of spin dephasing is related to the strength of the static field it experiences. When a spin is kicked into the x-y plane, torque from the static magnetic field forces it to rotate in that plane. Spins in a stronger magnetic field rotate more quickly than ones in a weaker magnetic field, leading to aggressive dephasing. To mitigate this, a $\pi$ pulse is applied. The $\pi$ pulse essentially flips the direction of spin rotation, meaning all spins rotate back at roughly the same speed. 
+T2 measurements require a $\halfpi-\pi$ pulse sequence. The $\halfpi$ pulse tips the magnetization into the x-y plane, where the spins dephase due to inhomogeneities in the static magnetic field and spin-spin interactions. The goal in a T2 measurement is to isolate the spin-spin dephasing.  To do this, one must note that magnitude of spin dephasing is related to the strength of the static field it experiences. When a spin is kicked into the x-y plane, torque from the static magnetic field forces it to rotate in that plane. Spins in a stronger magnetic field rotate more quickly than ones in a weaker magnetic field, leading to aggressive dephasing. To mitigate this, a $\pi$ pulse is applied. The $\pi$ pulse essentially flips the direction of spin rotation, meaning all spins rotate back at roughly the same speed.
 
-This leads to the `rephasing' of spins shortly after the pulse since spins that rotated more quickly following the $\halfpi$ pulse have a longer distance to travel on the way back after the $\pi$ pulse. This rephasing is known as a \textbf{spin echo}. If the inhomogeneous field were the only cause of dephasing, the magnitude of the rephased signal would equal the initial in phase signal. However, since spin-spin interactions are also dephasing spins, the rephased signal is slightly weaker. By applying multiple $\pi$ pulses after an initial $\halfpi$ pulse, one can track the decay in magnitude of the rephasing signal due to spin spin interactions and characterize it with a time constant, this time constant is T2. 
+This leads to the `rephasing' of spins shortly after the pulse since spins that rotated more quickly following the $\halfpi$ pulse have a longer distance to travel on the way back after the $\pi$ pulse. This rephasing is known as a \textbf{spin echo}. If the inhomogeneous field were the only cause of dephasing, the magnitude of the rephased signal would equal the initial in phase signal. However, since spin-spin interactions are also dephasing spins, the rephased signal is slightly weaker. By applying multiple $\pi$ pulses after an initial $\halfpi$ pulse, one can track the decay in magnitude of the rephasing signal due to spin spin interactions and characterize it with a time constant, this time constant is T2.
 
-It's important that the $\pi$ pulses are close together, since particle diffusion in a sample can cause a proton to move into a different magnetic field region. This would make the `rephasing' speed of the spin different from its initial `dephasing' speed, causing it to not rephase with other spins for reasons not related to the spin-spin interactions we seek to measure. 
+It's important that the $\pi$ pulses are close together, since particle diffusion in a sample can cause a proton to move into a different magnetic field region. This would make the `rephasing' speed of the spin different from its initial `dephasing' speed, causing it to not rephase with other spins for reasons not related to the spin-spin interactions we seek to measure.
 
 \section{Data and Analysis}
 
 \subsection{Measuring $T_1$}
 
-We start by a brief measurement of $T_1$ of mineral oil. We use the second ``preferred'' technique outlined in Section \ref{sec:measure-t1}. We apply a $\pi$ pulse and check the ratio of $\frac{N_+}{N_-}$ by applying a $\halfpi$. When we observe a null signal, we record the time between the $\pi$ and $\halfpi$ pulse. 
+We start by a brief measurement of $T_1$ of mineral oil. We use the second ``preferred'' technique outlined in Section \ref{sec:measure-t1}. We apply a $\pi$ pulse and check the ratio of $\frac{N_+}{N_-}$ by applying a $\halfpi$. When we observe a null signal, we record the time between the $\pi$ and $\halfpi$ pulse.
 
-No oscilloscope plot is available for this portion, because at null all you see is a straight line. 
+No oscilloscope plot is available for this portion, because at null all you see is a straight line.
 
 After a $\pi$ pulse, $M_z \rightarrow -M_z$, so at the zero-crossing, $\frac{N_+}{N_-} = 1$ and $M_z = 0$. One can then solve Equation \ref{eqn:decay-eqn} for $M_i = -M_z$ and $M_z(t_\text{crossing}) = 0$ to yield
 
@@ -322,13 +322,13 @@ After a $\pi$ pulse, $M_z \rightarrow -M_z$, so at the zero-crossing, $\frac{N_+
     T_1 = \frac{t_\text{crossing}}{\ln(2)}
 \end{equation}
 
-For mineral oil, the obtained crossing point was 
+For mineral oil, the obtained crossing point was
 
 \begin{equation}
     t_\text{crossing} = \SI[separate-uncertainty = true]{34(.5)}{\milli\second}
 \end{equation}
 
-yielding 
+yielding
 
 \begin{equation}
     T_1 = \SI[separate-uncertainty=true]{49.1(0.7)}{\milli\second}
@@ -336,7 +336,7 @@ yielding
 
 \subsection{Measuring $T_2$}
 
-Now, we can attempt to measure $T_2$. We will use the $\halfpi-\pi$ sequence outlined in Section \ref{sec:measure-t2}. As mentioned previously, we apply one $\halfpi$ pulse, and then apply many $\pi$ pulses to isolate the spin-spin interaction (as opposed to effects caused by the inhomogeneity of the field). This produces spin echoes with decaying magnitude; this is known as the \textbf{Carr-Purcell sequence}. 
+Now, we can attempt to measure $T_2$. We will use the $\halfpi-\pi$ sequence outlined in Section \ref{sec:measure-t2}. As mentioned previously, we apply one $\halfpi$ pulse, and then apply many $\pi$ pulses to isolate the spin-spin interaction (as opposed to effects caused by the inhomogeneity of the field). This produces spin echoes with decaying magnitude; this is known as the \textbf{Carr-Purcell sequence}.
 
 \subsubsection{Simulating the Carr-Purcell Sequence}
 
@@ -348,9 +348,9 @@ As the individual spins precess around \(\vec{B_0}\), they will continue to reph
 
 for $t_n = n \times \text{echo\_spacing}$. We define a continuous version by replacing the discrete index $n$ with $t/\text{echo\_spacing}$.
 
-From a heuristic standpoint, this makes sense; we have a decaying envelope characterized by $\exp(\sfrac{t_n}{T_2})$ and beating following the periodic oscillation of the magnetization. 
+From a heuristic standpoint, this makes sense; we have a decaying envelope characterized by $\exp(\sfrac{t_n}{T_2})$ and beating following the periodic oscillation of the magnetization.
 
-Plotting these results, we obtain Figure \ref{fig:simulation}. 
+Plotting these results, we obtain Figure \ref{fig:simulation}.
 
 \begin{figure}[h]
     \centering
@@ -364,7 +364,7 @@ The envelope represents the net decay or modulation of the transverse magnetizat
 
 \subsubsection{Obtaining experimental values of $T_2$}
 
-We will now create the Carr-Purcell with mineral oil. Apply a $\halfpi$ pulse and subsequent $\pi$ pulses to produce spin-echoes. Let \texttt{N} denote the number of $\pi$ pulses after a $\halfpi$ pulse. We perform this experiment with \texttt{N}=\{10, 20, 21, 50\}. We use varying separation times $\taucode$ between the pulses to get a feel for the procedure; the exact time isn't relavant for this part of the experiment, although minimizing times will produce more accurate results. These plots and exponential fits to the peaks are presented in Figure \ref{fig:experimental-purcell}. 
+We will now create the Carr-Purcell with mineral oil. Apply a $\halfpi$ pulse and subsequent $\pi$ pulses to produce spin-echoes. Let \texttt{N} denote the number of $\pi$ pulses after a $\halfpi$ pulse. We perform this experiment with \texttt{N}=\{10, 20, 21, 50\}. We use varying separation times $\taucode$ between the pulses to get a feel for the procedure; the exact time isn't relavant for this part of the experiment, although minimizing times will produce more accurate results. These plots and exponential fits to the peaks are presented in Figure \ref{fig:experimental-purcell}.
 
 \begin{figure*}[hbpt]
     \centering
@@ -397,7 +397,7 @@ The envelope obeys Equation \ref{eqn:bloch-t2}; therefore, we fit an exponential
       \begin{tabular}{|c|c|c|}
       \hline
       \texttt{N} & \SI[parse-numbers=false]{\text{Total Time Recorded}}{(\milli\second)} & $\SI[parse-numbers=false]{T_2}{(\milli\second)}$\\
-      
+
       \hline
       10    & 80    & 48.79 \\
       \hline
@@ -410,17 +410,17 @@ The envelope obeys Equation \ref{eqn:bloch-t2}; therefore, we fit an exponential
       \end{tabular}%
     \label{tab:t2-times}%
   \end{table}%
-  
-From these four calculations of $T_2$, we obtain a final averaged result of 
+
+From these four calculations of $T_2$, we obtain a final averaged result of
 
 \begin{equation}
     T_2 = \SI[uncertainty-mode=separate]{44(3)}{\milli\second}
 \end{equation}
 
 
-\section{Conclusion}  
+\section{Conclusion}
 
-In this intermediate report, we discussed our efforts to measure spin-lattice ($T_1$) and spin-spin ($T_2$) relaxation times for mineral oil. We also discussed different RF pulse sequences that allow for best $T_1$ and $T_2$ measurements. Although our results are modest, we have demonstrated that we are capable of effectively characterizing the NMR behavior of a material. Moving forward, we intend to use this information to characterize more materials like water and glycerol. We also hope to run pseudo-MRI experiments, where we characterize different points in a hybrid sample and reconstruct an image of the sample. 
+In this intermediate report, we discussed our efforts to measure spin-lattice ($T_1$) and spin-spin ($T_2$) relaxation times for mineral oil. We also discussed different RF pulse sequences that allow for best $T_1$ and $T_2$ measurements. Although our results are modest, we have demonstrated that we are capable of effectively characterizing the NMR behavior of a material. Moving forward, we intend to use this information to characterize more materials like water and glycerol. We also hope to run pseudo-MRI experiments, where we characterize different points in a hybrid sample and reconstruct an image of the sample.
 
 
 
