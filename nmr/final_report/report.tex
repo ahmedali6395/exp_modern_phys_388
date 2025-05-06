@@ -380,9 +380,9 @@ In order to directly measure $T_1$ and $T_2$, we must therefore get creative on 
     \label{apparatus}
 \end{figure}
 
-The apparatus for NMR experiments (Figure \ref{apparatus}) consists of a TeachSpin PS2-B Pulsed/CW NMR set and a Tektronix oscilloscope. The TeachSpin set comes with a \SI{0.49}{\tesla} permanent magnet, PS2 magnet temperature controller, and mainframe module with pulse programmer, synthesizer, receiver and lock-in amplifier. The synthesizer generates the signal that will be used to excite proton spins. The receiver reads the signal (specifically the envelope of the signal) from a pickup coil aligned with the x-axis of the permanent magnet; this coil outputs a voltage when proton spins produce a net change of flux. The oscilloscope then displays the output from the receiver. The pulse programmer allows for the length, period and delay time to be set for a pulse sequence. This will be critical in creating the sequences of $\halfpi$ and $\pi$ pulses needed to effectively measure NMR decay.
+The apparatus for NMR experiments (Figure \ref{apparatus}) consists of a TeachSpin PS2-B Pulsed/CW NMR set and a Tektronix oscilloscope. The TeachSpin set comes with a \SI{0.49}{\tesla} permanent magnet, PS2 magnet temperature controller, and mainframe module with pulse programmer, synthesizer, receiver and lock-in amplifier. The synthesizer generates the signal that will be used to excite proton spins. The receiver reads the signal (specifically the envelope of the signal) from a pickup coil aligned with $+\hat{x}$ of the permanent magnet; this coil outputs a voltage when proton spins produce a net change of flux. The oscilloscope then displays the output from the receiver. The pulse programmer allows for the length, period and delay time to be set for a pulse sequence. This will be critical in creating the sequences of $\halfpi$ and $\pi$ pulses needed to effectively measure NMR decay.
 
-It is critical that the frequency of the RF signal be tuned to match the Larmor frequency of protons in the static magnetic field. For hydrogen, the Larmor frequecy is ~\SI{21}{\mega\hertz}.
+It is critical that the frequency of the RF signal be tuned to match the Larmor frequency of protons in the static magnetic field. For hydrogen, the Larmor frequency is ~\SI{21}{\mega\hertz}.
 
 
 
@@ -392,7 +392,7 @@ It is critical that the frequency of the RF signal be tuned to match the Larmor 
 
 \subsection{Measuring $T_1$ \label{sec:measure-t1}}
 
-There are two traditional pulse sequences that allow for a T1 measurement: $\halfpi$ and $\pi-\halfpi$. By applying a single $\halfpi$ pulse, the net magnetization vector is tipped into the x-y plane, producing an FID signal. This signal quickly decays primarily due to the dephasing of individual spins, but also realignment of spins with the z-axis. Even after this signal disappears, the net magnetization vector is still decaying towards the z-axis. At any moment in time, another $\halfpi$ pulse can be applied. When this happens, any spins aligned with the z-axis are thrown back in the x-y plane and can be measured, while those in the x-y plane are rotated out of the measurement region. This means that by applying two $\halfpi$ pulses, one can effectively check the decay of net magnetization and characterize it with a time constant.
+There are two traditional pulse sequences that allow for a T1 measurement: $\halfpi$ and $\pi-\halfpi$. By applying a single $\halfpi$ pulse, the net magnetization vector is tipped into the x-y plane, producing an FID signal. This signal quickly decays primarily due to the dephasing of individual spins, but also realignment of spins with $+\hat{z}$. Even after this signal disappears, the net magnetization vector is still decaying towards $+\hat{z}$. At any moment in time, another $\halfpi$ pulse can be applied. When this happens, any spins aligned with the $+\hat{z}$ are thrown back in the x-y plane and can be measured, while those in the x-y plane are rotated out of the measurement region. This means that by applying two $\halfpi$ pulses, one can effectively check the decay of net magnetization and characterize it with a time constant.
 
 Alternatively, one can apply a $\pi$ pulse, which inverts the net magnetization to $-\hat{z}$. This produces a negligible FID signal, since the spins dephase before entering the measurement region (x-y plane). In spite of this, the net magnetization vector is still decaying towards $+\hat{z}$. At any moment in time, a $\halfpi$ pulse can be applied to, much like before, check the decay of the net magnetization. When the FID signal following a $\halfpi$ pulse is zero, half of the spins have decayed back to $+\hat{z}$. This is known as the \textbf{zero crossing time} and can be used to calculate the time constant of the decay. This method is preferred, since a null signal can easily be identified.
 
@@ -667,9 +667,9 @@ The envelope obeys Equation \ref{eqn:bloch-t2}; therefore, we fit an exponential
 \section{Conclusion}
 
 In this report, we discussed our efforts to
-measure spin-lattice (T1) and spin-spin (T2) relaxation
+measure spin-lattice ($T_1$) and spin-spin ($T_2$) relaxation
 times for mineral oil, glycerin, and distilled water. We also discussed the different RF
-pulse sequences that allow for best T1 and T2 measurements. Using the zero-crossing method for measuring T1 we measured 49.1, 40.4, and 1880 ms as the T1 relaxation times for mineral oil, glycerin and water, respectively. By using the Carr-Purcell sequence method, we measured 44, 28, and 851 ms as the T2 relaxation times, respectively. The significant differences between T1 and T2 times for different substances emphasizes the usefulness of NMR for material characterization.
+pulse sequences that allow for best $T_1$ and $T_2$ measurements. Using the zero-crossing method for measuring $T_1$ we measured 49.1, 40.4, and 1880 ms as the $T_1$ relaxation times for mineral oil, glycerin and water, respectively. By using the Carr-Purcell sequence method, we measured 44, 28, and 851 ms as the $T_2$ relaxation times, respectively. The significant differences between $T_1$ and $T_2$ times for different substances emphasizes the usefulness of NMR for material characterization.
 
 
 
