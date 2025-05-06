@@ -444,7 +444,7 @@ To determine the spin-lattice relaxation time $T_1$ for all three samples, we em
             M_z(\tau)\,\longrightarrow\,M_{xy}(0)\,,
         \end{equation}
         whose amplitude is then detected as the initial free induction decay (FID).
-    \item We record the delay $\tau = t_{\mathrm{cross}}$ at which the FID amplitude first crosses zero ($M_z=0$), corresponding to equal spin populations:
+    \item We record the delay $\taucode = t_{\mathrm{cross}}$ at which the FID amplitude first crosses zero ($M_z=0$), corresponding to equal spin populations:
         \begin{equation}
             \frac{N_{+}}{N_{-}} = 1\,.
         \end{equation}
@@ -542,13 +542,12 @@ Why does this look different from the actual data we observe later on? In practi
 
 We will now create the Carr-Purcell sequence with each sample. Starting from thermal equilibrium, we apply a $\pi/2$ pulse followed by $N$ equally spaced $\pi$ pulses (the echo spacing is $2\taucode$). For mineral oil, glycerin, and deionized water we performed echo trains with $N\approx\{10,20,50\}$ (oil), $N\approx\{20,30,50\}$ (glycerin), and $N\approx\{100\}$ (water), using various $\taucode$ values chosen to maintain sufficient echo amplitude while minimizing diffusion effects.
 
-Because the transverse magnetization in the rotating frame decays as
 
-\begin{equation}
+\begin{equation}\label{eqn:decay-transverse}
     M_{xy}(t) = M_0 \exp\bigl(-t/T_2\bigr)\,,
 \end{equation}
 
-we fit an exponential envelope to each echo train to extract $T_2$. (See Appendix A for the full-scale Carr-Purcell plots, Figs.\ \ref{fig:purcell/mineral_oil}-\ref{fig:purcell/water}.) The individual fits are summarized in Table \ref{tab:relaxation-all}. To visualize the overall reproducibility, we then compute the mean and standard deviation of all $T_2$ values for each compound (Table \ref{tab:t2-stats}).
+Because the transverse magnetization in the rotating frame decays according to Equation \ref{eqn:decay-transverse}, we fit an exponential envelope to each echo train to extract $T_2$. (See Appendix A for the full-scale Carr-Purcell plots, Figs.\ \ref{fig:purcell/mineral_oil}-\ref{fig:purcell/water}.) The individual fits are summarized in Table \ref{tab:relaxation-all}. To visualize the overall reproducibility, we then compute the mean and standard deviation of all $T_2$ values for each compound (Table \ref{tab:t2-stats}).
 
 \begin{table}[htbp]
     \centering
@@ -641,7 +640,7 @@ The large differences in $T_1$ and $T_2$ between water, glycerin, and mineral oi
 
 % In this report, we discussed our efforts to measure spin-lattice ($T_1$) and spin-spin ($T_2$) relaxation times for mineral oil, glycerin, and distilled water. We also discussed the different RF pulse sequences that allow for best $T_1$ and $T_2$ measurements. Using the zero-crossing method for measuring $T_1$ we measured 49.1, 40.4, and 1880 ms as the $T_1$ relaxation times for mineral oil, glycerin and water, respectively. By using the Carr-Purcell sequence method, we measured 44, 28, and 851 ms as the $T_2$ relaxation times, respectively. The significant differences between $T_1$ and $T_2$ times for different substances emphasizes the usefulness of NMR for material characterization.
 
-In conclusion, the NMR relaxation times we measured reflect each liquid's molecular characteristics. Water showed a $T_1$ on the order of seconds ($\approx$1.9 s) and a long $T_2$ ($\approx$0.85 s), consistent with its highly mobile molecules and weak intermolecular constraints. Glycerin had much shorter $T_1$ ($\sim$40 ms) and $T_2$ ($\sim$28 ms), which is expected for a viscous, hydrogen-bonded liquid where slow molecular motion and strong dipolar interactions lead to fast relaxation. Mineral oil exhibited intermediate values ($T_1$ $\sim$49 ms, $T_2$ $\sim$44 ms), reflecting moderate molecular mobility and the absence of hydrogen bonding. These results agree well with published reference values (e.g. water $T_1$ $\sim$3 s, glycerin $T_1$ $\sim$45 ms). The trend (water $\gg$ oil $\geq$ glycerin in both $T_1$ and $T_2$) stems from fundamental physical differences: water's low viscosity and transient hydrogen bonds give it unusually prolonged spin relaxation, whereas glycerin's high viscosity and extensive hydrogen bonding dramatically accelerate spin-lattice and spin-spin relaxation. Thus, our findings illustrate how increasing molecular size, stronger intermolecular forces, and higher viscosity lead to shorter $T_1$/$T_2$, while small, fast-diffusing molecules like water have exceptionally long relaxation times.
+In conclusion, the NMR relaxation times we measured reflect each liquid's molecular characteristics. Water showed a $T_1$ on the order of seconds ($\approx$1.9 s) and a long $T_2$ ($\approx$0.85 s), consistent with its highly mobile molecules and weak intermolecular constraints. Glycerin had much shorter $T_1$ ($\sim$40 ms) and $T_2$ ($\sim$28 ms), which is expected for a viscous, hydrogen-bonded liquid where slow molecular motion and strong dipolar interactions lead to fast relaxation. Mineral oil exhibited intermediate values ($T_1$ $\sim$49 ms, $T_2$ $\sim$44 ms), reflecting moderate molecular mobility and the absence of hydrogen bonding. These results agree well with published reference values (e.g. water $T_1$ $\sim$3 s, glycerin $T_1$ $\sim$45 ms). The trend (water $\gg$ oil $\geq$ glycerin in both $T_1$ and $T_2$) stems from fundamental physical differences: water's low viscosity and transient hydrogen bonds give it unusually prolonged spin relaxation, whereas glycerin's high viscosity and extensive hydrogen bonding dramatically accelerate spin-lattice and spin-spin relaxation. Thus, our findings illustrate how increasing molecular size, stronger intermolecular forces, and higher viscosity lead to shorter $\sfrac{T_1}{T_2}$, while small, fast-diffusing molecules like water have exceptionally long relaxation times.
 
 
 
