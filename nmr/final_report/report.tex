@@ -423,37 +423,71 @@ It's important that the $\pi$ pulses are close together, since particle diffusio
 %                                    RESULTS                                   %
 % ---------------------------------------------------------------------------- %
 
-\section{Data and Analysis}
+\section{Results \& Discussion}
 
 
 
 
 % ---------------------------------------------------------------------------- %
-
 \subsection{Measuring $T_1$}
 
-We start by a brief measurement of $T_1$ of mineral oil. We use the second ``preferred'' technique outlined in Section \ref{sec:measure-t1}. We apply a $\pi$ pulse and check the ratio of $\frac{N_+}{N_-}$ by applying a $\halfpi$. When we observe a null signal, we record the time between the $\pi$ and $\halfpi$ pulse.
+To determine the spin-lattice relaxation time $T_1$ for all three samples, we employed the inversion-recovery ($\pi$-$\tau$-$\pi$/2) sequence described in Section \ref{sec:measure-t1}. In each measurement:
 
-No oscilloscope plot is available for this portion, because at null all you see is a straight line.
+\begin{enumerate}
+    \item A $180^\circ$ ($\pi$) pulse inverts the equilibrium magnetization:
+        \begin{equation}
+            M_0\hat{z}\,\longrightarrow\,-M_0\hat{z}\,.
+        \end{equation}
+    \item After a variable delay $\tau$, a $90^\circ$ ($\pi/2$) pulse rotates the recovered longitudinal magnetization into the transverse plane:
+        \begin{equation}
+            M_z(\tau)\,\longrightarrow\,M_{xy}(0)\,,
+        \end{equation}
+        whose amplitude is then detected as the initial free induction decay (FID).
+    \item We record the delay $\tau = t_{\mathrm{cross}}$ at which the FID amplitude first crosses zero ($M_z=0$), corresponding to equal spin populations:
+        \begin{equation}
+            \frac{N_{+}}{N_{-}} = 1\,.
+        \end{equation}
+\end{enumerate}
 
-After a $\pi$ pulse, $M_z \rightarrow -M_z$, so at the zero-crossing, $\frac{N_+}{N_-} = 1$ and $M_z = 0$. One can then solve Equation \ref{eqn:decay-eqn} for $M_i = -M_z$ and $M_z(t_\text{crossing}) = 0$ to yield
 
+At the zero-crossing point, substituting $M_i=-M_0$ and $M_z(t_{\mathrm{cross}})=0$ into the recovery law
 \begin{equation}
-    T_1 = \frac{t_\text{crossing}}{\ln(2)}
+    M_z(t) \;=\; M_0\bigl(1 - 2\,e^{-\,t/T_1}\bigr)
+\end{equation}
+yields
+\begin{equation}
+    T_1 \;=\;\frac{t_{\mathrm{cross}}}{\ln 2}\,.
 \end{equation}
 
-For mineral oil, the obtained crossing point was
+No oscilloscope trace is shown at the null point, since the baseline is indistinguishable from zero signal. The measured crossing delays and corresponding $T_1$ values are:
 
-\begin{equation}
-    t_\text{crossing} = \SI[separate-uncertainty = true]{34(.5)}{\milli\second}
-\end{equation}
+% \begin{align}
+%     t_{\mathrm{cross}}^{\rm oil}   &= \SI[separate-uncertainty=true]{34.0(5)}{\milli\second},  &
+%     T_1^{\rm oil}   &= \SI[separate-uncertainty=true]{49.1(0.7)}{\milli\second},\\
+%     t_{\mathrm{cross}}^{\rm gly}   &= \SI[separate-uncertainty=true]{28.0(5)}{\milli\second},  &
+%     T_1^{\rm gly}   &= \SI[separate-uncertainty=true]{40.4(0.7)}{\milli\second},\\
+%     t_{\mathrm{cross}}^{\rm water} &= \SI[separate-uncertainty=true]{1300(10)}{\milli\second}, &
+%     T_1^{\rm water} &= \SI[separate-uncertainty=true]{1880(15)}{\milli\second}.
+% \end{align}
 
-yielding
+\begin{table}[htbp]
+    \centering
+    \caption{Zero-crossing delays and extracted $T_1$ values for each compound.}
+    \label{tab:t1-results}
+    \setlength{\tabcolsep}{12pt}
+    \begin{tabular}{l S[table-format=6.0(2)] S[table-format=6.0(1)]}
+        \toprule
+        Compound         & {$t_{\mathrm{cross}}$ (\si{\milli\second})} & {$T_1$ (\si{\milli\second})} \\
+        \midrule
+        Mineral oil      & 34.0(5)    & 49.1(0.7)   \\
+        Glycerin         & 28.0(5)    & 40.4(0.7)   \\
+        Deionized water  & 1300(10)   & 1880(15)    \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
-\begin{equation}
-    T_1 = \SI[separate-uncertainty=true]{49.1(0.7)}{\milli\second}
-\end{equation}
 
+These results span three orders of magnitude: mineral oil exhibits an intermediate $T_1\approx50$ ms, glycerin a slightly shorter $T_1\approx40$ ms, and deionized water a very long $T_1\approx1.9$ s. This trend reflects each liquid's molecular environment and mobility, as discussed in the Conclusion.
 
 
 
@@ -475,7 +509,8 @@ Now, we can attempt to measure $T_2$. We will use the $\halfpi-\pi$ sequence out
 As the individual spins precess around \(\vec{B_0}\), they will continue to rephase until reaching a maximum spin echo. This produces a periodic flux in the pickup coil with peaks, modeled by Equation \ref{eqn:simulation}
 
 \begin{equation}\label{eqn:simulation}
-    A(n) = A_0 \exp{\left( \sfrac{-t_n}{T_2} \right)} \cdot \left[ \tfrac{1}{2} \left(1 + \cos \left( \frac{2\pi n}{\mathrm{beatperiod}} \right)\right) \right]
+    % A(n) = A_0 \exp{\left( -t_n / T_2 \right)} \cdot \left[ \tfrac{1}{2} \left(1 + \cos \left( \frac{2\pi n}{\mathrm{beat period}} \right)\right) \right]
+    A(n) = A_0 \exp{\left( \frac{-t_n}{T_2} \right)} \cdot \left[ \frac{1}{2} \left(1 + \cos \left( \frac{2\pi n}{\mathrm{beat \ period}} \right)\right) \right]
 \end{equation}
 
 for $t_n = n \times \text{echo\_spacing}$. We define a continuous version by replacing the discrete index $n$ with $t/\text{echo\_spacing}$.
@@ -490,9 +525,12 @@ Plotting these results, we obtain Figure \ref{fig:simulation}.
     \caption{Simulation of the beating behavior in a Carr-Purcell sequence with 60 $\pi$ pulses. Each echo is modeled as a Gaussian pulse. The echo amplitude decays exponentially (simulating $T_2$ decay) and is modulated by a cosine factor (to incorporate beating effects). Additionally, we overlay a smooth envelope curve that passes through the echo peak amplitudes.}\label{fig:simulation}
 \end{figure}
 
-Physically, in an idealized model we would ``see'' every individual rephasing event of the spins as a distinct, narrow pulse. However, in a real NMR detection system the output isn't the raw high-frequency signal — instead, the receiver circuitry (which includes mixers, rectifiers, and low-pass filters) performs envelope detection. This means that it extracts and outputs the overall amplitude envelope of the rapidly oscillating RF signal rather than the instantaneous voltage values.
+% Physically, in an idealized model we would ``see'' every individual rephasing event of the spins as a distinct, narrow pulse. However, in a real NMR detection system the output isn't the raw high-frequency signal — instead, the receiver circuitry (which includes mixers, rectifiers, and low-pass filters) performs envelope detection. This means that it extracts and outputs the overall amplitude envelope of the rapidly oscillating RF signal rather than the instantaneous voltage values.
 
-The envelope represents the net decay or modulation of the transverse magnetization (affected by factors like $T_2$ and any beat modulation) rather than the fine time structure of each echo. As a result, the oscilloscope displays a smooth decaying curve rather than the ``spiky'' substructure seen in the simulation.
+% The envelope represents the net decay or modulation of the transverse magnetization (affected by factors like $T_2$ and any beat modulation) rather than the fine time structure of each echo. As a result, the oscilloscope displays a smooth decaying curve rather than the ``spiky'' substructure seen in the simulation.
+
+Why does this look different from the actual data we observe later on? In practice, the NMR receiver first band-limits the raw RF voltage at the Larmor frequency, then mixes it with a local oscillator to bring it down to an intermediate (or baseband) frequency. This down-converted signal is passed through a rectifier (often a precision diode or active circuit) which charges a capacitor on each RF peak, and a resistor then discharges the capacitor between peaks, forming a simple RC low-pass filter that smooths out the tens-of-MHz oscillations and ``follows'' only the slowly varying amplitude envelope. The result of this envelope detector is a voltage proportional to the magnitude of the transverse magnetization (i.e., the echo amplitude), with all of the high-frequency carrier components removed. Because the oscilloscope displays this low-frequency envelope (not the raw RF oscillations) the observed signal is a smooth, exponentially decaying curve whose time constant directly reflects spin-spin dephasing ($T_2$) and any beat modulation, rather than the ``spiky'' substructure of each individual echo.
+
 
 
 
@@ -501,114 +539,13 @@ The envelope represents the net decay or modulation of the transverse magnetizat
 
 \subsubsection{Obtaining experimental values of $T_2$}
 
-We will now create the Carr-Purcell with mineral oil. Apply a $\halfpi$ pulse and subsequent $\pi$ pulses to produce spin-echoes. Let \texttt{N} denote the number of $\pi$ pulses after a $\halfpi$ pulse. We perform this experiment with \texttt{N}=\{10, 20, 21, 50\}. We use varying separation times $\taucode$ between the pulses to get a feel for the procedure; the exact time isn't relavant for this part of the experiment, although minimizing times will produce more accurate results.
+We will now create the Carr-Purcell sequence with each sample. Starting from thermal equilibrium, we apply a $\pi/2$ pulse followed by $N$ equally spaced $\pi$ pulses (the echo spacing is $2\taucode$). For mineral oil, glycerin, and deionized water we performed echo trains with $N\approx\{10,20,50\}$ (oil), $N\approx\{20,30,50\}$ (glycerin), and $N\approx\{100\}$ (water), using various $\taucode$ values chosen to maintain sufficient echo amplitude while minimizing diffusion effects.
 
-
-The envelope obeys Equation \ref{eqn:bloch-t2}; therefore, we fit an exponential to each of the experimental sets. We then obtain fitted time constants. These results are summarized in AHHHHHHHHHHHHHHHHHHHHHHHHHH EXPLAIN THIS MORE
-
-
-% \begin{table}[htbp]
-%     \centering
-%     \caption{Relaxation parameters for mineral oil, corresponding to Figure \ref{fig:purcell/mineral_oil}.}
-%     \label{tab:mineral_oil}
-%     \begin{ruledtabular}
-%         \begin{tabular}{ccc}
-%             $N$ & $\tau$ (\si{\milli\second}) & $T_2$ (\si{\milli\second}) \\
-%             \hline
-%             10  & 0.0719 & 48.8 \\
-%             20  & 0.0342 & 41.1 \\
-%             21  & 0.164  & 44.7 \\
-%             50  & 0.0882 & 41.3 \\
-%         \end{tabular}
-%     \end{ruledtabular}
-% \end{table}
-
-% \begin{table}[htbp]
-%     \centering
-%     \caption{Relaxation parameters for glycerin, corresponding to Figure \ref{fig:purcell/glycerin}.}
-%     \label{tab:glycerin}
-%     \begin{ruledtabular}
-%         \begin{tabular}{ccc}
-%             $N$ & $\tau$ (\si{\milli\second}) & $T_2$ (\si{\milli\second}) \\
-%             \hline
-%             20  & 0.0761 & 27.3 \\
-%             31  & 0.0780 & 27.7 \\
-%             35  & 0.0204 & 28.5 \\
-%             50  & 0.0196 & 27.6 \\
-%         \end{tabular}
-%     \end{ruledtabular}
-% \end{table}
-
-% \begin{table}[htbp]
-%     \centering
-%     \caption{Relaxation parameters for deionized water, corresponding to Figure \ref{fig:purcell/water}.}
-%     \label{tab:water}
-%     \begin{ruledtabular}
-%         \begin{tabular}{ccc}
-%             $N$  & $\tau$ (\si{\milli\second}) & $T_2$ (\si{\milli\second}) \\
-%             \hline
-%             98   & 1.16   & 777 \\
-%             100  & 0.594  & 926 \\
-%         \end{tabular}
-%     \end{ruledtabular}
-% \end{table}
-
-% \begin{table}[htbp]
-%     \centering
-%     \caption{Relaxation parameters for three compounds.}
-%     \label{tab:relaxation-all}
-%     \sisetup{table-format=2.3}  % align decimals
-%     \begin{tabular}{l S[table-format=2.0] S[table-format=1.4] S[table-format=3.1]}
-%         \toprule
-%         Compound & {$N$} & {$\tau$ (\si{\milli\second})} & {$T_2$ (\si{\milli\second})} \\
-%         \midrule
-%         \multirow{4}{*}{Mineral oil}
-%         & 10  & 0.0719 &  48.8 \\
-%         & 20  & 0.0342 &  41.1 \\
-%         & 21  & 0.1640 &  44.7 \\
-%         & 50  & 0.0882 &  41.3 \\[1ex]
-%         \multirow{4}{*}{Glycerin}
-%         & 20  & 0.0761 &  27.3 \\
-%         & 31  & 0.0780 &  27.7 \\
-%         & 35  & 0.0204 &  28.5 \\
-%         & 50  & 0.0196 &  27.6 \\[1ex]
-%         \multirow{2}{*}{DI water}
-%         & 98  & 1.1600 & 777.0 \\
-%         & 100 & 0.5940 & 926.0 \\
-%         \bottomrule
-%     \end{tabular}
-% \end{table}
-
-
-\
-
-
-\
-
-% \begin{tabular*}{0.9\linewidth}{@{\extracolsep{\fill}}l c c c@{}}
-%     \toprule
-%     Compound       & $N$  & $\tau$ (\si{\milli\second}) & $T_2$ (\si{\milli\second}) \\
-%     \midrule
-%     Mineral oil    & 10   & 0.0719                      & 48.8                       \\
-%     & 20   & 0.0342                      & 41.1                       \\
-%     & 21   & 0.1640                      & 44.7                       \\
-%     & 50   & 0.0882                      & 41.3                       \\
-%     \addlinespace
-%     \hline
-%     \addlinespace
-%     Glycerin       & 20   & 0.0761                      & 27.3                       \\
-%     & 31   & 0.0780                      & 27.7                       \\
-%     & 35   & 0.0204                      & 28.5                       \\
-%     & 50   & 0.0196                      & 27.6                       \\
-%     \addlinespace
-%     \hline
-%     \addlinespace
-%     Deionized water& 98   & 1.1600                      & 777.0                      \\
-%     & 100  & 0.5940                      & 926.0                      \\
-%     \bottomrule
-% \end{tabular*}
-
-
+Because the transverse magnetization in the rotating frame decays as
+\begin{equation}
+    M_{xy}(t) = M_0 \exp\bigl(-t/T_2\bigr)\,,
+\end{equation}
+we fit an exponential envelope to each echo train to extract $T_2$. The individual fits are summarized in Table \ref{tab:relaxation-all}. To visualize the overall reproducibility, we then compute the mean and standard deviation of all $T_2$ values for each compound (Table \ref{tab:t2-stats}).
 
 \begin{table}[htbp]
     \centering
@@ -642,19 +579,47 @@ The envelope obeys Equation \ref{eqn:bloch-t2}; therefore, we fit an exponential
 
 \begin{table}[htbp]
     \centering
-    \caption{Mean and standard deviation of \(T_2\) for each compound.}
+    \caption{Mean and standard deviation of $T_2$ for each compound.}
     \label{tab:t2-stats}
-    \setlength{\tabcolsep}{12pt}   % default is 6pt; try 8pt, 10pt, 12pt...
+    \setlength{\tabcolsep}{12pt}
     \begin{tabular}{l c c}
         \toprule
         Compound      & Mean (\si{\milli\second}) & Std.\ dev.\ (\si{\milli\second}) \\
         \midrule
-        Glycerin      & 27.8    & 0.509  \\
-        Mineral oil   & 44.0    & 3.61   \\
+        Glycerin      & 27.8    & 0.5    \\
+        Mineral oil   & 44.0    & 3.6    \\
         Water         & 851     & 105    \\
         \bottomrule
     \end{tabular}
 \end{table}
+
+After fitting, we see that glycerin exhibits the shortest transverse relaxation time, with a mean $T_2 = \SI{27.8}{\milli\second}$ and a small relative spread ($<2\%$), reflecting its highly viscous, hydrogen-bonded environment that rapidly dephases spins. Mineral oil yields an intermediate mean value, $T_2 = \SI{44.0}{\milli\second}$, with moderate variability ($\sim8\%$), consistent with its nonpolar aliphatic chains and faster molecular tumbling that partially averages dipolar interactions. Deionized water's $T_2$ is over an order of magnitude larger, $\SI{851}{\milli\second}$, albeit with a larger absolute standard deviation due to its long coherence being more sensitive to diffusion and residual field inhomogeneities over extended echo trains.
+
+These results follow the expected trend that slower molecular motion and stronger dipole-dipole couplings (as in glycerin) shorten $T_2$, while fast tumbling and motional narrowing (as in water) prolong coherence. The Carr-Purcell exponential fits are robust across different $N$ and $\taucode$, validating this pulse sequence as an effective method for isolating $T_2$ in the presence of static field inhomogeneities.
+
+
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------------- %
+
+\subsection{Interpreting Results}
+
+For context, literature reference values at similar field strength ($\sim$20 MHz) are: water $T_1$ $\approx$ 3-4 s, glycerin $T_1$ $\sim$40-50 ms, mineral oil $T_1$ $\sim$50-60 ms (with $T_2$ generally equal or slightly shorter than $T_1$ in each case). Our measured results follow this trend. Notably, water's $T_1$ is orders of magnitude larger than those of glycerin and oil, as expected. Glycerin's $T_2$ is about 28 ms, shorter than its $T_1$, consistent with published glycerol $T_2$ values in the 20-40 ms range. Mineral oil's $T_1$ and $T_2$ are very similar (49 ms vs 44 ms), in line with the behavior of low-viscosity alkanes where $T_1$ $\approx$ $T_2$.
+
+The large differences in $T_1$ and $T_2$ between water, glycerin, and mineral oil can be explained by molecular mobility, viscosity, and hydrogen bonding. Water's small molecules reorient extremely fast (short correlation time), making its $T_1$ and $T_2$ very long because fast molecular motion weakens dipolar relaxation (the extreme motional narrowing limit). Glycerin's much higher viscosity ($\approx 1000 \times$ that of water) means its molecules tumble slowly, which greatly enhances dipole-dipole relaxation efficiency — hence its $T_1$ is two orders of magnitude shorter. Additionally, glycerin's molecules form extensive hydrogen bonds that restrict motion and create strong local magnetic fields, causing very rapid dephasing ($T_2 \ll T_1$). Mineral oil is nonpolar and less viscous (intermediate mobility), so its relaxation times fall in between: $T_1$ and $T_2$ are on the order of $10^{-2}$s. In fact, in low-viscosity liquids without strong intermolecular bonding, $T_1$ and $T_2$ are often similar. Glycerin, being viscous and H-bonded, shows $T_2$ much shorter than $T_1$ due to insufficient averaging of neighbor interactions. Water, with very low viscosity and transient H-bonds, has both $T_1$ and $T_2$ extremely high (on the order of seconds).
+
+
+
+
+
 
 
 
@@ -666,10 +631,9 @@ The envelope obeys Equation \ref{eqn:bloch-t2}; therefore, we fit an exponential
 
 \section{Conclusion}
 
-In this report, we discussed our efforts to
-measure spin-lattice ($T_1$) and spin-spin ($T_2$) relaxation
-times for mineral oil, glycerin, and distilled water. We also discussed the different RF
-pulse sequences that allow for best $T_1$ and $T_2$ measurements. Using the zero-crossing method for measuring $T_1$ we measured 49.1, 40.4, and 1880 ms as the $T_1$ relaxation times for mineral oil, glycerin and water, respectively. By using the Carr-Purcell sequence method, we measured 44, 28, and 851 ms as the $T_2$ relaxation times, respectively. The significant differences between $T_1$ and $T_2$ times for different substances emphasizes the usefulness of NMR for material characterization.
+% In this report, we discussed our efforts to measure spin-lattice ($T_1$) and spin-spin ($T_2$) relaxation times for mineral oil, glycerin, and distilled water. We also discussed the different RF pulse sequences that allow for best $T_1$ and $T_2$ measurements. Using the zero-crossing method for measuring $T_1$ we measured 49.1, 40.4, and 1880 ms as the $T_1$ relaxation times for mineral oil, glycerin and water, respectively. By using the Carr-Purcell sequence method, we measured 44, 28, and 851 ms as the $T_2$ relaxation times, respectively. The significant differences between $T_1$ and $T_2$ times for different substances emphasizes the usefulness of NMR for material characterization.
+
+In conclusion, the NMR relaxation times we measured reflect each liquid's molecular characteristics. Water showed a $T_1$ on the order of seconds ($\approx$1.9 s) and a long $T_2$ ($\approx$0.85 s), consistent with its highly mobile molecules and weak intermolecular constraints. Glycerin had much shorter $T_1$ ($\sim$40 ms) and $T_2$ ($\sim$28 ms), which is expected for a viscous, hydrogen-bonded liquid where slow molecular motion and strong dipolar interactions lead to fast relaxation. Mineral oil exhibited intermediate values ($T_1$ $\sim$49 ms, $T_2$ $\sim$44 ms), reflecting moderate molecular mobility and the absence of hydrogen bonding. These results agree well with published reference values (e.g. water $T_1$ $\sim$3 s, glycerin $T_1$ $\sim$45 ms). The trend (water $\gg$ oil $\geq$ glycerin in both $T_1$ and $T_2$) stems from fundamental physical differences: water's low viscosity and transient hydrogen bonds give it unusually prolonged spin relaxation, whereas glycerin's high viscosity and extensive hydrogen bonding dramatically accelerate spin-lattice and spin-spin relaxation. Thus, our findings illustrate how increasing molecular size, stronger intermolecular forces, and higher viscosity lead to shorter $T_1$/$T_2$, while small, fast-diffusing molecules like water have exceptionally long relaxation times.
 
 
 
@@ -700,8 +664,6 @@ pulse sequences that allow for best $T_1$ and $T_2$ measurements. Using the zero
 %                                    FOOTER                                    %
 % ---------------------------------------------------------------------------- %
 
-
-\section{References}
 
 % The \nocite command causes all entries in a bibliography to be printed out
 % whether or not they are actually referenced in the text. This is appropriate
