@@ -358,7 +358,7 @@ The characteristic decay time constant of an FID signal depends not only on $T_1
     \frac{1}{T_2^*} = \frac{1}{T_1}+\frac{1}{T_2}+ \gamma \Delta B_0
 \end{equation}
 
-In order to directly measure $T_1$ and $T_2$, we must therefore get creative on our measurement techniques. We will now discuss experimental procedures.
+In order to directly measure $T_1$ and $T_2$, we must therefore get creative on our measurement techniques. By using specific pulse sequences (see Section IIA,B), the effects of the $\vec{\gamma \Delta B_0}$ can be mitigated and $T_1$ and $T_2$ can be isolated and calculated using Equations 10 and 14, respectively. 
 
 
 
@@ -382,7 +382,14 @@ In order to directly measure $T_1$ and $T_2$, we must therefore get creative on 
 
 \section{Apparatus and Experimental Procedure}
 
-The apparatus for NMR experiments consists of a TeachSpin PS2-B Pulsed/CW NMR set and a Tektronix oscilloscope. The TeachSpin set comes with a \SI{0.49}{\tesla} permanent magnet, PS2 magnet temperature controller, and mainframe module with pulse programmer, synthesizer, receiver and lock-in amplifier. The synthesizer generates the signal that will be used to excite proton spins. The receiver reads the signal (specifically the envelope of the signal) from a pickup coil aligned with the x-axis of the permanent magnet; this coil outputs a voltage when proton spins produce a net change of flux. The oscilloscope then displays the output from the receiver. The pulse programmer allows for the length, period and delay time to be set for a pulse sequence. This will be critical in creating the sequences of $\halfpi$ and $\pi$ pulses needed to effectively measure NMR decay.
+\begin{figure}
+    \centering
+    \includegraphics[width=.8\linewidth]{figs/Screenshot 2025-05-05 201540.png}
+    \caption{TeachSpin NMR Apparatus}
+    \label{apparatus}
+\end{figure}
+
+The apparatus for NMR experiments (Figure \ref{apparatus}) consists of a TeachSpin PS2-B Pulsed/CW NMR set and a Tektronix oscilloscope. The TeachSpin set comes with a \SI{0.49}{\tesla} permanent magnet, PS2 magnet temperature controller, and mainframe module with pulse programmer, synthesizer, receiver and lock-in amplifier. The synthesizer generates the signal that will be used to excite proton spins. The receiver reads the signal (specifically the envelope of the signal) from a pickup coil aligned with the x-axis of the permanent magnet; this coil outputs a voltage when proton spins produce a net change of flux. The oscilloscope then displays the output from the receiver. The pulse programmer allows for the length, period and delay time to be set for a pulse sequence. This will be critical in creating the sequences of $\halfpi$ and $\pi$ pulses needed to effectively measure NMR decay.
 
 It is critical that the frequency of the RF signal be tuned to match the Larmor frequency of protons in the static magnetic field. For hydrogen, the Larmor frequecy is ~\SI{21}{\mega\hertz}.
 
@@ -575,7 +582,11 @@ From these four calculations of $T_2$, we obtain a final averaged result of
 
 \section{Conclusion}
 
-In this intermediate report, we discussed our efforts to measure spin-lattice ($T_1$) and spin-spin ($T_2$) relaxation times for mineral oil. We also discussed different RF pulse sequences that allow for best $T_1$ and $T_2$ measurements. Although our results are modest, we have demonstrated that we are capable of effectively characterizing the NMR behavior of a material. Moving forward, we intend to use this information to characterize more materials like water and glycerol. We also hope to run pseudo-MRI experiments, where we characterize different points in a hybrid sample and reconstruct an image of the sample.
+In this report, we discussed our efforts to
+measure spin-lattice (T1) and spin-spin (T2) relaxation
+times for mineral oil, glycerin, and distilled water. We also discussed the different RF
+pulse sequences that allow for best T1 and T2 measurements. Using the zero-crossing method for measuring T1 we measured 49.1, 40.4, and 1880 ms as the T1 relaxation times for mineral oil, glycerin and water, respectively. By using the Carr-Purcell sequence method, we measured 44, 28, and 851 ms as the T2 relaxation times, respectively. The significant differences between T1 and T2 times for different substances emphasizes the usefulness of NMR for material characterization. 
+
 
 
 
