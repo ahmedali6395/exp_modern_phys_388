@@ -145,7 +145,7 @@ The study of nuclear magnetic resonance (NMR) utilizes weak magnetic fields to a
 \subsection{\label{subsec:larmor} Larmor Precession}
 
 We will start with the phenomena of Larmor precession, occuring when atoms are placed in a strong magnetic field.
-Larmor precession most readily occurs when the nucleus has a net magnetic moment i.e. there is an odd number of nucleons (protons and neutrons), producing a spin $\half$ system (e.g. $^1H$, $^{13}C$, $^{19}F$, etc.). In this case, the magnetic dipole moment $\mu$ of the nucleus is described as
+Larmor precession most readily occurs when the nucleus has a net magnetic moment i.e. there is an odd number of nucleons (protons and neutrons), producing a spin $\half$ system (e.g. $^1H$, $^{13}C$, $^{19}F$, etc.) \cite{griffiths,abragam1961}. In this case, the magnetic dipole moment $\mu$ of the nucleus is described as
 
 \begin{equation}
     \vec{\mu} = \gamma \vec{S}
@@ -229,7 +229,7 @@ The lower energy $E_+$ is the favored energy state; slightly more spins will ali
     \frac{N_+}{N_-} = \exp\left(\frac{\gamma \hbar B_0}{k T}\right)
 \end{equation}
 
-This small difference produces a net longitudinal magnetization (in this context, ``longitudinal'' refers ``along the $B_0$ field''), which is the sum of the individual quantized spins of the sytem. \cite{lab-manual}
+This small difference produces a net longitudinal magnetization (in this context, ``longitudinal'' refers ``along the $B_0$ field''), which is the sum of the individual quantized spins of the sytem.
 
 \begin{equation}
     M_z = \sum_i \gamma \hbar m_i = \frac{\hbar}{2} \gamma (N_+ - N_-)
@@ -294,7 +294,7 @@ In this rotating frame, applying a circularly polarized magnetic field has the e
 
 \subsubsection{$\halfpi$ and $\pi$ pulses}
 
-By applying $\vec{B_1}(t)$, we will create two types of pulses. We will first define a \textbf{$\halfpi$ pulse}, a pulse of $B_1(t)$ that will be applied for exactly long enough such that the magnetization is entirely in the $x-y$ plane. We will also define a \textbf{$\pi$ pulse}, a pulse that flips the magnetization from $+\hat{z}$ to $-\hat{z}$.
+By applying $\vec{B_1}(t)$, we will create two types of pulses \cite{hahn1950}. We will first define a \textbf{$\halfpi$ pulse}, a pulse of $B_1(t)$ that will be applied for exactly long enough such that the magnetization is entirely in the $x-y$ plane. We will also define a \textbf{$\pi$ pulse}, a pulse that flips the magnetization from $+\hat{z}$ to $-\hat{z}$.
 
 
 During a $\halfpi$ or $\pi$ pulse, we can plot the expectation $\langle \vec{S} \rangle  = (\langle S_x \rangle, \langle S_y \rangle, \langle S_z \rangle)$ over time, as shown in Figure \ref{fig:pulse-spirals}.
@@ -343,7 +343,7 @@ Suppose we apply a $\halfpi$ pulse to a system of nuclei; the net magnetization 
 
 This oscillation will decay according to Equations \ref{eqn:bloch-t1} and \ref{eqn:bloch-t2} as the magnetization becomes increasingly decoherent. The envelope of this decay is known as \textbf{free induction decay (FID)}.
 
-The characteristic decay time constant of an FID signal depends not only on $T_1$ and $T_2$, but also local inhomogeneities in $\vec{B_0}$. We label the time constant obtained from all three factors $T_2^*$, which, with some simple algebra, we obtain as \cite{lab-manual}
+The characteristic decay time constant of an FID signal depends not only on $T_1$ and $T_2$, but also local inhomogeneities in $\vec{B_0}$. We label the time constant obtained from all three factors $T_2^*$, which, with some simple algebra, we obtain as \cite{bloembergen1948}
 
 \begin{equation}
     \frac{1}{T_2^*} = \frac{1}{T_1}+\frac{1}{T_2}+ \gamma \Delta B_0
@@ -380,7 +380,7 @@ In order to directly measure $T_1$ and $T_2$, we must therefore get creative on 
     \label{apparatus}
 \end{figure}
 
-The apparatus for NMR experiments (Figure \ref{apparatus}) consists of a TeachSpin PS2-B Pulsed/CW NMR set and a Tektronix oscilloscope. The TeachSpin set comes with a \SI{0.49}{\tesla} permanent magnet, PS2 magnet temperature controller, and mainframe module with pulse programmer, synthesizer, receiver and lock-in amplifier. The synthesizer generates the signal that will be used to excite proton spins. The receiver reads the signal (specifically the envelope of the signal) from a pickup coil aligned with $+\hat{x}$ of the permanent magnet; this coil outputs a voltage when proton spins produce a net change of flux. The oscilloscope then displays the output from the receiver. The pulse programmer allows for the length, period and delay time to be set for a pulse sequence. This will be critical in creating the sequences of $\halfpi$ and $\pi$ pulses needed to effectively measure NMR decay.
+The apparatus for NMR experiments (Figure \ref{apparatus}) consists of a TeachSpin PS2-B Pulsed/CW NMR set \cite{teachspin-ps2} and a Tektronix oscilloscope. The TeachSpin set comes with a \SI{0.49}{\tesla} permanent magnet, PS2 magnet temperature controller, and mainframe module with pulse programmer, synthesizer, receiver and lock-in amplifier. The synthesizer generates the signal that will be used to excite proton spins. The receiver reads the signal (specifically the envelope of the signal) from a pickup coil aligned with $+\hat{x}$ of the permanent magnet; this coil outputs a voltage when proton spins produce a net change of flux. The oscilloscope then displays the output from the receiver. The pulse programmer allows for the length, period and delay time to be set for a pulse sequence. This will be critical in creating the sequences of $\halfpi$ and $\pi$ pulses needed to effectively measure NMR decay.
 
 It is critical that the frequency of the RF signal be tuned to match the Larmor frequency of protons in the static magnetic field. For hydrogen, the Larmor frequency is ~\SI{21}{\mega\hertz}.
 
@@ -431,14 +431,14 @@ It's important that the $\pi$ pulses are close together, since particle diffusio
 % ---------------------------------------------------------------------------- %
 \subsection{Measuring $T_1$}
 
-To determine the spin-lattice relaxation time $T_1$ for all three samples, we employed the inversion-recovery ($\pi$-$\tau$-$\pi$/2) sequence described in Section \ref{sec:measure-t1}. In each measurement:
+To determine the spin-lattice relaxation time $T_1$ for all three samples, we employed the inversion-recovery ($\pi$-$\taucode$-$\pi$/2) sequence described in Section \ref{sec:measure-t1}. In each measurement:
 
 \begin{enumerate}
     \item A $180^\circ$ ($\pi$) pulse inverts the equilibrium magnetization:
         \begin{equation}
             M_0\hat{z}\,\longrightarrow\,-M_0\hat{z}\,.
         \end{equation}
-    \item After a variable delay $\tau$, a $90^\circ$ ($\pi/2$) pulse rotates the recovered longitudinal magnetization into the transverse plane:
+    \item After a variable delay $\taucode$, a $90^\circ$ ($\pi/2$) pulse rotates the recovered longitudinal magnetization into the transverse plane:
         \begin{equation}
             M_z(\tau)\,\longrightarrow\,M_{xy}(0)\,,
         \end{equation}
@@ -499,7 +499,7 @@ These results span three orders of magnitude: mineral oil exhibits an intermedia
 
 \subsection{Measuring $T_2$}
 
-Now, we can attempt to measure $T_2$. We will use the $\halfpi-\pi$ sequence outlined in Section \ref{sec:measure-t2}. As mentioned previously, we apply one $\halfpi$ pulse, and then apply many $\pi$ pulses to isolate the spin-spin interaction (as opposed to effects caused by the inhomogeneity of the field). This produces spin echoes with decaying magnitude; this is known as the \textbf{Carr-Purcell sequence}.
+Now, we can attempt to measure $T_2$. We will use the $\halfpi-\pi$ sequence outlined in Section \ref{sec:measure-t2}. As mentioned previously, we apply one $\halfpi$ pulse, and then apply many $\pi$ pulses to isolate the spin-spin interaction (as opposed to effects caused by the inhomogeneity of the field). This produces spin echoes with decaying magnitude; this is known as the \textbf{Carr-Purcell sequence} \cite{carr_purcell1954,meiboom_gill1958}.
 
 
 
@@ -553,7 +553,7 @@ we fit an exponential envelope to each echo train to extract $T_2$. The individu
     \label{tab:relaxation-all}
     \begin{tabular*}{0.9\linewidth}{@{\extracolsep{\fill}}l c c c@{}}
         \toprule
-        Compound        & $N$   & $\tau$ (\si{\milli\second}) & $T_2$ (\si{\milli\second}) \\
+        Compound        & $N$   & $\taucode$ (\si{\milli\second}) & $T_2$ (\si{\milli\second}) \\
         \midrule
         Mineral oil     & 10    & 0.0719                      & 48.8                        \\
         & 20    & 0.0342                      & 41.1                        \\
@@ -612,9 +612,14 @@ These results follow the expected trend that slower molecular motion and stronge
 
 \subsection{Interpreting Results}
 
-For context, literature reference values at similar field strength ($\sim$20 MHz) are: water $T_1$ $\approx$ 3-4 s, glycerin $T_1$ $\sim$40-50 ms, mineral oil $T_1$ $\sim$50-60 ms (with $T_2$ generally equal or slightly shorter than $T_1$ in each case). Our measured results follow this trend. Notably, water's $T_1$ is orders of magnitude larger than those of glycerin and oil, as expected. Glycerin's $T_2$ is about 28 ms, shorter than its $T_1$, consistent with published glycerol $T_2$ values in the 20-40 ms range. Mineral oil's $T_1$ and $T_2$ are very similar (49 ms vs 44 ms), in line with the behavior of low-viscosity alkanes where $T_1$ $\approx$ $T_2$.
+For context, literature reference values at similar field strength ($\sim$20 MHz) are:
+water $T_1$ $\approx$ 3-4 s,
+glycerin $T_1$ $\sim$40-50 ms, and
+mineral oil $T_1$ $\sim$50-60 ms \cite{melissinos2003}
+(with $T_2$ generally equal or slightly shorter than $T_1$ in each case \cite{abragam1961}).
+Our measured results follow this trend. Notably, water's $T_1$ is orders of magnitude larger than those of glycerin and oil, as expected. Glycerin's $T_2$ is about 28 ms, shorter than its $T_1$, consistent with published glycerol $T_2$ values in the 20-40 ms range. Mineral oil's $T_1$ and $T_2$ are very similar (49 ms vs 44 ms), in line with the behavior of low-viscosity alkanes where $T_1$ $\approx$ $T_2$.
 
-The large differences in $T_1$ and $T_2$ between water, glycerin, and mineral oil can be explained by molecular mobility, viscosity, and hydrogen bonding. Water's small molecules reorient extremely fast (short correlation time), making its $T_1$ and $T_2$ very long because fast molecular motion weakens dipolar relaxation (the extreme motional narrowing limit). Glycerin's much higher viscosity ($\approx 1000 \times$ that of water) means its molecules tumble slowly, which greatly enhances dipole-dipole relaxation efficiency — hence its $T_1$ is two orders of magnitude shorter. Additionally, glycerin's molecules form extensive hydrogen bonds that restrict motion and create strong local magnetic fields, causing very rapid dephasing ($T_2 \ll T_1$). Mineral oil is nonpolar and less viscous (intermediate mobility), so its relaxation times fall in between: $T_1$ and $T_2$ are on the order of $10^{-2}$s. In fact, in low-viscosity liquids without strong intermolecular bonding, $T_1$ and $T_2$ are often similar. Glycerin, being viscous and H-bonded, shows $T_2$ much shorter than $T_1$ due to insufficient averaging of neighbor interactions. Water, with very low viscosity and transient H-bonds, has both $T_1$ and $T_2$ extremely high (on the order of seconds).
+The large differences in $T_1$ and $T_2$ between water, glycerin, and mineral oil can be explained by molecular mobility, viscosity, and hydrogen bonding. Water's small molecules reorient extremely fast (short correlation time), making its $T_1$ and $T_2$ very long because fast molecular motion weakens dipolar relaxation (the extreme motional narrowing limit). Glycerin's much higher viscosity ($\approx 1000 \times$ that of water) means its molecules tumble slowly, which greatly enhances dipole-dipole relaxation efficiency — hence its $T_1$ is two orders of magnitude shorter. Additionally, glycerin's molecules form extensive hydrogen bonds that restrict motion and create strong local magnetic fields, causing very rapid dephasing ($T_2 \ll T_1$). Mineral oil is nonpolar and less viscous (intermediate mobility), so its relaxation times fall in between: $T_1$ and $T_2$ are on the order of $10^{-2}$s. In fact, in low-viscosity liquids without strong intermolecular bonding, $T_1$ and $T_2$ are often similar. Glycerin, being viscous and H-bonded, shows $T_2$ much shorter than $T_1$ due to insufficient averaging of neighbor interactions. Water, with very low viscosity and transient H-bonds, has both $T_1$ and $T_2$ extremely high (on the order of seconds) \cite{abragam1961,melissinos2003}.
 
 
 
@@ -696,21 +701,21 @@ In conclusion, the NMR relaxation times we measured reflect each liquid's molecu
 \begin{figure*}[htbp]
     \centering
     \includegraphics[width=\textwidth]{figs/purcell/mineral_oil.png}
-    \caption{Carr-Purcell sequences with various $N, \tau$ for mineral oil.}
+    \caption{Carr-Purcell sequences with various $N, \taucode$ for mineral oil.}
     \label{fig:purcell/mineral_oil}
 \end{figure*}
 
 \begin{figure*}[htbp]
     \centering
     \includegraphics[width=\textwidth]{figs/purcell/glycerin.png}
-    \caption{Carr-Purcell sequences with various $N, \tau$ for glycerin.}
+    \caption{Carr-Purcell sequences with various $N, \taucode$ for glycerin.}
     \label{fig:purcell/glycerin}
 \end{figure*}
 
 \begin{figure*}[htbp]
     \centering
     \includegraphics[width=\textwidth]{figs/purcell/water.png}
-    \caption{Carr-Purcell sequences with various $N, \tau$ for deionized water.}
+    \caption{Carr-Purcell sequences with various $N, \taucode$ for deionized water.}
     \label{fig:purcell/water}
 \end{figure*}
 
