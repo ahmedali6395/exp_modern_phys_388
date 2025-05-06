@@ -112,7 +112,8 @@
     Department of Physics \& Astronomy, Rutgers University
 }
 
-\date{\today}
+% \date{\today}
+\date{May 5, 2025}
 
 \begin{abstract}
     This report summarizes our investigation of pulsed nuclear magnetic resonance (NMR) using the TeachSpin spectrometer. Building on the principles of Larmor precession and the quantum-mechanical behavior of spin-$\half$ nuclei, we examined the response of magnetic moments when subjected to time-dependent radio frequency (RF) pulses. We began with a theoretical framework covering key concepts such as the net magnetization arising from the Boltzmann population difference and the associated longitudinal ($T_1$) and transverse ($T_2$) relaxation processes. In our experiments, specially-tuned $\halfpi$ and $\pi$ pulses were applied to tip and invert the magnetization, thereby generating free induction decay (FID) signals and spin echoes. A simulation model incorporating the exponential decay of echo amplitudes provided a basis for comparing the expected with the observed signal features. Data analysis of envelope decay yielded $T_1$ and $T_2$ times for mineral oil, water, and glycerol. Our study demonstrates the successful application of pulsed NMR techniques in measuring relaxation times, validating both the theoretical description and the simulation model.
@@ -542,10 +543,12 @@ Why does this look different from the actual data we observe later on? In practi
 We will now create the Carr-Purcell sequence with each sample. Starting from thermal equilibrium, we apply a $\pi/2$ pulse followed by $N$ equally spaced $\pi$ pulses (the echo spacing is $2\taucode$). For mineral oil, glycerin, and deionized water we performed echo trains with $N\approx\{10,20,50\}$ (oil), $N\approx\{20,30,50\}$ (glycerin), and $N\approx\{100\}$ (water), using various $\taucode$ values chosen to maintain sufficient echo amplitude while minimizing diffusion effects.
 
 Because the transverse magnetization in the rotating frame decays as
+
 \begin{equation}
     M_{xy}(t) = M_0 \exp\bigl(-t/T_2\bigr)\,,
 \end{equation}
-we fit an exponential envelope to each echo train to extract $T_2$. The individual fits are summarized in Table \ref{tab:relaxation-all}. To visualize the overall reproducibility, we then compute the mean and standard deviation of all $T_2$ values for each compound (Table \ref{tab:t2-stats}).
+
+we fit an exponential envelope to each echo train to extract $T_2$. (See Appendix A for the full-scale Carr-Purcell plots, Figs.\ \ref{fig:purcell/mineral_oil}-\ref{fig:purcell/water}.) The individual fits are summarized in Table \ref{tab:relaxation-all}. To visualize the overall reproducibility, we then compute the mean and standard deviation of all $T_2$ values for each compound (Table \ref{tab:t2-stats}).
 
 \begin{table}[htbp]
     \centering
