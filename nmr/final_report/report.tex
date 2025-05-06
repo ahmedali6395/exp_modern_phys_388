@@ -325,7 +325,7 @@ As a practical matter, the Larmor frequency generally lies in the radio frequenc
 Along with the decay of the transverse magnetization, we observe a different kind of decay; the decay of the relative phasing of all of the magnetic moments. After a $\halfpi$ pulse, the magnetic moments are in phase with each other---however, due to mutual interactions, these moments slowly turn out of phase. This dephasing is known as \textbf{spin-spin relaxation}, and obeys a similar relationship to Equation \ref{eqn:bloch-t1}. In particular, the external magnetic field denoted by $\vec{M}_0$ in Equation \ref{eqn:bloch-t1} is $\vec{0}$. Adapting this, we obtain Equation \ref{eqn:bloch-t2}.
 
 \begin{equation}\label{eqn:bloch-t2}
-    \frac{d\vec{M_{x,y}}}{dt} = \frac{\vec{M_{x,y}}}{T_2}
+    \frac{d\vec{M}_{x,y}}{dt} = \frac{\vec{M}_{x,y}}{T_2}
 \end{equation}
 
 Note that both Equation \ref{eqn:bloch-t1} and \ref{eqn:bloch-t2} are in the same form, following a familiar exponential curve.
@@ -347,7 +347,7 @@ The characteristic decay time constant of an FID signal depends not only on $T_1
     \frac{1}{T_2^*} = \frac{1}{T_1}+\frac{1}{T_2}+ \gamma \Delta B_0
 \end{equation}
 
-In order to directly measure $T_1$ and $T_2$, we must therefore get creative on our measurement techniques. By using specific pulse sequences (see Section IIA,B), the effects of the $\vec{\gamma \Delta B_0}$ can be mitigated and $T_1$ and $T_2$ can be isolated and calculated using Equations 10 and 14, respectively. 
+In order to directly measure $T_1$ and $T_2$, we must therefore get creative on our measurement techniques. By using specific pulse sequences (see Section IIA,B), the effects of the $\vec{\gamma \Delta B_0}$ can be mitigated and $T_1$ and $T_2$ can be isolated and calculated using Equations \ref{eqn:bloch-t1} and \ref{eqn:bloch-t2}, respectively. 
 
 
 
@@ -499,28 +499,7 @@ The envelope represents the net decay or modulation of the transverse magnetizat
 
 \subsubsection{Obtaining experimental values of $T_2$}
 
-We will now create the Carr-Purcell with mineral oil. Apply a $\halfpi$ pulse and subsequent $\pi$ pulses to produce spin-echoes. Let \texttt{N} denote the number of $\pi$ pulses after a $\halfpi$ pulse. We perform this experiment with \texttt{N}=\{10, 20, 21, 50\}. We use varying separation times $\taucode$ between the pulses to get a feel for the procedure; the exact time isn't relavant for this part of the experiment, although minimizing times will produce more accurate results. These plots and exponential fits to the peaks are presented in Figure \ref{fig:experimental-purcell}.
-
-\begin{figure*}[hbpt]
-    \centering
-    \begin{subfigure}{0.4\linewidth}
-        \includegraphics[width = 0.8\linewidth]{figs/purcell/data2.png}
-        \caption{\texttt{N} = 10, $\taucode = \SI{4}{\milli\second}$}
-    \end{subfigure}
-    \begin{subfigure}{0.4\linewidth}
-        \includegraphics[width = 0.8\linewidth]{figs/purcell/data3.png}
-        \caption{\texttt{N} = 20, $\taucode = \SI{1}{\milli\second}$}
-    \end{subfigure}\\
-    \begin{subfigure}{0.4\linewidth}
-        \includegraphics[width = 0.8\linewidth]{figs/purcell/data1.png}
-        \caption{\texttt{N} = 21, $\taucode = \SI{2}{\milli\second}$}
-    \end{subfigure}
-    \begin{subfigure}{0.4\linewidth}
-        \includegraphics[width = 0.8\linewidth]{figs/purcell/data4.png}
-        \caption{\texttt{N} = 50, $\taucode = \SI{0.9}{\milli\second}$}
-    \end{subfigure}
-    \caption{Different Carr-Purcell sequences for different \texttt{N}, $\taucode$}\label{fig:experimental-purcell}
-\end{figure*}
+We will now create the Carr-Purcell with mineral oil. Apply a $\halfpi$ pulse and subsequent $\pi$ pulses to produce spin-echoes. Let \texttt{N} denote the number of $\pi$ pulses after a $\halfpi$ pulse. We perform this experiment with \texttt{N}=\{10, 20, 21, 50\}. We use varying separation times $\taucode$ between the pulses to get a feel for the procedure; the exact time isn't relavant for this part of the experiment, although minimizing times will produce more accurate results.
 
 
 The envelope obeys Equation \ref{eqn:bloch-t2}; therefore, we fit an exponential to each of the experimental sets. We then obtain fitted time constants. These results are summarized in Table \ref{tab:t2-times}.
@@ -555,15 +534,6 @@ From these four calculations of $T_2$, we obtain a final averaged result of
 
 
 
-
-
-
-
-
-
-
-
-
 % ---------------------------------------------------------------------------- %
 %                                  CONCLUSION                                  %
 % ---------------------------------------------------------------------------- %
@@ -572,10 +542,9 @@ From these four calculations of $T_2$, we obtain a final averaged result of
 \section{Conclusion}
 
 In this report, we discussed our efforts to
-measure spin-lattice (T1) and spin-spin (T2) relaxation
+measure spin-lattice ($T_1$) and spin-spin ($T_2$) relaxation
 times for mineral oil, glycerin, and distilled water. We also discussed the different RF
-pulse sequences that allow for best T1 and T2 measurements. Using the zero-crossing method for measuring T1 we measured 49.1, 40.4, and 1880 ms as the T1 relaxation times for mineral oil, glycerin and water, respectively. By using the Carr-Purcell sequence method, we measured 44, 28, and 851 ms as the T2 relaxation times, respectively. The significant differences between T1 and T2 times for different substances emphasizes the usefulness of NMR for material characterization. 
-
+pulse sequences that allow for best $T_1$ and $T_2$ measurements. Using the zero-crossing method for measuring $T_1$ we measured 49.1, 40.4, and 1880 ms as the $T_1$ relaxation times for mineral oil, glycerin and water, respectively. By using the Carr-Purcell sequence method, we measured 44, 28, and 851 ms as the $T_2$ relaxation times, respectively. The significant differences between $T_1$ and $T_2$ times for different substances emphasizes the usefulness of NMR for material characterization. 
 
 
 
@@ -613,5 +582,69 @@ pulse sequences that allow for best T1 and T2 measurements. Using the zero-cross
 \nocite{*}
 
 \bibliography{appsamp.bib} % Produces the bibliography via BibTeX.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------------- %
+%                               APPENDIX: GRAPHS                               %
+% ---------------------------------------------------------------------------- %
+
+
+\clearpage
+
+\onecolumngrid
+\appendix
+\section{Full-Size Purcell Plots for Mineral Oil, Glycerin, and DI Water}
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figs/purcell/mineral_oil.png}
+    \caption{Carr-Purcell sequences with various $N, \tau$ for mineral oil.}
+    \label{fig:purcell/mineral_oil}
+\end{figure*}
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figs/purcell/glycerin.png}
+    \caption{Carr-Purcell sequences with various $N, \tau$ for glycerin.}
+    \label{fig:purcell/glycerin}
+\end{figure*}
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figs/purcell/water.png}
+    \caption{Carr-Purcell sequences with various $N, \tau$ for deionized water.}
+    \label{fig:purcell/water}
+\end{figure*}
+
+
+\twocolumngrid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------------- %
 
 \end{document}
