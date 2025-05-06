@@ -113,23 +113,12 @@
 \date{\today}
 
 \begin{abstract}
-    This intermediate report summarizes our investigation of pulsed nuclear magnetic resonance (NMR) using the TeachSpin spectrometer. Building on the principles of Larmor precession and the quantum-mechanical behavior of spin-$\half$ nuclei, we examined the response of magnetic moments when subjected to time-dependent radio frequency (RF) pulses. We began with a theoretical framework covering key concepts such as the net magnetization arising from the Boltzmann population difference and the associated longitudinal ($T_1$) and transverse ($T_2$) relaxation processes. In our experiments, specially-tuned $\halfpi$ and $\pi$ pulses were applied to tip and invert the magnetization, thereby generating free induction decay (FID) signals and spin echoes. A simulation model incorporating the exponential decay of echo amplitudes provided a basis for comparing the expected with the observed signal features. Data analysis of envelope decay for mineral oil samples yielded an experimental $T_1 = \SI[uncertainty-mode=separate]{34\pm0.5}{\milli\second}$, $T_2 = \SI[uncertainty-mode=separate]{44\pm3}{\milli\second}$. Our study demonstrates the successful application of pulsed NMR techniques in measuring relaxation times, validating both the theoretical description and the simulation model.
+    This report summarizes our investigation of pulsed nuclear magnetic resonance (NMR) using the TeachSpin spectrometer. Building on the principles of Larmor precession and the quantum-mechanical behavior of spin-$\half$ nuclei, we examined the response of magnetic moments when subjected to time-dependent radio frequency (RF) pulses. We began with a theoretical framework covering key concepts such as the net magnetization arising from the Boltzmann population difference and the associated longitudinal ($T_1$) and transverse ($T_2$) relaxation processes. In our experiments, specially-tuned $\halfpi$ and $\pi$ pulses were applied to tip and invert the magnetization, thereby generating free induction decay (FID) signals and spin echoes. A simulation model incorporating the exponential decay of echo amplitudes provided a basis for comparing the expected with the observed signal features. Data analysis of envelope decay yielded $T_1$ and $T_2$ times for mineral oil, water, and glycerol. Our study demonstrates the successful application of pulsed NMR techniques in measuring relaxation times, validating both the theoretical description and the simulation model.
 \end{abstract}
 
 \maketitle
 
 %\tableofcontents
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -154,7 +143,7 @@ The study of nuclear magnetic resonance (NMR) utilizes weak magnetic fields to a
 \subsection{\label{subsec:larmor} Larmor Precession}
 
 We will start with the phenomena of Larmor precession, occuring when atoms are placed in a strong magnetic field.
-Larmor precession most readily occurs when the nucleus has a net magnetic moment i.e. there is an odd number of nucleons (protons plus neutrons), producing a spin $\half$ system (e.g. $^1H$, $^13C$, $^19F$, etc.). In this case, the magnetic dipole moment $\mu$ of the nucleus is described as
+Larmor precession most readily occurs when the nucleus has a net magnetic moment i.e. there is an odd number of nucleons (protons and neutrons), producing a spin $\half$ system (e.g. $^1H$, $^{13}C$, $^{19}F$, etc.). In this case, the magnetic dipole moment $\mu$ of the nucleus is described as
 
 \begin{equation}
     \vec{\mu} = \gamma \vec{S}
