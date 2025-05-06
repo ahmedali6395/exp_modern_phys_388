@@ -503,28 +503,7 @@ The envelope represents the net decay or modulation of the transverse magnetizat
 
 \subsubsection{Obtaining experimental values of $T_2$}
 
-We will now create the Carr-Purcell with mineral oil. Apply a $\halfpi$ pulse and subsequent $\pi$ pulses to produce spin-echoes. Let \texttt{N} denote the number of $\pi$ pulses after a $\halfpi$ pulse. We perform this experiment with \texttt{N}=\{10, 20, 21, 50\}. We use varying separation times $\taucode$ between the pulses to get a feel for the procedure; the exact time isn't relavant for this part of the experiment, although minimizing times will produce more accurate results. These plots and exponential fits to the peaks are presented in Figure \ref{fig:experimental-purcell}.
-
-\begin{figure*}[hbpt]
-    \centering
-    \begin{subfigure}{0.4\linewidth}
-        \includegraphics[width = 0.8\linewidth]{figs/purcell/data2.png}
-        \caption{\texttt{N} = 10, $\taucode = \SI{4}{\milli\second}$}
-    \end{subfigure}
-    \begin{subfigure}{0.4\linewidth}
-        \includegraphics[width = 0.8\linewidth]{figs/purcell/data3.png}
-        \caption{\texttt{N} = 20, $\taucode = \SI{1}{\milli\second}$}
-    \end{subfigure}\\
-    \begin{subfigure}{0.4\linewidth}
-        \includegraphics[width = 0.8\linewidth]{figs/purcell/data1.png}
-        \caption{\texttt{N} = 21, $\taucode = \SI{2}{\milli\second}$}
-    \end{subfigure}
-    \begin{subfigure}{0.4\linewidth}
-        \includegraphics[width = 0.8\linewidth]{figs/purcell/data4.png}
-        \caption{\texttt{N} = 50, $\taucode = \SI{0.9}{\milli\second}$}
-    \end{subfigure}
-    \caption{Different Carr-Purcell sequences for different \texttt{N}, $\taucode$}\label{fig:experimental-purcell}
-\end{figure*}
+We will now create the Carr-Purcell with mineral oil. Apply a $\halfpi$ pulse and subsequent $\pi$ pulses to produce spin-echoes. Let \texttt{N} denote the number of $\pi$ pulses after a $\halfpi$ pulse. We perform this experiment with \texttt{N}=\{10, 20, 21, 50\}. We use varying separation times $\taucode$ between the pulses to get a feel for the procedure; the exact time isn't relavant for this part of the experiment, although minimizing times will produce more accurate results.
 
 
 The envelope obeys Equation \ref{eqn:bloch-t2}; therefore, we fit an exponential to each of the experimental sets. We then obtain fitted time constants. These results are summarized in Table \ref{tab:t2-times}.
@@ -554,15 +533,6 @@ From these four calculations of $T_2$, we obtain a final averaged result of
 \begin{equation}
     T_2 = \SI[uncertainty-mode=separate]{44(3)}{\milli\second}
 \end{equation}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -601,7 +571,6 @@ In this intermediate report, we discussed our efforts to measure spin-lattice ($
 
 
 
-
 % ---------------------------------------------------------------------------- %
 %                                    FOOTER                                    %
 % ---------------------------------------------------------------------------- %
@@ -613,5 +582,69 @@ In this intermediate report, we discussed our efforts to measure spin-lattice ($
 \nocite{*}
 
 \bibliography{appsamp.bib} % Produces the bibliography via BibTeX.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------------- %
+%                               APPENDIX: GRAPHS                               %
+% ---------------------------------------------------------------------------- %
+
+
+\clearpage
+
+\onecolumngrid
+\appendix
+\section{Full-Size Purcell Plots for Mineral Oil, Glycerin, and DI Water}
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figs/purcell/mineral_oil.png}
+    \caption{Carr-Purcell sequences with various $N, \tau$ for mineral oil.}
+    \label{fig:purcell/mineral_oil}
+\end{figure*}
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figs/purcell/glycerin.png}
+    \caption{Carr-Purcell sequences with various $N, \tau$ for glycerin.}
+    \label{fig:purcell/glycerin}
+\end{figure*}
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{figs/purcell/water.png}
+    \caption{Carr-Purcell sequences with various $N, \tau$ for deionized water.}
+    \label{fig:purcell/water}
+\end{figure*}
+
+
+\twocolumngrid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------------- %
 
 \end{document}
